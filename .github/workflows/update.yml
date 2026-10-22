@@ -1,0 +1,25 @@
+name: Daily menu check
+on:
+  schedule:
+    - cron: "0 18 * * *"   # 02:00 Taipei
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Re-read the official menus and rebuild the site
+        run: python update.py
+      - name: Publish what changed (the check date moves every day)
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data snapshots docs
+          git diff --cached --quiet || git commit -m "Daily menu check $(TZ=Asia/Taipei date +%F)"
+          git push

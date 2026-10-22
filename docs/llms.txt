@@ -1,0 +1,5 @@
+# Menu Check 台灣
+
+台灣連鎖店的官方菜單價格（新台幣），照官網原文整理，每天自動重查；每頁寫出處網址與查證日期。
+
+- [可不可熟成茶行](https://alpha-0619.github.io/taiwan-menus/kebuke/): https://kebuke.com/menu/
