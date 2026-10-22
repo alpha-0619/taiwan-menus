@@ -76,6 +76,7 @@ def chain_page(rec):
             + "<th>熱量／糖量（官網標示，大杯）</th></tr></thead>\n<tbody>" + "".join(rows) + "</tbody></table></div>\n"
             + f"<h2>官網上的其他說明</h2><ul>{notes}</ul>\n<p><small>{esc(rec.get('notes_zh', ''))}</small></p>\n"
             + "<p><small>本頁每天自動對官網重查一次；只轉成文字，不放店家照片。發現價格跟門市不同，歡迎告訴我們。</small></p>\n"
+            + f"<p><small>Menu Check 不是{esc(name)}的官方網站，跟品牌沒有合作關係。</small></p>\n"
             + f"</main>{GOAT}</body></html>\n")
 
 
@@ -94,7 +95,8 @@ def build(root):
         head("台灣連鎖店菜單價格（官網原文，每天查證）| Menu Check",
              "台灣連鎖飲料店與餐廳的官方菜單價格，照官網原文整理、分地區價目、每天自動重查。")
         + "<h1>台灣連鎖店菜單價格</h1>\n<p class=\"meta\">每一頁都照該品牌官網原文整理，寫出處和查證日期，每天自動重查。</p>\n"
-        + f"<ul>{items}</ul>\n</main>{GOAT}</body></html>\n", encoding="utf-8", newline="\n")
+        + f"<ul>{items}</ul>\n<p><small>Menu Check 不是這些品牌的官方網站，跟品牌沒有合作關係。</small></p>\n"
+        + f"</main>{GOAT}</body></html>\n", encoding="utf-8", newline="\n")
     urls = [(f"{SITE_URL}/", max(r["checked"] for r in recs))] + [(f"{SITE_URL}/{r['slug']}/", r["checked"]) for r in recs]
     (docs / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
