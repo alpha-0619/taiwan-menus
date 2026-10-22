@@ -8,20 +8,33 @@ Unchanged prices only move the check date forward; changed prices also move the 
 """
 import json
 import sys
+import time
 import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from tw import kebuke, pages
+from tw import kebuke, louisa, pages
 
 ROOT = Path(__file__).resolve().parent
-CHAINS = [kebuke]
+CHAINS = [kebuke, louisa]
 UA = {"User-Agent": "Mozilla/5.0 (compatible; MenuCheckBot/1.0; +https://alpha-0619.github.io/taiwan-menus/)"}
 
 
 def fetch(url):
     with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=40) as r:
         return r.read()
+
+
+def read_chain(chain):
+    """A chain with one menu page has URL; one with a page per category has URLS (fetched one at a time)."""
+    if hasattr(chain, "URLS"):
+        raws = {}
+        for n, url in enumerate(chain.URLS):
+            if n:
+                time.sleep(1.5)
+            raws[url] = fetch(url)
+        return chain.parse(raws)
+    return chain.parse(fetch(chain.URL))
 
 
 def priced(rec):
@@ -38,7 +51,7 @@ def main():
         if "--offline" in sys.argv:
             continue
         try:
-            rec, text = chain.parse(fetch(chain.URL))
+            rec, text = read_chain(chain)
             n_new = sum(len(s["items"]) for s in rec["sections"])
             n_old = sum(len(s["items"]) for s in old["sections"]) if old else 0
             bad = chain.check(rec, text)

@@ -24,7 +24,11 @@ def esc(s):
 
 
 def cell(p):
-    return " ".join(f"{k} {v}" for k, v in p.items()) if p else "—"
+    """{'中': 35, '大': 40} -> '中 35 大 40'; {'單價': 50} -> '50'; {'單片': 80} -> '80／單片'."""
+    if not p:
+        return "—"
+    return " ".join(f"{v}" if k == "單價" else f"{k} {v}" if k in ("中", "大", "M", "L") else f"{v}／{k}"
+                    for k, v in p.items())
 
 
 def nutrition(lines):
@@ -48,32 +52,43 @@ def head(title, desc, ld=None):
 
 def chain_page(rec):
     lists, name, day = rec["price_lists"], rec["name_zh"], rec["checked"]
+    items = [it for s in rec["sections"] for it in s["items"]]
+    has_nut = any(it.get("nutrition") for it in items)
+    has_note = any(it.get("note") for it in items)
+    cols = 1 + len(lists) + has_nut + has_note
     rows, offers = [], []
     for s in rec["sections"]:
-        rows.append(f'<tr class="sec"><th colspan="{len(lists) + 2}">{esc(s["name"])}</th></tr>')
+        src = f' <small><a href="{esc(s["source"])}" rel="nofollow">官網這一頁</a></small>' if s.get("source") else ""
+        rows.append(f'<tr class="sec"><th colspan="{cols}">{esc(s["name"])}{src}</th></tr>')
         for it in s["items"]:
-            nut = nutrition(it.get("nutrition", []))
-            nut_txt = (f"{nut[2]} kcal / 糖 {nut[1]} g" + ("" if nut[0] == "大杯" else "（中杯）")) if nut else "—"
-            rows.append("<tr><td>" + esc(it["name_zh"]) + "</td>"
-                        + "".join(f"<td>{esc(cell(it['prices_by_list'].get(l)))}</td>" for l in lists)
-                        + f"<td>{esc(nut_txt)}</td></tr>")
+            en = f'<br><small>{esc(it["name_en"])}</small>' if it.get("name_en") else ""
+            row = ("<tr><td>" + esc(it["name_zh"]) + en + "</td>"
+                   + "".join(f"<td>{esc(cell(it['prices_by_list'].get(l)))}</td>" for l in lists))
+            if has_nut:
+                nut = nutrition(it.get("nutrition", []))
+                row += "<td>" + esc((f"{nut[2]} kcal / 糖 {nut[1]} g" + ("" if nut[0] == "大杯" else "（中杯）")) if nut else "—") + "</td>"
+            if has_note:
+                row += f"<td>{esc(it.get('note') or '')}</td>"
+            rows.append(row + "</tr>")
             for size, price in (it["prices_by_list"].get(lists[0]) or {}).items():
-                offers.append({"@type": "MenuItem", "name": f"{it['name_zh']}（{size}）",
+                offers.append({"@type": "MenuItem", "name": it["name_zh"] if size == "單價" else f"{it['name_zh']}（{size}）",
                                "offers": {"@type": "Offer", "price": price, "priceCurrency": "TWD",
-                                          "description": f"{lists[0]}價格"}})
+                                          "description": f"{lists[0]}價格" if len(lists) > 1 else "官網價格"}})
     ld = {"@context": "https://schema.org", "@type": "Menu", "name": f"{name} 菜單", "inLanguage": "zh-TW",
           "url": f"{SITE_URL}/{rec['slug']}/", "hasMenuItem": offers}
     areas = "".join(f"<li><b>{esc(l)}</b>：{esc(rec['areas'].get(l, ''))}</li>" for l in lists)
     notes = "".join(f"<li>{esc(n.lstrip('• '))}</li>" for n in rec.get("notes_official", []))
     changed = f"．價錢上次變動 {rec['changed']}" if rec.get("changed") and rec["changed"] != rec.get("first_seen") else ""
-    return (head(f"{name}菜單價格 {day[:4]}（官網原文，{day} 查證）| Menu Check",
-                 f"{name}全品項價格：{'、'.join(lists)}分開列，附官網標示的熱量與糖量。照官網菜單頁原文整理，{day} 查證。", ld)
+    desc = (f"{name}全品項價格：{'、'.join(lists)}分開列" if len(lists) > 1 else f"{name}全品項價格（{len(items)} 品項）") \
+        + ("，附官網標示的熱量與糖量" if has_nut else "") + f"。照官網菜單頁原文整理，{day} 查證。"
+    return (head(f"{name}菜單價格 {day[:4]}（官網原文，{day} 查證）| Menu Check", desc, ld)
             + f'<p class="meta"><a href="../">Menu Check 台灣連鎖菜單</a></p>\n<h1>{esc(name)} 菜單價格</h1>\n'
             + f'<p class="meta">照<a href="{esc(rec["source_url"])}" rel="nofollow">官網菜單頁</a>原文整理．{day} 查證{changed}．價格以門市為準</p>\n'
-            + f"<p>{esc(name)}有{len(lists)}種價目，看你在哪裡買：</p>\n<ul>{areas}</ul>\n"
+            + (f"<p>{esc(name)}有{len(lists)}種價目，看你在哪裡買：</p>\n<ul>{areas}</ul>\n" if len(lists) > 1 else "")
             + '<div class="wrap"><table>\n<thead><tr><th>品項</th>'
             + "".join(f"<th>{esc(l)}</th>" for l in lists)
-            + "<th>熱量／糖量（官網標示，大杯）</th></tr></thead>\n<tbody>" + "".join(rows) + "</tbody></table></div>\n"
+            + ("<th>熱量／糖量（官網標示，大杯）</th>" if has_nut else "") + ("<th>官網標示</th>" if has_note else "")
+            + "</tr></thead>\n<tbody>" + "".join(rows) + "</tbody></table></div>\n"
             + f"<h2>官網上的其他說明</h2><ul>{notes}</ul>\n<p><small>{esc(rec.get('notes_zh', ''))}</small></p>\n"
             + "<p><small>本頁每天自動對官網重查一次；只轉成文字，不放店家照片。發現價格跟門市不同，歡迎告訴我們。</small></p>\n"
             + f"<p><small>Menu Check 不是{esc(name)}的官方網站，跟品牌沒有合作關係。</small></p>\n"

@@ -5,6 +5,7 @@ import re
 
 def page_text(raw):
     s = raw.decode("utf-8", "replace")
+    s = re.sub(r"(?s)<!--.*?-->", " ", s)  # commented-out markup is not shown on the page (old prices can hide there)
     s = re.sub(r"(?is)<(script|style|noscript|svg|nav|footer)[^>]*>.*?</\1>", " ", s)
     s = re.sub(r"(?i)<br\s*/?>|</(p|div|li|h\d|tr|td|section|article)>", "\n", s)
     s = html.unescape(re.sub(r"<[^>]+>", " ", s))

@@ -1,0 +1,3741 @@
+{
+ "slug": "louisa",
+ "name_zh": "路易莎咖啡",
+ "name_en": "LOUISA COFFEE",
+ "currency": "TWD",
+ "cuisine": "咖啡",
+ "source_url": "https://www.louisacoffee.co/products",
+ "price_lists": [
+  "價格"
+ ],
+ "areas": {},
+ "sections": [
+  {
+   "name": "經典義式咖啡",
+   "source": "https://www.louisacoffee.co/products_list/8",
+   "items": [
+    {
+     "name_zh": "燕麥拿鐵(冰)",
+     "name_printed": "燕麥拿鐵(冰)",
+     "name_en": "Coffee Oat Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "燕麥拿鐵(熱)",
+     "name_printed": "燕麥拿鐵(熱)",
+     "name_en": "Coffee Oat Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "抹茶風味拿鐵 (冰)",
+     "name_printed": "抹茶風味拿鐵 (冰)",
+     "name_en": "Matcha Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 95,
+       "L": 115
+      }
+     },
+     "printed": [
+      "M $95",
+      "L $115"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "抹茶風味拿鐵 (熱)",
+     "name_printed": "抹茶風味拿鐵 (熱)",
+     "name_en": "Matcha Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 95,
+       "L": 115
+      }
+     },
+     "printed": [
+      "M $95",
+      "L $115"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "生椰美式(冰)",
+     "name_printed": "生椰美式(冰)",
+     "name_en": "Coconut Americano",
+     "prices_by_list": {
+      "價格": {
+       "M": 75
+      }
+     },
+     "printed": [
+      "M $75"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "生椰拿鐵(冰)",
+     "name_printed": "生椰拿鐵(冰)",
+     "name_en": "Coconut Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 85
+      }
+     },
+     "printed": [
+      "M $85"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "咖啡拿鐵 (冰)",
+     "name_printed": "咖啡拿鐵 (冰)",
+     "name_en": "Coffee Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 80,
+       "L": 100
+      }
+     },
+     "printed": [
+      "M $80",
+      "L $100"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "咖啡拿鐵 (熱)",
+     "name_printed": "咖啡拿鐵 (熱)",
+     "name_en": "Coffee Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 80,
+       "L": 100
+      }
+     },
+     "printed": [
+      "M $80",
+      "L $100"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "卡布奇諾 (冰)",
+     "name_printed": "卡布奇諾 (冰)",
+     "name_en": "Cappuccino",
+     "prices_by_list": {
+      "價格": {
+       "M": 80,
+       "L": 100
+      }
+     },
+     "printed": [
+      "M $80",
+      "L $100"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "卡布奇諾 (熱)",
+     "name_printed": "卡布奇諾 (熱)",
+     "name_en": "Cappuccino",
+     "prices_by_list": {
+      "價格": {
+       "M": 80,
+       "L": 100
+      }
+     },
+     "printed": [
+      "M $80",
+      "L $100"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "焦糖風味拿鐵 (冰)",
+     "name_printed": "焦糖風味拿鐵 (冰)",
+     "name_en": "Flavored Coffee / Caramel",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "焦糖風味拿鐵 (熱)",
+     "name_printed": "焦糖風味拿鐵 (熱)",
+     "name_en": "Flavored Coffee / Caramel",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "焦糖瑪奇朵 (熱)",
+     "name_printed": "焦糖瑪奇朵 (熱)",
+     "name_en": "Caramel Macchiato",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "焦糖瑪奇朵 (冰)",
+     "name_printed": "焦糖瑪奇朵 (冰)",
+     "name_en": "Caramel Macchiato",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "榛果風味拿鐵 (冰)",
+     "name_printed": "榛果風味拿鐵 (冰)",
+     "name_en": "Flavored Coffee / Hazelnut",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "榛果風味拿鐵 (熱)",
+     "name_printed": "榛果風味拿鐵 (熱)",
+     "name_en": "Flavored Coffee / Hazelnut",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "香草風味拿鐵 (冰)",
+     "name_printed": "香草風味拿鐵 (冰)",
+     "name_en": "Flavored Coffee / Vanilla",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "香草風味拿鐵 (熱)",
+     "name_printed": "香草風味拿鐵 (熱)",
+     "name_en": "Flavored Coffee / Vanilla",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "橘皮風味拿鐵 (冰)",
+     "name_printed": "橘皮風味拿鐵 (冰)",
+     "name_en": "Flavored Coffee / Orange Peel",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "橘皮風味拿鐵 (熱)",
+     "name_printed": "橘皮風味拿鐵 (熱)",
+     "name_en": "Flavored Coffee / Orange Peel",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "黑糖風味拿鐵 (冰)",
+     "name_printed": "黑糖風味拿鐵 (冰)",
+     "name_en": "Flavored Coffee / Brown Sugar",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "黑糖風味拿鐵 (熱)",
+     "name_printed": "黑糖風味拿鐵 (熱)",
+     "name_en": "Flavored Coffee / Brown Sugar",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "義式摩卡 (冰)",
+     "name_printed": "義式摩卡 (冰)",
+     "name_en": "Mochacino",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "義式摩卡 (熱)",
+     "name_printed": "義式摩卡 (熱)",
+     "name_en": "Mochacino",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "鴛鴦咖啡 (冰)",
+     "name_printed": "鴛鴦咖啡 (冰)",
+     "name_en": "Milk Tea Coffee",
+     "prices_by_list": {
+      "價格": {
+       "M": 70,
+       "L": 90
+      }
+     },
+     "printed": [
+      "M $70",
+      "L $90"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "鴛鴦咖啡 (熱)",
+     "name_printed": "鴛鴦咖啡 (熱)",
+     "name_en": "Milk Tea Coffee",
+     "prices_by_list": {
+      "價格": {
+       "M": 70,
+       "L": 90
+      }
+     },
+     "printed": [
+      "M $70",
+      "L $90"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "路易莎特調咖啡 (冰)",
+     "name_printed": "路易莎特調咖啡 (冰)",
+     "name_en": "Louisa Special",
+     "prices_by_list": {
+      "價格": {
+       "M": 70,
+       "L": 90
+      }
+     },
+     "printed": [
+      "M $70",
+      "L $90"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "路易莎特調咖啡 (熱)",
+     "name_printed": "路易莎特調咖啡 (熱)",
+     "name_en": "Louisa Special",
+     "prices_by_list": {
+      "價格": {
+       "M": 70,
+       "L": 90
+      }
+     },
+     "printed": [
+      "M $70",
+      "L $90"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "美式黑咖啡 (冰)",
+     "name_printed": "美式黑咖啡 (冰)",
+     "name_en": "Americano",
+     "prices_by_list": {
+      "價格": {
+       "M": 60,
+       "L": 75
+      }
+     },
+     "printed": [
+      "M $60",
+      "L $75"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "美式黑咖啡 (熱)",
+     "name_printed": "美式黑咖啡 (熱)",
+     "name_en": "Americano",
+     "prices_by_list": {
+      "價格": {
+       "M": 60,
+       "L": 75
+      }
+     },
+     "printed": [
+      "M $60",
+      "L $75"
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "name": "精品咖啡",
+   "source": "https://www.louisacoffee.co/products_list/10",
+   "items": [
+    {
+     "name_zh": "莊園級美式 (冰)",
+     "name_printed": "莊園級美式 (冰)",
+     "name_en": "Specialty Americano",
+     "prices_by_list": {
+      "價格": {
+       "M": 70,
+       "L": 90
+      }
+     },
+     "printed": [
+      "M $70",
+      "L $90"
+     ],
+     "note": "莊園濃縮系列"
+    },
+    {
+     "name_zh": "莊園級美式 (熱)",
+     "name_printed": "莊園級美式 (熱)",
+     "name_en": "Specialty Americano",
+     "prices_by_list": {
+      "價格": {
+       "M": 70,
+       "L": 90
+      }
+     },
+     "printed": [
+      "M $70",
+      "L $90"
+     ],
+     "note": "莊園濃縮系列"
+    },
+    {
+     "name_zh": "莊園級拿鐵 (冰)",
+     "name_printed": "莊園級拿鐵 (冰)",
+     "name_en": "Specialty Coffee Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": "莊園濃縮系列"
+    },
+    {
+     "name_zh": "莊園級拿鐵 (熱)",
+     "name_printed": "莊園級拿鐵 (熱)",
+     "name_en": "Specialty Coffee Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": "莊園濃縮系列"
+    },
+    {
+     "name_zh": "特濃小卡布 (4oz)",
+     "name_printed": "特濃小卡布 (4oz)",
+     "name_en": "Piccolo (4oz)",
+     "prices_by_list": {
+      "價格": {
+       "M": 70
+      }
+     },
+     "printed": [
+      "M $70"
+     ],
+     "note": "莊園濃縮系列 / 僅供內用熱飲"
+    },
+    {
+     "name_zh": "澳洲小拿鐵 (8oz)",
+     "name_printed": "澳洲小拿鐵 (8oz)",
+     "name_en": "Flat White (8oz)",
+     "prices_by_list": {
+      "價格": {
+       "M": 75
+      }
+     },
+     "printed": [
+      "M $75"
+     ],
+     "note": "莊園濃縮系列 / 僅供熱飲"
+    },
+    {
+     "name_zh": "義式濃縮",
+     "name_printed": "義式濃縮",
+     "name_en": "Espresso",
+     "prices_by_list": {
+      "價格": {
+       "M": 65
+      }
+     },
+     "printed": [
+      "M $65"
+     ],
+     "note": "莊園濃縮系列 / 僅供內用熱飲"
+    },
+    {
+     "name_zh": "完美日曬耶加雪菲 G1 (冰)",
+     "name_printed": "完美日曬耶加雪菲 G1 (冰)",
+     "name_en": "Yirgacheffe G1 Natural",
+     "prices_by_list": {
+      "價格": {
+       "M": 110
+      }
+     },
+     "printed": [
+      "M $110"
+     ],
+     "note": "典藏手沖咖啡"
+    },
+    {
+     "name_zh": "完美日曬耶加雪菲 G1 (熱)",
+     "name_printed": "完美日曬耶加雪菲 G1 (熱)",
+     "name_en": "Yirgacheffe G1 Natural",
+     "prices_by_list": {
+      "價格": {
+       "M": 110
+      }
+     },
+     "printed": [
+      "M $110"
+     ],
+     "note": "典藏手沖咖啡"
+    },
+    {
+     "name_zh": "黃金曼特寧 G1 (三次手選) (冰)",
+     "name_printed": "黃金曼特寧 G1 (三次手選) (冰)",
+     "name_en": "Golden Mandheling G1(TP)",
+     "prices_by_list": {
+      "價格": {
+       "M": 115
+      }
+     },
+     "printed": [
+      "M $115"
+     ],
+     "note": "典藏手沖咖啡"
+    },
+    {
+     "name_zh": "黃金曼特寧 G1 (三次手選) (熱)",
+     "name_printed": "黃金曼特寧 G1 (三次手選) (熱)",
+     "name_en": "Golden Mandheling G1(TP)",
+     "prices_by_list": {
+      "價格": {
+       "M": 115
+      }
+     },
+     "printed": [
+      "M $115"
+     ],
+     "note": "典藏手沖咖啡"
+    },
+    {
+     "name_zh": "水洗耶加雪菲 科契爾 G1 (冰)",
+     "name_printed": "水洗耶加雪菲 科契爾 G1 (冰)",
+     "name_en": "Yirgacheffe Kochere G1",
+     "prices_by_list": {
+      "價格": {
+       "M": 95
+      }
+     },
+     "printed": [
+      "M $95"
+     ],
+     "note": "典藏手沖咖啡"
+    },
+    {
+     "name_zh": "水洗耶加雪菲 科契爾 G1 (熱)",
+     "name_printed": "水洗耶加雪菲 科契爾 G1 (熱)",
+     "name_en": "Yirgacheffe Kochere G1",
+     "prices_by_list": {
+      "價格": {
+       "M": 95
+      }
+     },
+     "printed": [
+      "M $95"
+     ],
+     "note": "典藏手沖咖啡"
+    },
+    {
+     "name_zh": "肯亞 精選小農 (冰)",
+     "name_printed": "肯亞 精選小農 (冰)",
+     "name_en": "Kenya Small holders",
+     "prices_by_list": {
+      "價格": {
+       "M": 95
+      }
+     },
+     "printed": [
+      "M $95"
+     ],
+     "note": "典藏手沖精品"
+    },
+    {
+     "name_zh": "肯亞 精選小農 (熱)",
+     "name_printed": "肯亞 精選小農 (熱)",
+     "name_en": "Kenya Small holders",
+     "prices_by_list": {
+      "價格": {
+       "M": 95
+      }
+     },
+     "printed": [
+      "M $95"
+     ],
+     "note": "典藏手沖精品"
+    },
+    {
+     "name_zh": "哥倫比亞 薇拉 (冰)",
+     "name_printed": "哥倫比亞 薇拉 (冰)",
+     "name_en": "Colombia Huila",
+     "prices_by_list": {
+      "價格": {
+       "M": 95
+      }
+     },
+     "printed": [
+      "M $95"
+     ],
+     "note": "典藏手沖咖啡"
+    },
+    {
+     "name_zh": "哥倫比亞 薇拉 (熱)",
+     "name_printed": "哥倫比亞 薇拉 (熱)",
+     "name_en": "Colombia Huila",
+     "prices_by_list": {
+      "價格": {
+       "M": 95
+      }
+     },
+     "printed": [
+      "M $95"
+     ],
+     "note": "典藏手沖咖啡"
+    },
+    {
+     "name_zh": "曼巴 (冰)",
+     "name_printed": "曼巴 (冰)",
+     "name_en": "Mandheling / Brazil blend",
+     "prices_by_list": {
+      "價格": {
+       "M": 95
+      }
+     },
+     "printed": [
+      "M $95"
+     ],
+     "note": "典藏手沖咖啡"
+    },
+    {
+     "name_zh": "曼巴 (熱)",
+     "name_printed": "曼巴 (熱)",
+     "name_en": "Mandheling / Brazil blend",
+     "prices_by_list": {
+      "價格": {
+       "M": 95
+      }
+     },
+     "printed": [
+      "M $95"
+     ],
+     "note": "典藏手沖咖啡"
+    },
+    {
+     "name_zh": "莊園老饕深焙 (冰)",
+     "name_printed": "莊園老饕深焙 (冰)",
+     "name_en": "Choice Blended(Dark)",
+     "prices_by_list": {
+      "價格": {
+       "M": 95
+      }
+     },
+     "printed": [
+      "M $95"
+     ],
+     "note": "典藏手沖咖啡"
+    },
+    {
+     "name_zh": "莊園老饕深焙 (熱)",
+     "name_printed": "莊園老饕深焙 (熱)",
+     "name_en": "Choice Blended(Dark)",
+     "prices_by_list": {
+      "價格": {
+       "M": 95
+      }
+     },
+     "printed": [
+      "M $95"
+     ],
+     "note": "典藏手沖咖啡"
+    }
+   ]
+  },
+  {
+   "name": "嚴選在地小農牧場系列",
+   "source": "https://www.louisacoffee.co/products_list/11",
+   "items": [
+    {
+     "name_zh": "小農經典拿鐵 (冰)",
+     "name_printed": "小農經典拿鐵 (冰)",
+     "name_en": "Farmer's Choice Coffee Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "小農經典拿鐵 (熱)",
+     "name_printed": "小農經典拿鐵 (熱)",
+     "name_en": "Farmer's Choice Coffee Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 90,
+       "L": 110
+      }
+     },
+     "printed": [
+      "M $90",
+      "L $110"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "小農輕奶拿鐵 (冰)",
+     "name_printed": "小農輕奶拿鐵 (冰)",
+     "name_en": "Farmer's Choice Tea Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 80,
+       "L": 100
+      }
+     },
+     "printed": [
+      "M $80",
+      "L $100"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "小農輕奶拿鐵 (熱)",
+     "name_printed": "小農輕奶拿鐵 (熱)",
+     "name_en": "Farmer's Choice Tea Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 80,
+       "L": 100
+      }
+     },
+     "printed": [
+      "M $80",
+      "L $100"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "小農雪點鮮奶茶 (冰)",
+     "name_printed": "小農雪點鮮奶茶 (冰)",
+     "name_en": "Farmer's Choice Tea Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 70
+      }
+     },
+     "printed": [
+      "M $70"
+     ],
+     "note": "(含黑糖)"
+    },
+    {
+     "name_zh": "小農雪點鮮奶茶 (熱)",
+     "name_printed": "小農雪點鮮奶茶 (熱)",
+     "name_en": "Farmer's Choice Tea Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 70
+      }
+     },
+     "printed": [
+      "M $70"
+     ],
+     "note": "(含黑糖)"
+    },
+    {
+     "name_zh": "黑糖風味小農鮮奶 (冰)",
+     "name_printed": "黑糖風味小農鮮奶 (冰)",
+     "name_en": "Farmer's Choice Flavored Milk / Brown Sugar",
+     "prices_by_list": {
+      "價格": {
+       "M": 65
+      }
+     },
+     "printed": [
+      "M $65"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "黑糖風味小農鮮奶 (熱)",
+     "name_printed": "黑糖風味小農鮮奶 (熱)",
+     "name_en": "Farmer's Choice Flavored Milk / Brown Sugar",
+     "prices_by_list": {
+      "價格": {
+       "M": 65
+      }
+     },
+     "printed": [
+      "M $65"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "風味小農鮮奶 (冰)",
+     "name_printed": "風味小農鮮奶 (冰)",
+     "name_en": "Farmer's Choice Flavored Milk / Original",
+     "prices_by_list": {
+      "價格": {
+       "M": 65
+      }
+     },
+     "printed": [
+      "M $65"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "風味小農鮮奶 (熱)",
+     "name_printed": "風味小農鮮奶 (熱)",
+     "name_en": "Farmer's Choice Flavored Milk / Original",
+     "prices_by_list": {
+      "價格": {
+       "M": 65
+      }
+     },
+     "printed": [
+      "M $65"
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "name": "茶與其他飲品．英國百年茶莊系列",
+   "source": "https://www.louisacoffee.co/products_list/12",
+   "items": [
+    {
+     "name_zh": "伯爵鮮奶茶",
+     "name_printed": "伯爵鮮奶茶",
+     "name_en": "Earl Grey Tea Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 65,
+       "L": 80
+      }
+     },
+     "printed": [
+      "M $65",
+      "L $80"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "伯爵紅茶",
+     "name_printed": "伯爵紅茶",
+     "name_en": "Earl Grey Tea",
+     "prices_by_list": {
+      "價格": {
+       "M": 50
+      }
+     },
+     "printed": [
+      "M $50"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "精選英式紅茶(冰)",
+     "name_printed": "精選英式紅茶(冰)",
+     "name_en": "English Black Tea",
+     "prices_by_list": {
+      "價格": {
+       "M": 50
+      }
+     },
+     "printed": [
+      "M $50"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "精選英式紅茶(熱)",
+     "name_printed": "精選英式紅茶(熱)",
+     "name_en": "English Black Tea",
+     "prices_by_list": {
+      "價格": {
+       "M": 50
+      }
+     },
+     "printed": [
+      "M $50"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "精選英式奶茶(冰)",
+     "name_printed": "精選英式奶茶(冰)",
+     "name_en": "English Black Milk Tea",
+     "prices_by_list": {
+      "價格": {
+       "M": 60,
+       "L": 70
+      }
+     },
+     "printed": [
+      "M $60",
+      "L $70"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "精選英式奶茶(熱)",
+     "name_printed": "精選英式奶茶(熱)",
+     "name_en": "English Black Milk Tea",
+     "prices_by_list": {
+      "價格": {
+       "M": 60,
+       "L": 70
+      }
+     },
+     "printed": [
+      "M $60",
+      "L $70"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "精選英式紅茶拿鐵(冰)",
+     "name_printed": "精選英式紅茶拿鐵(冰)",
+     "name_en": "English Black Tea Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 65,
+       "L": 80
+      }
+     },
+     "printed": [
+      "M $65",
+      "L $80"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "精選英式紅茶拿鐵(熱)",
+     "name_printed": "精選英式紅茶拿鐵(熱)",
+     "name_en": "English Black Tea Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 65,
+       "L": 80
+      }
+     },
+     "printed": [
+      "M $65",
+      "L $80"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "黑糖雪點奶茶(冰)",
+     "name_printed": "黑糖雪點奶茶(冰)",
+     "name_en": "Brown Sugar Milk Tea",
+     "prices_by_list": {
+      "價格": {
+       "M": 60
+      }
+     },
+     "printed": [
+      "M $60"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "黑糖雪點奶茶(熱)",
+     "name_printed": "黑糖雪點奶茶(熱)",
+     "name_en": "Brown Sugar Milk Tea",
+     "prices_by_list": {
+      "價格": {
+       "M": 60
+      }
+     },
+     "printed": [
+      "M $60"
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "name": "茶與其他飲品．世界知名茶飲系列",
+   "source": "https://www.louisacoffee.co/products_list/12",
+   "items": [
+    {
+     "name_zh": "南非國寶青檸茶(冰)",
+     "name_printed": "南非國寶青檸茶(冰)",
+     "name_en": "Lime & Rooibos Tea",
+     "prices_by_list": {
+      "價格": {
+       "M": 50
+      }
+     },
+     "printed": [
+      "M $50"
+     ],
+     "note": "(無咖啡因)"
+    },
+    {
+     "name_zh": "南非國寶青檸茶(熱)",
+     "name_printed": "南非國寶青檸茶(熱)",
+     "name_en": "Lime & Rooibos Tea",
+     "prices_by_list": {
+      "價格": {
+       "M": 50
+      }
+     },
+     "printed": [
+      "M $50"
+     ],
+     "note": "(無咖啡因)"
+    },
+    {
+     "name_zh": "紅蜜鮮奶茶(冰)",
+     "name_printed": "紅蜜鮮奶茶(冰)",
+     "name_en": "Honey & Rooibos Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 65
+      }
+     },
+     "printed": [
+      "M $65"
+     ],
+     "note": "(無咖啡因)"
+    },
+    {
+     "name_zh": "紅蜜鮮奶茶(熱)",
+     "name_printed": "紅蜜鮮奶茶(熱)",
+     "name_en": "Honey & Rooibos Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 65
+      }
+     },
+     "printed": [
+      "M $65"
+     ],
+     "note": "(無咖啡因)"
+    },
+    {
+     "name_zh": "泰式鮮奶茶(冰)",
+     "name_printed": "泰式鮮奶茶(冰)",
+     "name_en": "Thai Tea Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 65
+      }
+     },
+     "printed": [
+      "M $65"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "泰式鮮奶茶(熱)",
+     "name_printed": "泰式鮮奶茶(熱)",
+     "name_en": "Thai Tea Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 65
+      }
+     },
+     "printed": [
+      "M $65"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "大臣賞 焙茶鮮奶茶 (冰)",
+     "name_printed": "大臣賞 焙茶鮮奶茶 (冰)",
+     "name_en": "Hojicha Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 80
+      }
+     },
+     "printed": [
+      "M $80"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "大臣賞 焙茶鮮奶茶 (熱)",
+     "name_printed": "大臣賞 焙茶鮮奶茶 (熱)",
+     "name_en": "Hojicha Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 80
+      }
+     },
+     "printed": [
+      "M $80"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "100%一番抹茶鮮奶茶 (冰)",
+     "name_printed": "100%一番抹茶鮮奶茶 (冰)",
+     "name_en": "First Flush Matcha Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 75
+      }
+     },
+     "printed": [
+      "M $75"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "100%一番抹茶鮮奶茶 (熱)",
+     "name_printed": "100%一番抹茶鮮奶茶 (熱)",
+     "name_en": "First Flush Matcha Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 75
+      }
+     },
+     "printed": [
+      "M $75"
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "name": "茶與其他飲品．嚴選經典風味茶系列",
+   "source": "https://www.louisacoffee.co/products_list/12",
+   "items": [
+    {
+     "name_zh": "錫蘭紅茶(冰)",
+     "name_printed": "錫蘭紅茶(冰)",
+     "name_en": "Ceylon Black Tea",
+     "prices_by_list": {
+      "價格": {
+       "L": 45
+      }
+     },
+     "printed": [
+      "L $45"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "錫蘭紅茶(熱)",
+     "name_printed": "錫蘭紅茶(熱)",
+     "name_en": "Ceylon Black Tea",
+     "prices_by_list": {
+      "價格": {
+       "L": 45
+      }
+     },
+     "printed": [
+      "L $45"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "薰香綠茶(冰)",
+     "name_printed": "薰香綠茶(冰)",
+     "name_en": "Green Tea",
+     "prices_by_list": {
+      "價格": {
+       "L": 45
+      }
+     },
+     "printed": [
+      "L $45"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "薰香綠茶(熱)",
+     "name_printed": "薰香綠茶(熱)",
+     "name_en": "Green Tea",
+     "prices_by_list": {
+      "價格": {
+       "L": 45
+      }
+     },
+     "printed": [
+      "L $45"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "經典水果茶(冰)",
+     "name_printed": "經典水果茶(冰)",
+     "name_en": "Classic Fruit Tea",
+     "prices_by_list": {
+      "價格": {
+       "L": 65
+      }
+     },
+     "printed": [
+      "L $65"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "經典水果茶(熱)",
+     "name_printed": "經典水果茶(熱)",
+     "name_en": "Classic Fruit Tea",
+     "prices_by_list": {
+      "價格": {
+       "L": 65
+      }
+     },
+     "printed": [
+      "L $65"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "柳橙鮮果風味綠茶(冰)",
+     "name_printed": "柳橙鮮果風味綠茶(冰)",
+     "name_en": "Orange Green Tea",
+     "prices_by_list": {
+      "價格": {
+       "L": 65
+      }
+     },
+     "printed": [
+      "L $65"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "檸檬鮮果風味綠茶(冰)",
+     "name_printed": "檸檬鮮果風味綠茶(冰)",
+     "name_en": "Lemon Green Tea",
+     "prices_by_list": {
+      "價格": {
+       "L": 65
+      }
+     },
+     "printed": [
+      "L $65"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "百香鮮果風味綠茶(冰)",
+     "name_printed": "百香鮮果風味綠茶(冰)",
+     "name_en": "Granadilla Green Tea",
+     "prices_by_list": {
+      "價格": {
+       "L": 65
+      }
+     },
+     "printed": [
+      "L $65"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "芒果鮮果風味綠茶(冰)",
+     "name_printed": "芒果鮮果風味綠茶(冰)",
+     "name_en": "Mango Green Tea",
+     "prices_by_list": {
+      "價格": {
+       "L": 65
+      }
+     },
+     "printed": [
+      "L $65"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "太妃糖風味紅茶(冰)",
+     "name_printed": "太妃糖風味紅茶(冰)",
+     "name_en": "Toffee Black Tea",
+     "prices_by_list": {
+      "價格": {
+       "L": 55
+      }
+     },
+     "printed": [
+      "L $55"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "太妃糖風味紅茶(熱)",
+     "name_printed": "太妃糖風味紅茶(熱)",
+     "name_en": "Toffee Black Tea",
+     "prices_by_list": {
+      "價格": {
+       "L": 55
+      }
+     },
+     "printed": [
+      "L $55"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "貴妃荔枝風味紅茶(冰)",
+     "name_printed": "貴妃荔枝風味紅茶(冰)",
+     "name_en": "Litchi Black Tea",
+     "prices_by_list": {
+      "價格": {
+       "L": 55
+      }
+     },
+     "printed": [
+      "L $55"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "貴妃荔枝風味紅茶(熱)",
+     "name_printed": "貴妃荔枝風味紅茶(熱)",
+     "name_en": "Litchi Black Tea",
+     "prices_by_list": {
+      "價格": {
+       "L": 55
+      }
+     },
+     "printed": [
+      "L $55"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "四季翠玉青茶(冰)",
+     "name_printed": "四季翠玉青茶(冰)",
+     "name_en": "Turquoise tea",
+     "prices_by_list": {
+      "價格": {
+       "L": 50
+      }
+     },
+     "printed": [
+      "L $50"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "四季翠玉青茶(熱)",
+     "name_printed": "四季翠玉青茶(熱)",
+     "name_en": "Turquoise tea",
+     "prices_by_list": {
+      "價格": {
+       "L": 50
+      }
+     },
+     "printed": [
+      "L $50"
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "name": "茶與其他飲品．冰沙系列",
+   "source": "https://www.louisacoffee.co/products_list/12",
+   "items": [
+    {
+     "name_zh": "英國百年茶莊紅茶冰沙",
+     "name_printed": "英國百年茶莊紅茶冰沙",
+     "name_en": "British Tea Frappe",
+     "prices_by_list": {
+      "價格": {
+       "M": 65
+      }
+     },
+     "printed": [
+      "M $65"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "義式巧克力冰沙",
+     "name_printed": "義式巧克力冰沙",
+     "name_en": "Chocolate Frappe",
+     "prices_by_list": {
+      "價格": {
+       "M": 75
+      }
+     },
+     "printed": [
+      "M $75"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "拿鐵咖啡冰沙",
+     "name_printed": "拿鐵咖啡冰沙",
+     "name_en": "Coffee Latte Frappe",
+     "prices_by_list": {
+      "價格": {
+       "L": 90
+      }
+     },
+     "printed": [
+      "L $90"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "摩卡咖啡冰沙",
+     "name_printed": "摩卡咖啡冰沙",
+     "name_en": "Mochaccino Frappe",
+     "prices_by_list": {
+      "價格": {
+       "L": 95
+      }
+     },
+     "printed": [
+      "L $95"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "大臣賞 焙茶鮮奶冰沙",
+     "name_printed": "大臣賞 焙茶鮮奶冰沙",
+     "name_en": "Hojicha Latte Frappe",
+     "prices_by_list": {
+      "價格": {
+       "M": 80
+      }
+     },
+     "printed": [
+      "M $80"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "100%一番抹茶鮮奶冰沙",
+     "name_printed": "100%一番抹茶鮮奶冰沙",
+     "name_en": "First Flush Matcha Latte Frappe",
+     "prices_by_list": {
+      "價格": {
+       "M": 80
+      }
+     },
+     "printed": [
+      "M $80"
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "name": "茶與其他飲品．其他風味飲品",
+   "source": "https://www.louisacoffee.co/products_list/12",
+   "items": [
+    {
+     "name_zh": "愛丁堡女王紅茶 (冰)",
+     "name_printed": "愛丁堡女王紅茶 (冰)",
+     "name_en": "Ceylon & Apple Tea",
+     "prices_by_list": {
+      "價格": {
+       "L": 60
+      }
+     },
+     "printed": [
+      "L $60"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "愛丁堡女王紅茶 (熱)",
+     "name_printed": "愛丁堡女王紅茶 (熱)",
+     "name_en": "Ceylon & Apple Tea",
+     "prices_by_list": {
+      "價格": {
+       "L": 60
+      }
+     },
+     "printed": [
+      "L $60"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "義式巧克力(冰)",
+     "name_printed": "義式巧克力(冰)",
+     "name_en": "Chocolate",
+     "prices_by_list": {
+      "價格": {
+       "M": 70,
+       "L": 85
+      }
+     },
+     "printed": [
+      "M $70",
+      "L $85"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "義式巧克力(熱)",
+     "name_printed": "義式巧克力(熱)",
+     "name_en": "Chocolate",
+     "prices_by_list": {
+      "價格": {
+       "M": 70,
+       "L": 85
+      }
+     },
+     "printed": [
+      "M $70",
+      "L $85"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "水蜜桃蘋果風味茶 (冰)",
+     "name_printed": "水蜜桃蘋果風味茶 (冰)",
+     "name_en": "Peach & Apple Tea",
+     "prices_by_list": {
+      "價格": {
+       "M": 65
+      }
+     },
+     "printed": [
+      "M $65"
+     ],
+     "note": "(無咖啡因)"
+    },
+    {
+     "name_zh": "水蜜桃蘋果風味茶 (熱)",
+     "name_printed": "水蜜桃蘋果風味茶 (熱)",
+     "name_en": "Peach & Apple Tea",
+     "prices_by_list": {
+      "價格": {
+       "L": 65
+      }
+     },
+     "printed": [
+      "L $65"
+     ],
+     "note": "(無咖啡因)"
+    },
+    {
+     "name_zh": "西西里咖啡",
+     "name_printed": "西西里咖啡",
+     "name_en": "Espresso Romano",
+     "prices_by_list": {
+      "價格": {
+       "M": 75
+      }
+     },
+     "printed": [
+      "M $75"
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "name": "享瘦低醣新食感．活力新食感系列",
+   "source": "https://www.louisacoffee.co/products_list/17",
+   "items": [
+    {
+     "name_zh": "打拋好好豬",
+     "name_printed": "打拋好好豬",
+     "name_en": "Thai Basil Minced Pork",
+     "prices_by_list": {
+      "價格": {
+       "單價": 120
+      }
+     },
+     "printed": [
+      "$",
+      "$120"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "打拋雞好好",
+     "name_printed": "打拋雞好好",
+     "name_en": "Thai Basil Minced Chicken",
+     "prices_by_list": {
+      "價格": {
+       "單價": 120
+      }
+     },
+     "printed": [
+      "$",
+      "$120"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "味噌真好豬",
+     "name_printed": "味噌真好豬",
+     "name_en": "Miso Pork",
+     "prices_by_list": {
+      "價格": {
+       "單價": 120
+      }
+     },
+     "printed": [
+      "$",
+      "$120"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "雞胸好好吃",
+     "name_printed": "雞胸好好吃",
+     "name_en": "Rosemary Chicken Breast",
+     "prices_by_list": {
+      "價格": {
+       "單價": 135
+      }
+     },
+     "printed": [
+      "$",
+      "$135"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "薑薑好燒肉",
+     "name_printed": "薑薑好燒肉",
+     "name_en": "Ginger Pork",
+     "prices_by_list": {
+      "價格": {
+       "單價": 135
+      }
+     },
+     "printed": [
+      "$",
+      "$135"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "照燒好吃雞",
+     "name_printed": "照燒好吃雞",
+     "name_en": "Teriyaki Chicken Leg",
+     "prices_by_list": {
+      "價格": {
+       "單價": 135
+      }
+     },
+     "printed": [
+      "$",
+      "$135"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "雞腿好棒棒",
+     "name_printed": "雞腿好棒棒",
+     "name_en": "Braised Chicken Leg",
+     "prices_by_list": {
+      "價格": {
+       "單價": 135
+      }
+     },
+     "printed": [
+      "$",
+      "$135"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "照燒魚兒游",
+     "name_printed": "照燒魚兒游",
+     "name_en": "Teriyaki Fish",
+     "prices_by_list": {
+      "價格": {
+       "單價": 140
+      }
+     },
+     "printed": [
+      "$",
+      "$140"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "鮭魚游兒游",
+     "name_printed": "鮭魚游兒游",
+     "name_en": "Grilled Salmon",
+     "prices_by_list": {
+      "價格": {
+       "單價": 170
+      }
+     },
+     "printed": [
+      "$",
+      "$170"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "菜多好元氣",
+     "name_printed": "菜多好元氣",
+     "name_en": "Boiled Vegetables",
+     "prices_by_list": {
+      "價格": {
+       "單價": 110
+      }
+     },
+     "printed": [
+      "$",
+      "$110"
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "name": "享瘦低醣新食感．路易莎美味經典",
+   "source": "https://www.louisacoffee.co/products_list/17",
+   "items": [
+    {
+     "name_zh": "菠菜奶油千層麵",
+     "name_printed": "菠菜奶油千層麵",
+     "name_en": "Creamy Spinach Lasagna",
+     "prices_by_list": {
+      "價格": {
+       "單價": 140
+      }
+     },
+     "printed": [
+      "$",
+      "$140"
+     ],
+     "note": "(植物五辛素)"
+    },
+    {
+     "name_zh": "義式肉醬千層麵",
+     "name_printed": "義式肉醬千層麵",
+     "name_en": "Lasagna Bolognese",
+     "prices_by_list": {
+      "價格": {
+       "單價": 140
+      }
+     },
+     "printed": [
+      "$",
+      "$140"
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "name": "輕食．早餐派對",
+   "source": "https://www.louisacoffee.co/products_list/13",
+   "items": [
+    {
+     "name_zh": "法式花生巧克力吐司",
+     "name_printed": "法式花生巧克力吐司",
+     "name_en": "Peanut Butter & Hazelnut Chocolate French Toast",
+     "prices_by_list": {
+      "價格": {
+       "單價": 75
+      }
+     },
+     "printed": [
+      "$75"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "鮪魚歐姆蛋堡",
+     "name_printed": "鮪魚歐姆蛋堡",
+     "name_en": "Tuna, Omelette & Cheese Burger",
+     "prices_by_list": {
+      "價格": {
+       "單價": 75
+      }
+     },
+     "printed": [
+      "$75"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "火腿蛋鬆餅堡",
+     "name_printed": "火腿蛋鬆餅堡",
+     "name_en": "Ham & Egg Pancake",
+     "prices_by_list": {
+      "價格": {
+       "單價": 80
+      }
+     },
+     "printed": [
+      "$80"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "麥香火腿玉米蛋磚壓",
+     "name_printed": "麥香火腿玉米蛋磚壓",
+     "name_en": "Ham, Corn & Omelette Wrapanini",
+     "prices_by_list": {
+      "價格": {
+       "單價": 85
+      }
+     },
+     "printed": [
+      "$85"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "法式培根蔬菜三明治",
+     "name_printed": "法式培根蔬菜三明治",
+     "name_en": "Bacon & Vegetable French Toast",
+     "prices_by_list": {
+      "價格": {
+       "單價": 90
+      }
+     },
+     "printed": [
+      "$90"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "麥香青醬燻雞磚壓",
+     "name_printed": "麥香青醬燻雞磚壓",
+     "name_en": "Smoked Chicken with Pesto Wrapanini",
+     "prices_by_list": {
+      "價格": {
+       "單價": 90
+      }
+     },
+     "printed": [
+      "$90"
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "name": "輕食．義式磚壓三明治",
+   "source": "https://www.louisacoffee.co/products_list/13",
+   "items": [
+    {
+     "name_zh": "青醬野菇磚壓",
+     "name_printed": "青醬野菇磚壓",
+     "name_en": "Mushroom With Pesto",
+     "prices_by_list": {
+      "價格": {
+       "單價": 65
+      }
+     },
+     "printed": [
+      "$65"
+     ],
+     "note": "奶素"
+    },
+    {
+     "name_zh": "火腿起司",
+     "name_printed": "火腿起司",
+     "name_en": "Ham & Cheese",
+     "prices_by_list": {
+      "價格": {
+       "單價": 65
+      }
+     },
+     "printed": [
+      "$65"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "鮪魚玉米",
+     "name_printed": "鮪魚玉米",
+     "name_en": "Tuna & Corn",
+     "prices_by_list": {
+      "價格": {
+       "單價": 70
+      }
+     },
+     "printed": [
+      "$70"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "培根起司蛋",
+     "name_printed": "培根起司蛋",
+     "name_en": "Bacon, Egg & Cheese",
+     "prices_by_list": {
+      "價格": {
+       "單價": 70
+      }
+     },
+     "printed": [
+      "$70"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "薑汁燒肉",
+     "name_printed": "薑汁燒肉",
+     "name_en": "Ginger Roasted Pork",
+     "prices_by_list": {
+      "價格": {
+       "單價": 85
+      }
+     },
+     "printed": [
+      "$85"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "墨西哥辣椒豬肉",
+     "name_printed": "墨西哥辣椒豬肉",
+     "name_en": "Jalapeño Pork",
+     "prices_by_list": {
+      "價格": {
+       "單價": 80
+      }
+     },
+     "printed": [
+      "$80"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "墨西哥辣椒牛肉",
+     "name_printed": "墨西哥辣椒牛肉",
+     "name_en": "Jalapeño Beef",
+     "prices_by_list": {
+      "價格": {
+       "單價": 90
+      }
+     },
+     "printed": [
+      "$90"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "法式紅酒牛肉",
+     "name_printed": "法式紅酒牛肉",
+     "name_en": "Beef Bourguignon",
+     "prices_by_list": {
+      "價格": {
+       "單價": 90
+      }
+     },
+     "printed": [
+      "$90"
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "name": "輕食．經典植物肉排系列",
+   "source": "https://www.louisacoffee.co/products_list/13",
+   "items": [
+    {
+     "name_zh": "經典植物肉排風味吐司磚壓",
+     "name_printed": "經典植物肉排風味吐司磚壓",
+     "name_en": "wrapanini",
+     "prices_by_list": {
+      "價格": {
+       "單價": 70
+      }
+     },
+     "printed": [
+      "$70"
+     ],
+     "note": "奶素"
+    },
+    {
+     "name_zh": "植物肉排麥香三明治",
+     "name_printed": "植物肉排麥香三明治",
+     "name_en": "Whole Wheat Sandwich",
+     "prices_by_list": {
+      "價格": {
+       "單價": 70
+      }
+     },
+     "printed": [
+      "$70"
+     ],
+     "note": "全素"
+    },
+    {
+     "name_zh": "植物肉排瑪芬堡",
+     "name_printed": "植物肉排瑪芬堡",
+     "name_en": "English Muffin",
+     "prices_by_list": {
+      "價格": {
+       "單價": 75
+      }
+     },
+     "printed": [
+      "$75"
+     ],
+     "note": "奶素"
+    },
+    {
+     "name_zh": "植物肉排炊米堡",
+     "name_printed": "植物肉排炊米堡",
+     "name_en": "Rice Burger",
+     "prices_by_list": {
+      "價格": {
+       "單價": 80
+      }
+     },
+     "printed": [
+      "$80"
+     ],
+     "note": "全素"
+    },
+    {
+     "name_zh": "植物肉排風味三明治",
+     "name_printed": "植物肉排風味三明治",
+     "name_en": "Flavored Sandwich",
+     "prices_by_list": {
+      "價格": {
+       "單價": 75
+      }
+     },
+     "printed": [
+      "$75"
+     ],
+     "note": "全素"
+    },
+    {
+     "name_zh": "植物肉排貝果",
+     "name_printed": "植物肉排貝果",
+     "name_en": "Bagel",
+     "prices_by_list": {
+      "價格": {
+       "單價": 80
+      }
+     },
+     "printed": [
+      "$80"
+     ],
+     "note": "全素"
+    }
+   ]
+  },
+  {
+   "name": "輕食．法式吐司系列",
+   "source": "https://www.louisacoffee.co/products_list/13",
+   "items": [
+    {
+     "name_zh": "蜂蜜",
+     "name_printed": "蜂蜜",
+     "name_en": "Honey",
+     "prices_by_list": {
+      "價格": {
+       "單價": 59
+      }
+     },
+     "printed": [
+      "$59"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "草莓",
+     "name_printed": "草莓",
+     "name_en": "Strawberry",
+     "prices_by_list": {
+      "價格": {
+       "單價": 59
+      }
+     },
+     "printed": [
+      "$59"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "藍莓",
+     "name_printed": "藍莓",
+     "name_en": "Blueberry",
+     "prices_by_list": {
+      "價格": {
+       "單價": 59
+      }
+     },
+     "printed": [
+      "$59"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "榛果可可",
+     "name_printed": "榛果可可",
+     "name_en": "Hazelnut Cocoa",
+     "prices_by_list": {
+      "價格": {
+       "單價": 59
+      }
+     },
+     "printed": [
+      "$59"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "脆粒花生",
+     "name_printed": "脆粒花生",
+     "name_en": "Peanut Butter",
+     "prices_by_list": {
+      "價格": {
+       "單價": 59
+      }
+     },
+     "printed": [
+      "$59"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "火腿",
+     "name_printed": "火腿",
+     "name_en": "Ham",
+     "prices_by_list": {
+      "價格": {
+       "單價": 72
+      }
+     },
+     "printed": [
+      "$72"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "鮪魚",
+     "name_printed": "鮪魚",
+     "name_en": "Tuna",
+     "prices_by_list": {
+      "價格": {
+       "單價": 72
+      }
+     },
+     "printed": [
+      "$72"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "蔬菜",
+     "name_printed": "蔬菜",
+     "name_en": "Vegetables",
+     "prices_by_list": {
+      "價格": {
+       "單價": 72
+      }
+     },
+     "printed": [
+      "$72"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "燻雞",
+     "name_printed": "燻雞",
+     "name_en": "Smoked Chicken",
+     "prices_by_list": {
+      "價格": {
+       "單價": 82
+      }
+     },
+     "printed": [
+      "$82"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "烤腿排",
+     "name_printed": "烤腿排",
+     "name_en": "Quarter BBQ",
+     "prices_by_list": {
+      "價格": {
+       "單價": 86
+      }
+     },
+     "printed": [
+      "$86"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "義式里肌豬",
+     "name_printed": "義式里肌豬",
+     "name_en": "Italian Pork Loin",
+     "prices_by_list": {
+      "價格": {
+       "單價": 82
+      }
+     },
+     "printed": [
+      "$82"
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "name": "輕食．瑪芬堡",
+   "source": "https://www.louisacoffee.co/products_list/13",
+   "items": [
+    {
+     "name_zh": "豬肉起司瑪芬堡",
+     "name_printed": "豬肉起司瑪芬堡",
+     "name_en": "Pork & Cheese",
+     "prices_by_list": {
+      "價格": {
+       "單價": 65
+      }
+     },
+     "printed": [
+      "$65"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "豬肉瑪芬堡加蛋",
+     "name_printed": "豬肉瑪芬堡加蛋",
+     "name_en": "Pork, Egg & Cheese",
+     "prices_by_list": {
+      "價格": {
+       "單價": 75
+      }
+     },
+     "printed": [
+      "$75"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "雙層豬肉瑪芬堡",
+     "name_printed": "雙層豬肉瑪芬堡",
+     "name_en": "Double Pork & Cheese",
+     "prices_by_list": {
+      "價格": {
+       "單價": 89
+      }
+     },
+     "printed": [
+      "$89"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "雙層豬肉瑪芬堡加蛋",
+     "name_printed": "雙層豬肉瑪芬堡加蛋",
+     "name_en": "Double Pork, Egg & Cheese",
+     "prices_by_list": {
+      "價格": {
+       "單價": 99
+      }
+     },
+     "printed": [
+      "$99"
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "name": "輕食．蛋堡系列",
+   "source": "https://www.louisacoffee.co/products_list/13",
+   "items": [
+    {
+     "name_zh": "起司蛋堡",
+     "name_printed": "起司蛋堡",
+     "name_en": "Cheese with Peanut Butter",
+     "prices_by_list": {
+      "價格": {
+       "單價": 60
+      }
+     },
+     "printed": [
+      "$60"
+     ],
+     "note": "蛋奶素/含花生醬"
+    },
+    {
+     "name_zh": "火腿起司",
+     "name_printed": "火腿起司",
+     "name_en": "Ham & Cheese with Peanut Butter",
+     "prices_by_list": {
+      "價格": {
+       "單價": 65
+      }
+     },
+     "printed": [
+      "$65"
+     ],
+     "note": "含花生醬"
+    },
+    {
+     "name_zh": "培根起司",
+     "name_printed": "培根起司",
+     "name_en": "Bacon & Cheese with Peanut Butter",
+     "prices_by_list": {
+      "價格": {
+       "單價": 70
+      }
+     },
+     "printed": [
+      "$70"
+     ],
+     "note": "含花生醬"
+    }
+   ]
+  },
+  {
+   "name": "輕食．甜磚壓",
+   "source": "https://www.louisacoffee.co/products_list/13",
+   "items": [
+    {
+     "name_zh": "蜂蜜",
+     "name_printed": "蜂蜜",
+     "name_en": "Honey",
+     "prices_by_list": {
+      "價格": {
+       "單價": 55
+      }
+     },
+     "printed": [
+      "$55"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "草莓",
+     "name_printed": "草莓",
+     "name_en": "Strawberry",
+     "prices_by_list": {
+      "價格": {
+       "單價": 55
+      }
+     },
+     "printed": [
+      "$55"
+     ],
+     "note": "全素"
+    },
+    {
+     "name_zh": "藍莓",
+     "name_printed": "藍莓",
+     "name_en": "Blueberry",
+     "prices_by_list": {
+      "價格": {
+       "單價": 55
+      }
+     },
+     "printed": [
+      "$55"
+     ],
+     "note": "全素"
+    },
+    {
+     "name_zh": "榛果可可",
+     "name_printed": "榛果可可",
+     "name_en": "Hazelnut Cocoa",
+     "prices_by_list": {
+      "價格": {
+       "單價": 55
+      }
+     },
+     "printed": [
+      "$55"
+     ],
+     "note": "奶素"
+    },
+    {
+     "name_zh": "脆粒花生",
+     "name_printed": "脆粒花生",
+     "name_en": "Peanut Butter",
+     "prices_by_list": {
+      "價格": {
+       "單價": 55
+      }
+     },
+     "printed": [
+      "$55"
+     ],
+     "note": "全素"
+    },
+    {
+     "name_zh": "(加一份麻糬)",
+     "name_printed": "(加一份麻糬)",
+     "name_en": "add Mochi",
+     "prices_by_list": {
+      "價格": {
+       "單價": 15
+      }
+     },
+     "printed": [
+      "$15"
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "name": "輕食．麥香三明治",
+   "source": "https://www.louisacoffee.co/products_list/13",
+   "items": [
+    {
+     "name_zh": "火腿",
+     "name_printed": "火腿",
+     "name_en": "Ham",
+     "prices_by_list": {
+      "價格": {
+       "單價": 60
+      }
+     },
+     "printed": [
+      "$60"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "蔬菜",
+     "name_printed": "蔬菜",
+     "name_en": "Vegetables",
+     "prices_by_list": {
+      "價格": {
+       "單價": 60
+      }
+     },
+     "printed": [
+      "$60"
+     ],
+     "note": "全素"
+    },
+    {
+     "name_zh": "鮪魚",
+     "name_printed": "鮪魚",
+     "name_en": "Tuna",
+     "prices_by_list": {
+      "價格": {
+       "單價": 60
+      }
+     },
+     "printed": [
+      "$60"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "燻雞",
+     "name_printed": "燻雞",
+     "name_en": "Smoked chicken",
+     "prices_by_list": {
+      "價格": {
+       "單價": 70
+      }
+     },
+     "printed": [
+      "$70"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "烤腿排",
+     "name_printed": "烤腿排",
+     "name_en": "Quarter BBQ",
+     "prices_by_list": {
+      "價格": {
+       "單價": 74
+      }
+     },
+     "printed": [
+      "$74"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "義式里肌豬",
+     "name_printed": "義式里肌豬",
+     "name_en": "Italian Pork Loin",
+     "prices_by_list": {
+      "價格": {
+       "單價": 70
+      }
+     },
+     "printed": [
+      "$70"
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "name": "輕食．風味三明治",
+   "source": "https://www.louisacoffee.co/products_list/13",
+   "items": [
+    {
+     "name_zh": "火腿",
+     "name_printed": "火腿",
+     "name_en": "Ham",
+     "prices_by_list": {
+      "價格": {
+       "單價": 65
+      }
+     },
+     "printed": [
+      "$65"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "蔬菜",
+     "name_printed": "蔬菜",
+     "name_en": "Vegetables",
+     "prices_by_list": {
+      "價格": {
+       "單價": 65
+      }
+     },
+     "printed": [
+      "$65"
+     ],
+     "note": "全素"
+    },
+    {
+     "name_zh": "鮪魚",
+     "name_printed": "鮪魚",
+     "name_en": "Tuna",
+     "prices_by_list": {
+      "價格": {
+       "單價": 65
+      }
+     },
+     "printed": [
+      "$65"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "燻雞",
+     "name_printed": "燻雞",
+     "name_en": "Smoked Chicken",
+     "prices_by_list": {
+      "價格": {
+       "單價": 75
+      }
+     },
+     "printed": [
+      "$75"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "烤腿排",
+     "name_printed": "烤腿排",
+     "name_en": "Quarter BBQ",
+     "prices_by_list": {
+      "價格": {
+       "單價": 79
+      }
+     },
+     "printed": [
+      "$79"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "義式里肌豬",
+     "name_printed": "義式里肌豬",
+     "name_en": "Italian Pork Loin",
+     "prices_by_list": {
+      "價格": {
+       "單價": 75
+      }
+     },
+     "printed": [
+      "$75"
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "name": "輕食．貝果系列",
+   "source": "https://www.louisacoffee.co/products_list/13",
+   "items": [
+    {
+     "name_zh": "火腿",
+     "name_printed": "火腿",
+     "name_en": "Ham",
+     "prices_by_list": {
+      "價格": {
+       "單價": 75
+      }
+     },
+     "printed": [
+      "$75"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "蔬菜",
+     "name_printed": "蔬菜",
+     "name_en": "Vegetables",
+     "prices_by_list": {
+      "價格": {
+       "單價": 75
+      }
+     },
+     "printed": [
+      "$75"
+     ],
+     "note": "全素"
+    },
+    {
+     "name_zh": "鮪魚",
+     "name_printed": "鮪魚",
+     "name_en": "Tuna",
+     "prices_by_list": {
+      "價格": {
+       "單價": 75
+      }
+     },
+     "printed": [
+      "$75"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "燻雞",
+     "name_printed": "燻雞",
+     "name_en": "Smoked Chicken",
+     "prices_by_list": {
+      "價格": {
+       "單價": 85
+      }
+     },
+     "printed": [
+      "$85"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "義式里肌豬",
+     "name_printed": "義式里肌豬",
+     "name_en": "Italian Pork Loin",
+     "prices_by_list": {
+      "價格": {
+       "單價": 85
+      }
+     },
+     "printed": [
+      "$85"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "烤腿排",
+     "name_printed": "烤腿排",
+     "name_en": "Quarter BBQ",
+     "prices_by_list": {
+      "價格": {
+       "單價": 89
+      }
+     },
+     "printed": [
+      "$89"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "蜂蜜",
+     "name_printed": "蜂蜜",
+     "name_en": "Honey",
+     "prices_by_list": {
+      "價格": {
+       "單價": 59
+      }
+     },
+     "printed": [
+      "$59"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "藍莓",
+     "name_printed": "藍莓",
+     "name_en": "Blueberry",
+     "prices_by_list": {
+      "價格": {
+       "單價": 59
+      }
+     },
+     "printed": [
+      "$59"
+     ],
+     "note": "全素"
+    },
+    {
+     "name_zh": "草莓",
+     "name_printed": "草莓",
+     "name_en": "Strawberry",
+     "prices_by_list": {
+      "價格": {
+       "單價": 59
+      }
+     },
+     "printed": [
+      "$59"
+     ],
+     "note": "全素"
+    },
+    {
+     "name_zh": "榛果可可",
+     "name_printed": "榛果可可",
+     "name_en": "Hazelnut Cocoa",
+     "prices_by_list": {
+      "價格": {
+       "單價": 59
+      }
+     },
+     "printed": [
+      "$59"
+     ],
+     "note": "奶素"
+    },
+    {
+     "name_zh": "脆粒花生",
+     "name_printed": "脆粒花生",
+     "name_en": "Peanut Butter",
+     "prices_by_list": {
+      "價格": {
+       "單價": 59
+      }
+     },
+     "printed": [
+      "$59"
+     ],
+     "note": "全素"
+    }
+   ]
+  },
+  {
+   "name": "輕食．炊米堡系列",
+   "source": "https://www.louisacoffee.co/products_list/13",
+   "items": [
+    {
+     "name_zh": "培根起司",
+     "name_printed": "培根起司",
+     "name_en": "Bacon & Cheese",
+     "prices_by_list": {
+      "價格": {
+       "單價": 70
+      }
+     },
+     "printed": [
+      "$70"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "火腿起司",
+     "name_printed": "火腿起司",
+     "name_en": "Ham & Cheese",
+     "prices_by_list": {
+      "價格": {
+       "單價": 65
+      }
+     },
+     "printed": [
+      "$65"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "豬肉起司",
+     "name_printed": "豬肉起司",
+     "name_en": "Pork & Cheese",
+     "prices_by_list": {
+      "價格": {
+       "單價": 75
+      }
+     },
+     "printed": [
+      "$75"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "墨西哥辣椒豬肉",
+     "name_printed": "墨西哥辣椒豬肉",
+     "name_en": "Jalapeño Pork",
+     "prices_by_list": {
+      "價格": {
+       "單價": 90
+      }
+     },
+     "printed": [
+      "$90"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "薑汁燒肉",
+     "name_printed": "薑汁燒肉",
+     "name_en": "Ginger Roasted Pork",
+     "prices_by_list": {
+      "價格": {
+       "單價": 95
+      }
+     },
+     "printed": [
+      "$95"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "墨西哥辣椒牛肉",
+     "name_printed": "墨西哥辣椒牛肉",
+     "name_en": "Jalapeño Beef",
+     "prices_by_list": {
+      "價格": {
+       "單價": 99
+      }
+     },
+     "printed": [
+      "$99"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "法式紅酒牛肉",
+     "name_printed": "法式紅酒牛肉",
+     "name_en": "Beef Bourguignon",
+     "prices_by_list": {
+      "價格": {
+       "單價": 99
+      }
+     },
+     "printed": [
+      "$99"
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "name": "輕食．漢堡",
+   "source": "https://www.louisacoffee.co/products_list/13",
+   "items": [
+    {
+     "name_zh": "墨西哥辣椒豬肉堡",
+     "name_printed": "墨西哥辣椒豬肉堡",
+     "name_en": "Jalapeño Pork",
+     "prices_by_list": {
+      "價格": {
+       "單價": 85
+      }
+     },
+     "printed": [
+      "$85"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "日式燒肉堡",
+     "name_printed": "日式燒肉堡",
+     "name_en": "Japanese Roasted Pork",
+     "prices_by_list": {
+      "價格": {
+       "單價": 90
+      }
+     },
+     "printed": [
+      "$90"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "墨西哥辣椒牛肉堡",
+     "name_printed": "墨西哥辣椒牛肉堡",
+     "name_en": "Jalapeño Beef",
+     "prices_by_list": {
+      "價格": {
+       "單價": 95
+      }
+     },
+     "printed": [
+      "$95"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "法式紅酒牛肉堡",
+     "name_printed": "法式紅酒牛肉堡",
+     "name_en": "Beef Bourguignon",
+     "prices_by_list": {
+      "價格": {
+       "單價": 95
+      }
+     },
+     "printed": [
+      "$95"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "雙層起司雞腿堡",
+     "name_printed": "雙層起司雞腿堡",
+     "name_en": "Double Cheese Chicken",
+     "prices_by_list": {
+      "價格": {
+       "單價": 95
+      }
+     },
+     "printed": [
+      "$95"
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "name": "輕食．口袋歐姆蛋",
+   "source": "https://www.louisacoffee.co/products_list/13",
+   "items": [
+    {
+     "name_zh": "起司歐姆蛋",
+     "name_printed": "起司歐姆蛋",
+     "name_en": "Cheese",
+     "prices_by_list": {
+      "價格": {
+       "單價": 65
+      }
+     },
+     "printed": [
+      "$65"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "培根歐姆蛋",
+     "name_printed": "培根歐姆蛋",
+     "name_en": "Bacon",
+     "prices_by_list": {
+      "價格": {
+       "單價": 75
+      }
+     },
+     "printed": [
+      "$75"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "鮪魚歐姆蛋",
+     "name_printed": "鮪魚歐姆蛋",
+     "name_en": "Tuna",
+     "prices_by_list": {
+      "價格": {
+       "單價": 75
+      }
+     },
+     "printed": [
+      "$75"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "蔬菜歐姆蛋",
+     "name_printed": "蔬菜歐姆蛋",
+     "name_en": "Vegetables",
+     "prices_by_list": {
+      "價格": {
+       "單價": 70
+      }
+     },
+     "printed": [
+      "$70"
+     ],
+     "note": "蛋奶素"
+    }
+   ]
+  },
+  {
+   "name": "輕食．鬆餅堡",
+   "source": "https://www.louisacoffee.co/products_list/13",
+   "items": [
+    {
+     "name_zh": "寶寶蛋鬆餅堡",
+     "name_printed": "寶寶蛋鬆餅堡",
+     "name_en": "Double Cheese & Egg",
+     "prices_by_list": {
+      "價格": {
+       "單價": 70
+      }
+     },
+     "printed": [
+      "$70"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "培根蛋鬆餅堡",
+     "name_printed": "培根蛋鬆餅堡",
+     "name_en": "Bacon, Egg & Cheese",
+     "prices_by_list": {
+      "價格": {
+       "單價": 75
+      }
+     },
+     "printed": [
+      "$75"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "豬肉蛋鬆餅堡",
+     "name_printed": "豬肉蛋鬆餅堡",
+     "name_en": "Pork, Egg & Cheese",
+     "prices_by_list": {
+      "價格": {
+       "單價": 85
+      }
+     },
+     "printed": [
+      "$85"
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "name": "軟歐藏心貝果．軟歐貝果",
+   "source": "https://www.louisacoffee.co/products_list/14",
+   "items": [
+    {
+     "name_zh": "原味",
+     "name_printed": "原味",
+     "name_en": "Plain",
+     "prices_by_list": {
+      "價格": {
+       "單價": 50
+      }
+     },
+     "printed": [
+      "$ $50"
+     ],
+     "note": "(全素)"
+    },
+    {
+     "name_zh": "紅麴蔓越莓",
+     "name_printed": "紅麴蔓越莓",
+     "name_en": "Red Yeast Rice with Cranberry",
+     "prices_by_list": {
+      "價格": {
+       "單價": 50
+      }
+     },
+     "printed": [
+      "$ $50"
+     ],
+     "note": "(全素)"
+    },
+    {
+     "name_zh": "藍莓",
+     "name_printed": "藍莓",
+     "name_en": "Blueberry",
+     "prices_by_list": {
+      "價格": {
+       "單價": 55
+      }
+     },
+     "printed": [
+      "$ $55"
+     ],
+     "note": "(全素)"
+    }
+   ]
+  },
+  {
+   "name": "軟歐藏心貝果．藏心貝果",
+   "source": "https://www.louisacoffee.co/products_list/14",
+   "items": [
+    {
+     "name_zh": "起司知心雙色乳酪",
+     "name_printed": "起司知心雙色乳酪",
+     "name_en": "Double Cheese",
+     "prices_by_list": {
+      "價格": {
+       "單價": 70
+      }
+     },
+     "printed": [
+      "$ $70"
+     ],
+     "note": "(奶素)"
+    },
+    {
+     "name_zh": "黑可可知心",
+     "name_printed": "黑可可知心",
+     "name_en": "Double Chocolate",
+     "prices_by_list": {
+      "價格": {
+       "單價": 65
+      }
+     },
+     "printed": [
+      "$ $65"
+     ],
+     "note": "(全素)"
+    }
+   ]
+  },
+  {
+   "name": "糕點",
+   "source": "https://www.louisacoffee.co/products_list/6",
+   "items": [
+    {
+     "name_zh": "伯爵柚香波士頓派",
+     "name_printed": "伯爵柚香波士頓派",
+     "name_en": "Earl Grapefruit Boston Pie",
+     "prices_by_list": {
+      "價格": {
+       "單片": 80
+      }
+     },
+     "printed": [
+      "$80/單片"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "肉桂捲",
+     "name_printed": "肉桂捲",
+     "name_en": "cinnamon roll",
+     "prices_by_list": {
+      "價格": {
+       "單個": 65
+      }
+     },
+     "printed": [
+      "$$65/單個"
+     ],
+     "note": ""
+    },
+    {
+     "name_zh": "生酮乳酪捲",
+     "name_printed": "生酮乳酪捲",
+     "name_en": "Keto Cheese Rolls",
+     "prices_by_list": {
+      "價格": {
+       "單片": 75
+      }
+     },
+     "printed": [
+      "$75/單片"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "生酮伯爵茶乳酪捲",
+     "name_printed": "生酮伯爵茶乳酪捲",
+     "name_en": "Keto Earl Grey Cheese Rolls",
+     "prices_by_list": {
+      "價格": {
+       "單片": 75
+      }
+     },
+     "printed": [
+      "$75/單片"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "輕乳酪焦糖布丁蛋糕",
+     "name_printed": "輕乳酪焦糖布丁蛋糕",
+     "name_en": "",
+     "prices_by_list": {
+      "價格": {
+       "單片": 70
+      }
+     },
+     "printed": [
+      "$70/單片"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "岩燒黃金乳酪派",
+     "name_printed": "岩燒黃金乳酪派",
+     "name_en": "Cream Cheese Pie",
+     "prices_by_list": {
+      "價格": {
+       "單片": 70
+      }
+     },
+     "printed": [
+      "$70/單片"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "深黑巧克脆皮泡芙",
+     "name_printed": "深黑巧克脆皮泡芙",
+     "name_en": "Chocolate Puff with Chocolate Cream",
+     "prices_by_list": {
+      "價格": {
+       "單顆": 55
+      }
+     },
+     "printed": [
+      "$55/單顆"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "草莓脆皮泡芙",
+     "name_printed": "草莓脆皮泡芙",
+     "name_en": "Strawberry Puff",
+     "prices_by_list": {
+      "價格": {
+       "單顆": 50
+      }
+     },
+     "printed": [
+      "$50/單顆"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "白蘭地生巧克力蛋糕",
+     "name_printed": "白蘭地生巧克力蛋糕",
+     "name_en": "Brandy Chocolate Cake",
+     "prices_by_list": {
+      "價格": {
+       "單片": 80
+      }
+     },
+     "printed": [
+      "$80/單片"
+     ],
+     "note": "葷(含酒)"
+    },
+    {
+     "name_zh": "黑森林波士頓派",
+     "name_printed": "黑森林波士頓派",
+     "name_en": "Black Forest Boston Pie",
+     "prices_by_list": {
+      "價格": {
+       "單片": 85
+      }
+     },
+     "printed": [
+      "$85/單片 (限定門市販售)"
+     ],
+     "note": "限定門市販售；蛋奶素(產品內可能含有籽，請小心食用)"
+    },
+    {
+     "name_zh": "慢熟乳酪",
+     "name_printed": "慢熟乳酪",
+     "name_en": "Cheese Cake",
+     "prices_by_list": {
+      "價格": {
+       "單個": 85
+      }
+     },
+     "printed": [
+      "$85/單個"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "法式布蕾(原味)",
+     "name_printed": "法式布蕾(原味)",
+     "name_en": "Brulee",
+     "prices_by_list": {
+      "價格": {
+       "單價": 60
+      }
+     },
+     "printed": [
+      "$60"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "青檸塔",
+     "name_printed": "青檸塔",
+     "name_en": "Lime Tart",
+     "prices_by_list": {
+      "價格": {
+       "單個": 55,
+       "兩個": 100
+      }
+     },
+     "printed": [
+      "$55/單個",
+      "$100/兩個"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "法式鹹派（培根蔬食／三杯杏鮑菇）",
+     "name_printed": "法式鹹派",
+     "name_en": "Quiche",
+     "prices_by_list": {
+      "價格": {
+       "單個": 75
+      }
+     },
+     "printed": [
+      "$培根蔬食／三杯杏鮑菇",
+      "$75/單個"
+     ],
+     "note": "葷"
+    },
+    {
+     "name_zh": "提拉米蘇",
+     "name_printed": "提拉米蘇",
+     "name_en": "Tiramisu",
+     "prices_by_list": {
+      "價格": {
+       "單個": 95,
+       "盒": 250
+      }
+     },
+     "printed": [
+      "$95/單個",
+      "$250/盒"
+     ],
+     "note": "葷(含酒與豬明膠)"
+    },
+    {
+     "name_zh": "焦糖蘋果派",
+     "name_printed": "焦糖蘋果派",
+     "name_en": "Caramel Apple Pie",
+     "prices_by_list": {
+      "價格": {
+       "單片": 95
+      }
+     },
+     "printed": [
+      "$95/單片"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "檸檬糖霜溫蛋糕",
+     "name_printed": "檸檬糖霜溫蛋糕",
+     "name_en": "Lemon Frosting Cake",
+     "prices_by_list": {
+      "價格": {
+       "單個": 75
+      }
+     },
+     "printed": [
+      "$75/單個"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "經典起司蛋糕",
+     "name_printed": "經典起司蛋糕",
+     "name_en": "Classic Cheesecake",
+     "prices_by_list": {
+      "價格": {
+       "單片": 55
+      }
+     },
+     "printed": [
+      "$$55/單片"
+     ],
+     "note": "葷(含牛明膠)"
+    },
+    {
+     "name_zh": "旅人常溫蛋糕系列-瑪德蓮",
+     "name_printed": "旅人常溫蛋糕系列-瑪德蓮",
+     "name_en": "Madeleine",
+     "prices_by_list": {
+      "價格": {
+       "原味": 35,
+       "伯爵茶": 45
+      }
+     },
+     "printed": [
+      "$35 / 原味",
+      "$45 / 伯爵茶"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "香蕉核桃旅人蛋糕",
+     "name_printed": "香蕉核桃旅人蛋糕",
+     "name_en": "Banana& Walnut Pound Cake",
+     "prices_by_list": {
+      "價格": {
+       "單片": 45
+      }
+     },
+     "printed": [
+      "$45/單片"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "柚香巧克力日常蛋糕",
+     "name_printed": "柚香巧克力日常蛋糕",
+     "name_en": "Chocolate Cake with Pomelo Cream",
+     "prices_by_list": {
+      "價格": {
+       "單片": 60
+      }
+     },
+     "printed": [
+      "$60/單片"
+     ],
+     "note": "葷(含豬明膠)"
+    },
+    {
+     "name_zh": "厚黑巧克力慕斯蛋糕",
+     "name_printed": "厚黑巧克力慕斯蛋糕",
+     "name_en": "Chocolate Mousse Cake",
+     "prices_by_list": {
+      "價格": {
+       "單片": 80
+      }
+     },
+     "printed": [
+      "$80/單片"
+     ],
+     "note": "葷(含豬明膠)產品內可能含有籽，請小心食用"
+    },
+    {
+     "name_zh": "厚黑芝麻輕乳酪慕斯蛋糕",
+     "name_printed": "厚黑芝麻輕乳酪慕斯蛋糕",
+     "name_en": "Black Sesame & Mascarpone Mousse Cake",
+     "prices_by_list": {
+      "價格": {
+       "單片": 70
+      }
+     },
+     "printed": [
+      "$70/單片"
+     ],
+     "note": "葷(含豬明膠)"
+    },
+    {
+     "name_zh": "愛情靈藥",
+     "name_printed": "愛情靈藥",
+     "name_en": "Brownie",
+     "prices_by_list": {
+      "價格": {
+       "單個": 50
+      }
+     },
+     "printed": [
+      "$50/單個"
+     ],
+     "note": "葷(含酒)"
+    },
+    {
+     "name_zh": "抹茶達克瓦茲",
+     "name_printed": "抹茶達克瓦茲",
+     "name_en": "",
+     "prices_by_list": {
+      "價格": {
+       "單個": 70
+      }
+     },
+     "printed": [
+      "$",
+      "$70/單個"
+     ],
+     "note": "葷(含豬明膠)"
+    },
+    {
+     "name_zh": "草莓乳酪慕斯蛋糕",
+     "name_printed": "草莓乳酪慕斯蛋糕",
+     "name_en": "",
+     "prices_by_list": {
+      "價格": {
+       "單個": 80
+      }
+     },
+     "printed": [
+      "$",
+      "$80/單個"
+     ],
+     "note": "葷(含豬明膠)"
+    },
+    {
+     "name_zh": "橙酒優格蛋糕",
+     "name_printed": "橙酒優格蛋糕",
+     "name_en": "",
+     "prices_by_list": {
+      "價格": {
+       "單個": 65
+      }
+     },
+     "printed": [
+      "$",
+      "$65/單個"
+     ],
+     "note": "葷(含酒與豬明膠)"
+    }
+   ]
+  },
+  {
+   "name": "La Merenda食光點心",
+   "source": "https://www.louisacoffee.co/products_list/20",
+   "items": [
+    {
+     "name_zh": "核桃酥",
+     "name_printed": "核桃酥",
+     "name_en": "",
+     "prices_by_list": {
+      "價格": {
+       "單盒": 55
+      }
+     },
+     "printed": [
+      "$",
+      "$55/單盒"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "伯爵紅糖",
+     "name_printed": "伯爵紅糖",
+     "name_en": "",
+     "prices_by_list": {
+      "價格": {
+       "單盒": 55
+      }
+     },
+     "printed": [
+      "$",
+      "$55/單盒"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "台茶18號紅玉杏仁",
+     "name_printed": "台茶18號紅玉杏仁",
+     "name_en": "",
+     "prices_by_list": {
+      "價格": {
+       "單盒": 55
+      }
+     },
+     "printed": [
+      "$",
+      "$55/單盒"
+     ],
+     "note": "奶素"
+    },
+    {
+     "name_zh": "黑糖吐司磚",
+     "name_printed": "黑糖吐司磚",
+     "name_en": "",
+     "prices_by_list": {
+      "價格": {
+       "單盒": 50
+      }
+     },
+     "printed": [
+      "$",
+      "$50/單盒"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "可可海鹽",
+     "name_printed": "可可海鹽",
+     "name_en": "",
+     "prices_by_list": {
+      "價格": {
+       "單盒": 60
+      }
+     },
+     "printed": [
+      "$",
+      "$60/單盒"
+     ],
+     "note": "奶素"
+    }
+   ]
+  }
+ ],
+ "notes_official": [
+  "．刊載之商品僅供參考，實際商品販售以各門市為主。",
+  "．網頁品項以台灣為主，其他國家會依當地做調整，欲了解請洽該地區路易莎門市。",
+  "．刊載之商品僅供參考，商品以實品為準。",
+  "豬肉產地：台灣、西班牙",
+  "牛肉產地：澳洲",
+  "．限定門市販售，販售時間、數量依門市實際供應為準。",
+  "．經調理非原塊肉僅供熱食。",
+  "．經過處理後的肉類製品 ，可能有碎骨/軟骨存留，請小心食用。",
+  "．商品過敏原請參照 過敏原資訊 。",
+  "豬肉產地：加拿大、西班牙、台灣、丹麥；牛肉產地：巴拉圭、澳洲"
+ ],
+ "notes_zh": "沒收進本頁：濾掛／浸泡咖啡系列（盒裝咖啡）、會議型糕點、商品（周邊）。M、L 是官網寫的杯型。",
+ "first_seen": "2026-10-23",
+ "changed": "2026-10-23",
+ "checked": "2026-10-23"
+}
