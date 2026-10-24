@@ -1,0 +1,28 @@
+{
+ "kind": "store_provided",
+ "slug": "yuan-fang-gua-bao",
+ "name_zh": "萬華源芳刈包",
+ "address": "台北市萬華區華西街觀光夜市161號（攤號）",
+ "provided": "店家 2026-10-24 用臉書 Messenger 回傳它 2025-08-20 貼在粉專的價目表，我們照著抄成文字",
+ "first_seen": "2026-10-24",
+ "changed": "2026-10-24",
+ "checked": "2026-10-24",
+ "sections": [
+  {
+   "name": "主食",
+   "items": [
+    {"name_zh": "刈包（五花肉／全瘦肉）", "name_en": "Steam Bun", "prices": {"單價": 70}}
+   ]
+  },
+  {
+   "name": "湯類",
+   "items": [
+    {"name_zh": "四神湯", "name_en": "Four-Herbal Soup", "prices": {"單價": 65}},
+    {"name_zh": "綜合湯", "name_en": "All-in-one Soup", "prices": {"單價": 75}},
+    {"name_zh": "小肚湯", "name_en": "Pig's Bladder Soup", "prices": {"單價": 60}},
+    {"name_zh": "豬肚湯", "name_en": "Pig's Stomach Soup", "prices": {"單價": 75}},
+    {"name_zh": "粉腸湯", "name_en": "Small Intestine Soup", "prices": {"單價": 70}}
+   ]
+  }
+ ]
+}
