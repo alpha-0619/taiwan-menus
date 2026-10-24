@@ -27,7 +27,7 @@ def cell(p):
     """{'中': 35, '大': 40} -> '中 35 大 40'; {'單價': 50} -> '50'; {'單片': 80} -> '80／單片'."""
     if not p:
         return "—"
-    return " ".join(f"{v}" if k == "單價" else f"{k} {v}" if k in ("中", "大", "M", "L") else f"{v}／{k}"
+    return " ".join(f"{v}" if k == "單價" else f"{k} {v}" if k in ("小", "中", "大", "M", "L") else f"{v}／{k}"
                     for k, v in p.items())
 
 
@@ -50,7 +50,48 @@ def head(title, desc, ld=None):
             + f"<style>{STYLE}</style></head><body><main>\n")
 
 
+def is_shop(rec):
+    """A restaurant's menu as the restaurant itself sent it to us: one date, no daily re-check."""
+    return rec.get("kind") == "store_provided"
+
+
+OTHER_NAMES = (("name_en", "en", "英"), ("name_ja", "ja", "日"), ("name_ko", "ko", "韓"))
+
+
+def shop_page(rec):
+    """The menu typed from what the restaurant sent, with the names it prints in other languages; no photo."""
+    name, day = rec["name_zh"], rec["checked"]
+    items = [it for s in rec["sections"] for it in s["items"]]
+    langs = [zh for k, _, zh in OTHER_NAMES if any(it.get(k) for it in items)]
+    rows, offers = [], []
+    for s in rec["sections"]:
+        rows.append(f'<tr class="sec"><th colspan="2">{esc(s["name"])}</th></tr>')
+        for it in s["items"]:
+            other = "".join(f'<br><small lang="{lang}">{esc(it[k])}</small>' for k, lang, _ in OTHER_NAMES if it.get(k))
+            rows.append(f"<tr><td>{esc(it['name_zh'])}{other}</td><td>{esc(cell(it.get('prices')))}</td></tr>")
+            for size, price in (it.get("prices") or {}).items():
+                offers.append({"@type": "MenuItem", "name": it["name_zh"] if size == "單價" else f"{it['name_zh']}（{size}）",
+                               "offers": {"@type": "Offer", "price": price, "priceCurrency": "TWD",
+                                          "description": f"店家 {day} 提供的菜單價格"}})
+    ld = {"@context": "https://schema.org", "@type": "Menu", "name": f"{name} 菜單", "inLanguage": "zh-TW",
+          "url": f"{SITE_URL}/{rec['slug']}/", "hasMenuItem": offers}
+    also = f"，附店家自己寫的{'、'.join(langs)}文菜名" if langs else ""
+    desc = f"{name}菜單價格（{len(items)} 品項）：店家 {day} 傳來的菜單，抄成文字{also}。"
+    where = f"{esc(rec['address'])}．" if rec.get("address") else ""
+    return (head(f"{name}菜單價格 {day[:4]}（店家 {day} 提供）| Menu Check", desc, ld)
+            + f'<p class="meta"><a href="../">Menu Check 台灣菜單</a></p>\n<h1>{esc(name)} 菜單價格</h1>\n'
+            + f'<p class="meta">{where}{esc(rec["provided"])}．價格以店內為準</p>\n'
+            + '<div class="wrap"><table style="min-width:0">\n<thead><tr><th>品項'
+            + (f"（店家寫的{'、'.join(langs)}文）" if langs else "") + "</th><th>價格（新台幣）</th></tr></thead>\n<tbody>"
+            + "".join(rows) + "</tbody></table></div>\n"
+            + f"<p><small>本頁照店家傳來的菜單抄成文字，寫的是店家 {day} 提供的價格；只放文字，不放店家照片。</small></p>\n"
+            + f"<p><small>Menu Check 不是{esc(name)}的官方網站，跟店家沒有合作關係。</small></p>\n"
+            + f"</main>{GOAT}</body></html>\n")
+
+
 def chain_page(rec):
+    if is_shop(rec):
+        return shop_page(rec)
     lists, name, day = rec["price_lists"], rec["name_zh"], rec["checked"]
     items = [it for s in rec["sections"] for it in s["items"]]
     has_nut = any(it.get("nutrition") for it in items)
@@ -104,13 +145,20 @@ def build(root):
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(chain_page(rec), encoding="utf-8", newline="\n")
     items = "".join(f'<li><a href="{esc(r["slug"])}/">{esc(r["name_zh"])} 菜單價格</a> '
-                    f'<small>（{sum(len(s["items"]) for s in r["sections"])} 品項，{esc(r["checked"])} 查證）</small></li>'
+                    f'<small>（{sum(len(s["items"]) for s in r["sections"])} 品項，'
+                    + (f'店家 {esc(r["checked"])} 提供' if is_shop(r) else f'{esc(r["checked"])} 查證') + "）</small></li>"
                     for r in recs)
-    (docs / "index.html").write_text(
+    shops = any(is_shop(r) for r in recs)  # the wording only changes once a page from a restaurant's own menu exists
+    top = (head("台灣餐廳與連鎖店菜單價格（官網原文、店家提供）| Menu Check",
+                "台灣餐廳與連鎖店的菜單價格：連鎖店照官網原文每天自動重查，其他店用店家自己傳來的菜單抄成文字，每頁寫出處和日期。")
+           + "<h1>台灣餐廳與連鎖店菜單價格</h1>\n<p class=\"meta\">連鎖店照官網原文整理、每天自動重查；"
+           + "其他店用店家自己傳來的菜單抄成文字。每一頁都寫出處和日期。</p>\n") if shops else (
         head("台灣連鎖店菜單價格（官網原文，每天查證）| Menu Check",
              "台灣連鎖飲料店與餐廳的官方菜單價格，照官網原文整理、分地區價目、每天自動重查。")
-        + "<h1>台灣連鎖店菜單價格</h1>\n<p class=\"meta\">每一頁都照該品牌官網原文整理，寫出處和查證日期，每天自動重查。</p>\n"
-        + f"<ul>{items}</ul>\n<p><small>Menu Check 不是這些品牌的官方網站，跟品牌沒有合作關係。</small></p>\n"
+        + "<h1>台灣連鎖店菜單價格</h1>\n<p class=\"meta\">每一頁都照該品牌官網原文整理，寫出處和查證日期，每天自動重查。</p>\n")
+    who = "店家" if shops else "品牌"
+    (docs / "index.html").write_text(
+        top + f"<ul>{items}</ul>\n<p><small>Menu Check 不是這些{who}的官方網站，跟{who}沒有合作關係。</small></p>\n"
         + f"</main>{GOAT}</body></html>\n", encoding="utf-8", newline="\n")
     urls = [(f"{SITE_URL}/", max(r["checked"] for r in recs))] + [(f"{SITE_URL}/{r['slug']}/", r["checked"]) for r in recs]
     (docs / "sitemap.xml").write_text(
@@ -118,7 +166,10 @@ def build(root):
         + "".join(f"<url><loc>{u}</loc><lastmod>{d}</lastmod></url>\n" for u, d in urls) + "</urlset>\n",
         encoding="utf-8", newline="\n")
     (docs / "llms.txt").write_text(
-        "# Menu Check 台灣\n\n台灣連鎖店的官方菜單價格（新台幣），照官網原文整理，每天自動重查；每頁寫出處網址與查證日期。\n\n"
-        + "".join(f"- [{r['name_zh']}]({SITE_URL}/{r['slug']}/): {r['source_url']}\n" for r in recs),
+        ("# Menu Check 台灣\n\n台灣餐廳與連鎖店的菜單價格（新台幣）：連鎖店照官網原文整理、每天自動重查；"
+         "其他店用店家自己傳來的菜單抄成文字。每頁寫出處與日期。\n\n" if shops else
+         "# Menu Check 台灣\n\n台灣連鎖店的官方菜單價格（新台幣），照官網原文整理，每天自動重查；每頁寫出處網址與查證日期。\n\n")
+        + "".join(f"- [{r['name_zh']}]({SITE_URL}/{r['slug']}/): "
+                  + (f"店家提供的菜單（{r['checked']}）" if is_shop(r) else r["source_url"]) + "\n" for r in recs),
         encoding="utf-8", newline="\n")
     return [u for u, _ in urls]

@@ -1,6 +1,7 @@
 # Menu Check 台灣
 
-台灣連鎖店的官方菜單價格（新台幣），照官網原文整理，每天自動重查；每頁寫出處網址與查證日期。
+台灣餐廳與連鎖店的菜單價格（新台幣）：連鎖店照官網原文整理、每天自動重查；其他店用店家自己傳來的菜單抄成文字。每頁寫出處與日期。
 
 - [可不可熟成茶行](https://alpha-0619.github.io/taiwan-menus/kebuke/): https://kebuke.com/menu/
 - [路易莎咖啡](https://alpha-0619.github.io/taiwan-menus/louisa/): https://www.louisacoffee.co/products
+- [永康牛肉麵館](https://alpha-0619.github.io/taiwan-menus/yong-kang-beef-noodles/): 店家提供的菜單（2026-10-23）

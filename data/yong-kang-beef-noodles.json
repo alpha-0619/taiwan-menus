@@ -1,0 +1,26 @@
+{
+ "kind": "store_provided",
+ "slug": "yong-kang-beef-noodles",
+ "name_zh": "永康牛肉麵館",
+ "address": "台北市金山南路二段31巷17號",
+ "provided": "店家 2026-10-23 用臉書 Messenger 傳來的菜單照片，我們照著抄成文字",
+ "first_seen": "2026-10-23",
+ "changed": "2026-10-23",
+ "checked": "2026-10-23",
+ "sections": [
+  {
+   "name": "菜單",
+   "items": [
+    {"name_zh": "粉蒸排骨", "name_en": "Steamed Spare Ribs with Rice Powder", "name_ja": "スペアリブとサツマイモのもち米蒸し", "name_ko": "갈비", "prices": {"單價": 160}},
+    {"name_zh": "紅油抄手", "name_en": "Spicy Dumpling", "name_ja": "四川風ワンタンのラー油あえ", "name_ko": "매운 만두", "prices": {"單價": 160}},
+    {"name_zh": "粉蒸肥腸", "name_en": "Steamed Large Intestines with Rice Powder", "name_ja": "白モツとサツマイモのもち米蒸し", "name_ko": "큰장", "prices": {"單價": 160}},
+    {"name_zh": "紅燒牛肉麵", "name_en": "Braised Beef Noodle Soup (Spicy)", "name_ja": "煮込み牛肉麺 (ピリ辛)", "name_ko": "매운 쇠고기", "prices": {"大": 350, "小": 300}},
+    {"name_zh": "紅燒牛筋麵", "name_en": "Braised Tendon Noodle Soup (Spicy)", "name_ja": "煮込み牛筋麺 (ピリ辛)", "name_ko": "매운 소힘줄", "prices": {"大": 390, "小": 340}},
+    {"name_zh": "紅燒半筋半肉麵", "name_en": "Braised Beef and Tendon Noodle Soup (Spicy)", "name_ja": "煮込み牛筋と牛肉麺 (ピリ辛)", "name_ko": "매운 반반", "prices": {"大": 370, "小": 320}},
+    {"name_zh": "清燉牛肉麵", "name_en": "Stewed Beef with Noodle Soup", "name_ja": "牛肉麺 (塩味)", "name_ko": "안 매운 쇠고기", "prices": {}},
+    {"name_zh": "担担麵", "name_en": "Dandan Noodle with Sesame and Peanut Sauce", "name_ja": "タンタン麺", "name_ko": "탄탄면", "prices": {"大": 160, "小": 140}},
+    {"name_zh": "炸醬麵", "name_en": "Noodle with Minced Pork Sauce", "name_ja": "ジャージャー麺", "name_ko": "자장면", "prices": {"大": 190, "小": 160}}
+   ]
+  }
+ ]
+}
