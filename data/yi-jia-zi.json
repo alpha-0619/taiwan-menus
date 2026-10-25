@@ -1,0 +1,41 @@
+{
+ "kind": "store_provided",
+ "slug": "yi-jia-zi",
+ "name_zh": "一甲子餐飲",
+ "address": "台北市萬華區康定路79號（創始店）",
+ "provided": "店家 2026-10-25 用臉書 Messenger 回傳它 2026-09-29 貼在粉專的新價目（2026-10-01 起），我們照著抄成文字",
+ "first_seen": "2026-10-25",
+ "changed": "2026-10-25",
+ "checked": "2026-10-25",
+ "sections": [
+  {
+   "name": "古早好滋味",
+   "items": [
+    {"name_zh": "麻豆碗粿", "prices": {"單價": 40}},
+    {"name_zh": "焢肉飯", "prices": {"單價": 130}}
+   ]
+  },
+  {
+   "name": "下港這一味",
+   "items": [
+    {"name_zh": "油條魚丸湯", "prices": {"單價": 40}}
+   ]
+  },
+  {
+   "name": "吃巧剛剛好",
+   "items": [
+    {"name_zh": "刈包", "prices": {"單價": 70}},
+    {"name_zh": "滷肉飯", "prices": {"單價": 45}},
+    {"name_zh": "雞肉飯", "prices": {"單價": 70}}
+   ]
+  },
+  {
+   "name": "鮮美湯品",
+   "items": [
+    {"name_zh": "豬血湯", "prices": {"單價": 50}},
+    {"name_zh": "豬腸湯", "prices": {"單價": 60}},
+    {"name_zh": "豬血豬腸湯", "prices": {"單價": 70}}
+   ]
+  }
+ ]
+}
