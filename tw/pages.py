@@ -24,11 +24,11 @@ def esc(s):
 
 
 def cell(p):
-    """{'中': 35, '大': 40} -> '中 35 大 40'; {'單價': 50} -> '50'; {'單片': 80} -> '80／單片'."""
+    """{'中': 35, '大': 40} -> '中 35 大 40'; {'單價': 50} -> '50'; {'單片': 80} -> '80／單片'; {'加價': 10} -> '+10'."""
     if not p:
         return "—"
-    return " ".join(f"{v}" if k == "單價" else f"{k} {v}" if k in ("小", "中", "大", "M", "L") else f"{v}／{k}"
-                    for k, v in p.items())
+    return " ".join(f"{v}" if k == "單價" else f"+{v}" if k == "加價" else f"{k} {v}" if k in ("小", "中", "大", "M", "L")
+                    else f"{v}／{k}" for k, v in p.items())
 
 
 def nutrition(lines):
