@@ -4,6 +4,7 @@
 
 - [春美冰菓室](https://alpha-0619.github.io/taiwan-menus/chun-mei-ice/): 店家提供的菜單（2026-10-25）
 - [可不可熟成茶行](https://alpha-0619.github.io/taiwan-menus/kebuke/): https://kebuke.com/menu/
+- [兩喜號](https://alpha-0619.github.io/taiwan-menus/liang-xi-hao/): 店家提供的菜單（2026-10-25）
 - [臨海樓海鮮料理](https://alpha-0619.github.io/taiwan-menus/lin-hai-lou/): 店家提供的菜單（2026-10-25）
 - [路易莎咖啡](https://alpha-0619.github.io/taiwan-menus/louisa/): https://www.louisacoffee.co/products
 - [小峨嵋川菜館](https://alpha-0619.github.io/taiwan-menus/xiao-e-mei/): 店家公布的菜單（2026-10-26 查證）

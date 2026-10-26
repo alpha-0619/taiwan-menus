@@ -1,0 +1,282 @@
+{
+ "kind": "store_provided",
+ "slug": "liang-xi-hao",
+ "name_zh": "兩喜號",
+ "address": "台北市萬華區廣州街245號（總店）、西園路一段194號（西園店）",
+ "provided": "店家 2026-10-25 用臉書 Messenger 回傳連結，指定看它放在 Google 雲端的多國語言菜單（2026-03-12 上傳，3 張），我們照著抄成文字．店家附註：魷魚有軟骨或吸盤，食用請小心；綜合焿恕無小碗、無魚塊肉塊",
+ "first_seen": "2026-10-26",
+ "changed": "2026-10-26",
+ "checked": "2026-10-25",
+ "sections": [
+  {
+   "name": "經典湯品",
+   "items": [
+    {
+     "name_zh": "兩喜魷魚焿",
+     "name_en": "Liang Xi squid thick soup",
+     "name_ja": "スルメイカのとろみスープ",
+     "name_ko": "갑오징어갱",
+     "prices": {
+      "大": 100,
+      "小": 70
+     }
+    },
+    {
+     "name_zh": "魚酥焿",
+     "name_en": "Fried fish cracker thick soup",
+     "name_ja": "白身魚のフライをのせたとろみスープ",
+     "name_ko": "생선과자갱",
+     "prices": {
+      "大": 100,
+      "小": 70
+     }
+    },
+    {
+     "name_zh": "蝦仁焿",
+     "name_en": "Shrimp thick soup",
+     "name_ja": "エビのとろみスープ",
+     "name_ko": "새우갱",
+     "prices": {
+      "大": 100,
+      "小": 70
+     }
+    },
+    {
+     "name_zh": "花枝焿",
+     "name_en": "Cuttlefish thick soup",
+     "name_ja": "コウイカのとろみスープ",
+     "name_ko": "오징어갱",
+     "prices": {
+      "大": 100,
+      "小": 70
+     }
+    },
+    {
+     "name_zh": "炸魚塊焿",
+     "name_en": "Fried fish thick soup",
+     "name_ja": "魚の唐揚げのとろみスープ",
+     "name_ko": "생선 튀김갱",
+     "prices": {
+      "大": 100,
+      "小": 70
+     }
+    },
+    {
+     "name_zh": "酥炸赤肉焿",
+     "name_en": "Fried pork thick soup",
+     "name_ja": "豚の唐揚げのとろみスープ",
+     "name_ko": "돼지고기 튀김갱",
+     "prices": {
+      "大": 100,
+      "小": 70
+     }
+    },
+    {
+     "name_zh": "綜合焿",
+     "name_en": "Assorted seafood thick soup",
+     "name_ja": "ミックスとろみスープ",
+     "name_ko": "종합갱",
+     "prices": {
+      "大": 100
+     }
+    },
+    {
+     "name_zh": "清湯瓜仔排骨",
+     "name_en": "Spare ribs soup",
+     "name_ja": "リブの醤油スープ",
+     "name_ko": "돼지갈비탕",
+     "prices": {
+      "單價": 80
+     }
+    },
+    {
+     "name_zh": "養生人蔘雞湯",
+     "name_en": "Ginseng chicken soup",
+     "name_ja": "サムゲタン",
+     "name_ko": "삼계탕",
+     "prices": {
+      "單價": 80
+     }
+    }
+   ]
+  },
+  {
+   "name": "焿配麵、米粉、冬粉或飯（主食擇一）",
+   "items": [
+    {
+     "name_zh": "兩喜魷魚焿（配麵、米粉、冬粉或飯）",
+     "name_en": "Liang Xi squid thick soup (Noodles, rice noodle, green bean noodle, or rice)",
+     "name_ja": "スルメイカのとろみスープ（麺・ビーフン・春雨・ごはん）",
+     "name_ko": "갑오징어갱（면・미펀・동펀・밥）",
+     "prices": {
+      "大": 105,
+      "小": 80
+     }
+    },
+    {
+     "name_zh": "魚酥焿（配麵、米粉、冬粉或飯）",
+     "name_en": "Fried fish cracker thick soup (Noodles, rice noodle, green bean noodle, or rice)",
+     "name_ja": "白身魚のフライをのせたとろみスープ（麺・ビーフン・春雨・ごはん）",
+     "name_ko": "생선과자갱（면・미펀・동펀・밥）",
+     "prices": {
+      "大": 105,
+      "小": 80
+     }
+    },
+    {
+     "name_zh": "蝦仁焿（配麵、米粉、冬粉或飯）",
+     "name_en": "Shrimp thick soup (Noodles, rice noodle, green bean noodle, or rice)",
+     "name_ja": "エビのとろみスープ（麺・ビーフン・春雨・ごはん）",
+     "name_ko": "새우갱（면・미펀・동펀・밥）",
+     "prices": {
+      "大": 105,
+      "小": 80
+     }
+    },
+    {
+     "name_zh": "花枝焿（配麵、米粉、冬粉或飯）",
+     "name_en": "Cuttlefish thick soup (Noodles, rice noodle, green bean noodle, or rice)",
+     "name_ja": "コウイカのとろみスープ（麺・ビーフン・春雨・ごはん）",
+     "name_ko": "오징어갱（면・미펀・동펀・밥）",
+     "prices": {
+      "大": 105,
+      "小": 80
+     }
+    },
+    {
+     "name_zh": "炸魚塊焿（配麵、米粉、冬粉或飯）",
+     "name_en": "Fried fish thick soup (Noodles, rice noodle, green bean noodle, or rice)",
+     "name_ja": "魚の唐揚げのとろみスープ（麺・ビーフン・春雨・ごはん）",
+     "name_ko": "생선 튀김갱（면・미펀・동펀・밥）",
+     "prices": {
+      "大": 105,
+      "小": 80
+     }
+    },
+    {
+     "name_zh": "酥炸赤肉焿（配麵、米粉、冬粉或飯）",
+     "name_en": "Fried pork thick soup (Noodles, rice noodle, green bean noodle, or rice)",
+     "name_ja": "豚の唐揚げのとろみスープ（麺・ビーフン・春雨・ごはん）",
+     "name_ko": "돼지고기 튀김갱（면・미펀・동펀・밥）",
+     "prices": {
+      "大": 105,
+      "小": 80
+     }
+    },
+    {
+     "name_zh": "綜合焿（配麵、米粉、冬粉或飯）",
+     "name_en": "Assorted seafood thick soup (Noodles, rice noodle, green bean noodle, or rice)",
+     "name_ja": "ミックスとろみスープ（麺・ビーフン・春雨・ごはん）",
+     "name_ko": "종합갱（면・미펀・동펀・밥）",
+     "prices": {
+      "大": 105
+     }
+    }
+   ]
+  },
+  {
+   "name": "單一絕品",
+   "items": [
+    {
+     "name_zh": "米粉炒",
+     "name_en": "Stir-fried rice noodle",
+     "name_ja": "炒めビーフン",
+     "name_ko": "볶음미펀",
+     "prices": {
+      "單價": 45
+     }
+    },
+    {
+     "name_zh": "乾麵",
+     "name_en": "Stir-fried noodle",
+     "name_ja": "汁なし麺",
+     "name_ko": "건면",
+     "prices": {
+      "單價": 45
+     }
+    },
+    {
+     "name_zh": "滷肉飯",
+     "name_en": "Traditional braised pork over rice",
+     "name_ja": "台湾風肉そぼろ丼",
+     "name_ko": "전통 루러우판",
+     "prices": {
+      "單價": 45
+     }
+    },
+    {
+     "name_zh": "燙青菜",
+     "name_en": "Boiled green vegetable",
+     "name_ja": "野菜のお浸し",
+     "name_ko": "야채 데침",
+     "prices": {
+      "單價": 45
+     }
+    },
+    {
+     "name_zh": "滷油豆腐（壹份）",
+     "name_en": "Braised tofu puff",
+     "name_ja": "厚揚げ豆腐煮込み（一人前）",
+     "name_ko": "유부 조림（1인분）",
+     "prices": {
+      "單價": 40
+     }
+    },
+    {
+     "name_zh": "現炸牛蒡天婦羅（兩片）",
+     "name_en": "Deep-fried burdock tempura (2 pieces)",
+     "name_ja": "ゴボウのさつま揚げ2枚",
+     "name_ko": "우엉 튀김 2개",
+     "prices": {
+      "單價": 40
+     }
+    },
+    {
+     "name_zh": "現炸鮮蝦捲（兩條）",
+     "name_en": "Deep-fried shrimp roll (2 pieces)",
+     "name_ja": "エビの春巻き2本",
+     "name_ko": "생선춘권 튀김 2개",
+     "prices": {
+      "單價": 40
+     }
+    },
+    {
+     "name_zh": "現炸魚塊",
+     "name_en": "Deep-fried fish",
+     "name_ja": "魚の唐揚げ",
+     "name_ko": "생선 튀김",
+     "prices": {
+      "單價": 60
+     }
+    },
+    {
+     "name_zh": "酥炸赤肉塊",
+     "name_en": "Deep-fried pork",
+     "name_ja": "豚の唐揚げ",
+     "name_ko": "돼지고기 튀김",
+     "prices": {
+      "單價": 60
+     }
+    },
+    {
+     "name_zh": "紅燒無刺虱目魚肚",
+     "name_en": "Braised milkfish belly",
+     "name_ja": "サバヒーのはらみ醤油煮",
+     "name_ko": "홍샤오 스무위 생선요리",
+     "prices": {
+      "單價": 100
+     }
+    },
+    {
+     "name_zh": "燙魷魚",
+     "name_en": "Boiled squid",
+     "name_ja": "茹でスルメイカ",
+     "name_ko": "갑오징어 데침",
+     "prices": {
+      "單價": 110
+     }
+    }
+   ]
+  }
+ ]
+}
