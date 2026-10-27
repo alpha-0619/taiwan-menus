@@ -18,6 +18,11 @@ La Merenda食光點心
 商品
 總共有 30 項產品
 ＃小標：
+抹茶風味拿鐵 (熱)
+Matcha Latte
+M $95
+L $115
+＃備註：
 燕麥拿鐵(冰)
 Coffee Oat Latte
 M $90
@@ -29,11 +34,6 @@ M $90
 L $110
 ＃備註：
 抹茶風味拿鐵 (冰)
-Matcha Latte
-M $95
-L $115
-＃備註：
-抹茶風味拿鐵 (熱)
 Matcha Latte
 M $95
 L $115
@@ -771,18 +771,6 @@ Bagel
 $80
 ＃備註：全素
 ＃小標：法式吐司系列
-蜂蜜
-Honey
-$59
-＃備註：
-草莓
-Strawberry
-$59
-＃備註：蛋奶素
-藍莓
-Blueberry
-$59
-＃備註：蛋奶素
 榛果可可
 Hazelnut Cocoa
 $59
@@ -791,6 +779,18 @@ $59
 Peanut Butter
 $59
 ＃備註：蛋奶素
+藍莓
+Blueberry
+$59
+＃備註：蛋奶素
+草莓
+Strawberry
+$59
+＃備註：蛋奶素
+蜂蜜
+Honey
+$59
+＃備註：
 火腿
 Ham
 $72
@@ -850,12 +850,12 @@ $70
 Honey
 $55
 ＃備註：
-草莓
-Strawberry
-$55
-＃備註：全素
 藍莓
 Blueberry
+$55
+＃備註：全素
+草莓
+Strawberry
 $55
 ＃備註：全素
 榛果可可
@@ -949,12 +949,12 @@ $89
 Honey
 $59
 ＃備註：
-藍莓
-Blueberry
-$59
-＃備註：全素
 草莓
 Strawberry
+$59
+＃備註：全素
+藍莓
+Blueberry
 $59
 ＃備註：全素
 榛果可可
@@ -1143,89 +1143,89 @@ $55/單顆
 Strawberry Puff
 $50/單顆
 ＃備註：蛋奶素
-白蘭地生巧克力蛋糕
-Brandy Chocolate Cake
-$80/單片
-＃備註：葷(含酒)
-黑森林波士頓派
-Black Forest Boston Pie
-$85/單片 (限定門市販售)
-＃備註：蛋奶素(產品內可能含有籽，請小心食用)
-慢熟乳酪
-Cheese Cake
-$85/單個
-＃備註：蛋奶素
-法式布蕾(原味)
-Brulee
-$60
-＃備註：蛋奶素
-青檸塔
-Lime Tart
-$55/單個
-$100/兩個
-＃備註：蛋奶素
-法式鹹派
-Quiche
-$培根蔬食／三杯杏鮑菇
-$75/單個
-＃備註：葷
-提拉米蘇
-Tiramisu
-$95/單個
-$250/盒
-＃備註：葷(含酒與豬明膠)
-焦糖蘋果派
-Caramel Apple Pie
-$95/單片
-＃備註：蛋奶素
-檸檬糖霜溫蛋糕
-Lemon Frosting Cake
-$75/單個
-＃備註：蛋奶素
-經典起司蛋糕
-Classic Cheesecake
-$$55/單片
-＃備註：葷(含牛明膠)
-旅人常溫蛋糕系列-瑪德蓮
-Madeleine
-$35 / 原味
-$45 / 伯爵茶
-＃備註：蛋奶素
-香蕉核桃旅人蛋糕
-Banana& Walnut Pound Cake
-$45/單片
-＃備註：蛋奶素
-柚香巧克力日常蛋糕
-Chocolate Cake with Pomelo Cream
-$60/單片
-＃備註：葷(含豬明膠)
-厚黑巧克力慕斯蛋糕
-Chocolate Mousse Cake
-$80/單片
-＃備註：葷(含豬明膠)產品內可能含有籽，請小心食用
-厚黑芝麻輕乳酪慕斯蛋糕
-Black Sesame & Mascarpone Mousse Cake
-$70/單片
-＃備註：葷(含豬明膠)
 愛情靈藥
 Brownie
 $50/單個
 ＃備註：葷(含酒)
 New
-抹茶達克瓦茲
+橙酒優格蛋糕
 $
-$70/單個
-＃備註：葷(含豬明膠)
+$65/單個
+＃備註：葷(含酒與豬明膠)
 New
 草莓乳酪慕斯蛋糕
 $
 $80/單個
 ＃備註：葷(含豬明膠)
 New
-橙酒優格蛋糕
+抹茶達克瓦茲
 $
-$65/單個
+$70/單個
+＃備註：葷(含豬明膠)
+黑森林波士頓派
+Black Forest Boston Pie
+$85/單片 (限定門市販售)
+＃備註：蛋奶素(產品內可能含有籽，請小心食用)
+白蘭地生巧克力蛋糕
+Brandy Chocolate Cake
+$80/單片
+＃備註：葷(含酒)
+慢熟乳酪
+Cheese Cake
+$85/單個
+＃備註：蛋奶素
+厚黑芝麻輕乳酪慕斯蛋糕
+Black Sesame & Mascarpone Mousse Cake
+$70/單片
+＃備註：葷(含豬明膠)
+厚黑巧克力慕斯蛋糕
+Chocolate Mousse Cake
+$80/單片
+＃備註：葷(含豬明膠)產品內可能含有籽，請小心食用
+柚香巧克力日常蛋糕
+Chocolate Cake with Pomelo Cream
+$60/單片
+＃備註：葷(含豬明膠)
+香蕉核桃旅人蛋糕
+Banana& Walnut Pound Cake
+$45/單片
+＃備註：蛋奶素
+旅人常溫蛋糕系列-瑪德蓮
+Madeleine
+$35 / 原味
+$45 / 伯爵茶
+＃備註：蛋奶素
+經典起司蛋糕
+Classic Cheesecake
+$$55/單片
+＃備註：葷(含牛明膠)
+檸檬糖霜溫蛋糕
+Lemon Frosting Cake
+$75/單個
+＃備註：蛋奶素
+焦糖蘋果派
+Caramel Apple Pie
+$95/單片
+＃備註：蛋奶素
+提拉米蘇
+Tiramisu
+$95/單個
+$250/盒
 ＃備註：葷(含酒與豬明膠)
+法式鹹派
+Quiche
+$培根蔬食／三杯杏鮑菇
+$75/單個
+＃備註：葷
+青檸塔
+Lime Tart
+$55/單個
+$100/兩個
+＃備註：蛋奶素
+法式布蕾(原味)
+Brulee
+$60
+＃備註：蛋奶素
 ．刊載之商品僅供參考，商品以實品為準。
 ．網頁品項以台灣為主，其他國家會依當地做調整，欲了解請洽該地區路易莎門市。
 === https://www.louisacoffee.co/products_list/20

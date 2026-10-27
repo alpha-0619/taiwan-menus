@@ -15,6 +15,22 @@
    "source": "https://www.louisacoffee.co/products_list/8",
    "items": [
     {
+     "name_zh": "抹茶風味拿鐵 (熱)",
+     "name_printed": "抹茶風味拿鐵 (熱)",
+     "name_en": "Matcha Latte",
+     "prices_by_list": {
+      "價格": {
+       "M": 95,
+       "L": 115
+      }
+     },
+     "printed": [
+      "M $95",
+      "L $115"
+     ],
+     "note": ""
+    },
+    {
      "name_zh": "燕麥拿鐵(冰)",
      "name_printed": "燕麥拿鐵(冰)",
      "name_en": "Coffee Oat Latte",
@@ -49,22 +65,6 @@
     {
      "name_zh": "抹茶風味拿鐵 (冰)",
      "name_printed": "抹茶風味拿鐵 (冰)",
-     "name_en": "Matcha Latte",
-     "prices_by_list": {
-      "價格": {
-       "M": 95,
-       "L": 115
-      }
-     },
-     "printed": [
-      "M $95",
-      "L $115"
-     ],
-     "note": ""
-    },
-    {
-     "name_zh": "抹茶風味拿鐵 (熱)",
-     "name_printed": "抹茶風味拿鐵 (熱)",
      "name_en": "Matcha Latte",
      "prices_by_list": {
       "價格": {
@@ -2179,48 +2179,6 @@
    "source": "https://www.louisacoffee.co/products_list/13",
    "items": [
     {
-     "name_zh": "蜂蜜",
-     "name_printed": "蜂蜜",
-     "name_en": "Honey",
-     "prices_by_list": {
-      "價格": {
-       "單價": 59
-      }
-     },
-     "printed": [
-      "$59"
-     ],
-     "note": ""
-    },
-    {
-     "name_zh": "草莓",
-     "name_printed": "草莓",
-     "name_en": "Strawberry",
-     "prices_by_list": {
-      "價格": {
-       "單價": 59
-      }
-     },
-     "printed": [
-      "$59"
-     ],
-     "note": "蛋奶素"
-    },
-    {
-     "name_zh": "藍莓",
-     "name_printed": "藍莓",
-     "name_en": "Blueberry",
-     "prices_by_list": {
-      "價格": {
-       "單價": 59
-      }
-     },
-     "printed": [
-      "$59"
-     ],
-     "note": "蛋奶素"
-    },
-    {
      "name_zh": "榛果可可",
      "name_printed": "榛果可可",
      "name_en": "Hazelnut Cocoa",
@@ -2247,6 +2205,48 @@
       "$59"
      ],
      "note": "蛋奶素"
+    },
+    {
+     "name_zh": "藍莓",
+     "name_printed": "藍莓",
+     "name_en": "Blueberry",
+     "prices_by_list": {
+      "價格": {
+       "單價": 59
+      }
+     },
+     "printed": [
+      "$59"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "草莓",
+     "name_printed": "草莓",
+     "name_en": "Strawberry",
+     "prices_by_list": {
+      "價格": {
+       "單價": 59
+      }
+     },
+     "printed": [
+      "$59"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "蜂蜜",
+     "name_printed": "蜂蜜",
+     "name_en": "Honey",
+     "prices_by_list": {
+      "價格": {
+       "單價": 59
+      }
+     },
+     "printed": [
+      "$59"
+     ],
+     "note": ""
     },
     {
      "name_zh": "火腿",
@@ -2463,9 +2463,9 @@
      "note": ""
     },
     {
-     "name_zh": "草莓",
-     "name_printed": "草莓",
-     "name_en": "Strawberry",
+     "name_zh": "藍莓",
+     "name_printed": "藍莓",
+     "name_en": "Blueberry",
      "prices_by_list": {
       "價格": {
        "單價": 55
@@ -2477,9 +2477,9 @@
      "note": "全素"
     },
     {
-     "name_zh": "藍莓",
-     "name_printed": "藍莓",
-     "name_en": "Blueberry",
+     "name_zh": "草莓",
+     "name_printed": "草莓",
+     "name_en": "Strawberry",
      "prices_by_list": {
       "價格": {
        "單價": 55
@@ -2817,9 +2817,9 @@
      "note": ""
     },
     {
-     "name_zh": "藍莓",
-     "name_printed": "藍莓",
-     "name_en": "Blueberry",
+     "name_zh": "草莓",
+     "name_printed": "草莓",
+     "name_en": "Strawberry",
      "prices_by_list": {
       "價格": {
        "單價": 59
@@ -2831,9 +2831,9 @@
      "note": "全素"
     },
     {
-     "name_zh": "草莓",
-     "name_printed": "草莓",
-     "name_en": "Strawberry",
+     "name_zh": "藍莓",
+     "name_printed": "藍莓",
+     "name_en": "Blueberry",
      "prices_by_list": {
       "價格": {
        "單價": 59
@@ -3363,18 +3363,63 @@
      "note": "蛋奶素"
     },
     {
-     "name_zh": "白蘭地生巧克力蛋糕",
-     "name_printed": "白蘭地生巧克力蛋糕",
-     "name_en": "Brandy Chocolate Cake",
+     "name_zh": "愛情靈藥",
+     "name_printed": "愛情靈藥",
+     "name_en": "Brownie",
      "prices_by_list": {
       "價格": {
-       "單片": 80
+       "單個": 50
       }
      },
      "printed": [
-      "$80/單片"
+      "$50/單個"
      ],
      "note": "葷(含酒)"
+    },
+    {
+     "name_zh": "橙酒優格蛋糕",
+     "name_printed": "橙酒優格蛋糕",
+     "name_en": "",
+     "prices_by_list": {
+      "價格": {
+       "單個": 65
+      }
+     },
+     "printed": [
+      "$",
+      "$65/單個"
+     ],
+     "note": "葷(含酒與豬明膠)"
+    },
+    {
+     "name_zh": "草莓乳酪慕斯蛋糕",
+     "name_printed": "草莓乳酪慕斯蛋糕",
+     "name_en": "",
+     "prices_by_list": {
+      "價格": {
+       "單個": 80
+      }
+     },
+     "printed": [
+      "$",
+      "$80/單個"
+     ],
+     "note": "葷(含豬明膠)"
+    },
+    {
+     "name_zh": "抹茶達克瓦茲",
+     "name_printed": "抹茶達克瓦茲",
+     "name_en": "",
+     "prices_by_list": {
+      "價格": {
+       "單個": 70
+      }
+     },
+     "printed": [
+      "$",
+      "$70/單個"
+     ],
+     "note": "葷(含豬明膠)"
     },
     {
      "name_zh": "黑森林波士頓派",
@@ -3391,6 +3436,20 @@
      "note": "限定門市販售；蛋奶素(產品內可能含有籽，請小心食用)"
     },
     {
+     "name_zh": "白蘭地生巧克力蛋糕",
+     "name_printed": "白蘭地生巧克力蛋糕",
+     "name_en": "Brandy Chocolate Cake",
+     "prices_by_list": {
+      "價格": {
+       "單片": 80
+      }
+     },
+     "printed": [
+      "$80/單片"
+     ],
+     "note": "葷(含酒)"
+    },
+    {
      "name_zh": "慢熟乳酪",
      "name_printed": "慢熟乳酪",
      "name_en": "Cheese Cake",
@@ -3405,149 +3464,16 @@
      "note": "蛋奶素"
     },
     {
-     "name_zh": "法式布蕾(原味)",
-     "name_printed": "法式布蕾(原味)",
-     "name_en": "Brulee",
+     "name_zh": "厚黑芝麻輕乳酪慕斯蛋糕",
+     "name_printed": "厚黑芝麻輕乳酪慕斯蛋糕",
+     "name_en": "Black Sesame & Mascarpone Mousse Cake",
      "prices_by_list": {
       "價格": {
-       "單價": 60
+       "單片": 70
       }
      },
      "printed": [
-      "$60"
-     ],
-     "note": "蛋奶素"
-    },
-    {
-     "name_zh": "青檸塔",
-     "name_printed": "青檸塔",
-     "name_en": "Lime Tart",
-     "prices_by_list": {
-      "價格": {
-       "單個": 55,
-       "兩個": 100
-      }
-     },
-     "printed": [
-      "$55/單個",
-      "$100/兩個"
-     ],
-     "note": "蛋奶素"
-    },
-    {
-     "name_zh": "法式鹹派（培根蔬食／三杯杏鮑菇）",
-     "name_printed": "法式鹹派",
-     "name_en": "Quiche",
-     "prices_by_list": {
-      "價格": {
-       "單個": 75
-      }
-     },
-     "printed": [
-      "$培根蔬食／三杯杏鮑菇",
-      "$75/單個"
-     ],
-     "note": "葷"
-    },
-    {
-     "name_zh": "提拉米蘇",
-     "name_printed": "提拉米蘇",
-     "name_en": "Tiramisu",
-     "prices_by_list": {
-      "價格": {
-       "單個": 95,
-       "盒": 250
-      }
-     },
-     "printed": [
-      "$95/單個",
-      "$250/盒"
-     ],
-     "note": "葷(含酒與豬明膠)"
-    },
-    {
-     "name_zh": "焦糖蘋果派",
-     "name_printed": "焦糖蘋果派",
-     "name_en": "Caramel Apple Pie",
-     "prices_by_list": {
-      "價格": {
-       "單片": 95
-      }
-     },
-     "printed": [
-      "$95/單片"
-     ],
-     "note": "蛋奶素"
-    },
-    {
-     "name_zh": "檸檬糖霜溫蛋糕",
-     "name_printed": "檸檬糖霜溫蛋糕",
-     "name_en": "Lemon Frosting Cake",
-     "prices_by_list": {
-      "價格": {
-       "單個": 75
-      }
-     },
-     "printed": [
-      "$75/單個"
-     ],
-     "note": "蛋奶素"
-    },
-    {
-     "name_zh": "經典起司蛋糕",
-     "name_printed": "經典起司蛋糕",
-     "name_en": "Classic Cheesecake",
-     "prices_by_list": {
-      "價格": {
-       "單片": 55
-      }
-     },
-     "printed": [
-      "$$55/單片"
-     ],
-     "note": "葷(含牛明膠)"
-    },
-    {
-     "name_zh": "旅人常溫蛋糕系列-瑪德蓮",
-     "name_printed": "旅人常溫蛋糕系列-瑪德蓮",
-     "name_en": "Madeleine",
-     "prices_by_list": {
-      "價格": {
-       "原味": 35,
-       "伯爵茶": 45
-      }
-     },
-     "printed": [
-      "$35 / 原味",
-      "$45 / 伯爵茶"
-     ],
-     "note": "蛋奶素"
-    },
-    {
-     "name_zh": "香蕉核桃旅人蛋糕",
-     "name_printed": "香蕉核桃旅人蛋糕",
-     "name_en": "Banana& Walnut Pound Cake",
-     "prices_by_list": {
-      "價格": {
-       "單片": 45
-      }
-     },
-     "printed": [
-      "$45/單片"
-     ],
-     "note": "蛋奶素"
-    },
-    {
-     "name_zh": "柚香巧克力日常蛋糕",
-     "name_printed": "柚香巧克力日常蛋糕",
-     "name_en": "Chocolate Cake with Pomelo Cream",
-     "prices_by_list": {
-      "價格": {
-       "單片": 60
-      }
-     },
-     "printed": [
-      "$60/單片"
+      "$70/單片"
      ],
      "note": "葷(含豬明膠)"
     },
@@ -3566,77 +3492,151 @@
      "note": "葷(含豬明膠)產品內可能含有籽，請小心食用"
     },
     {
-     "name_zh": "厚黑芝麻輕乳酪慕斯蛋糕",
-     "name_printed": "厚黑芝麻輕乳酪慕斯蛋糕",
-     "name_en": "Black Sesame & Mascarpone Mousse Cake",
+     "name_zh": "柚香巧克力日常蛋糕",
+     "name_printed": "柚香巧克力日常蛋糕",
+     "name_en": "Chocolate Cake with Pomelo Cream",
      "prices_by_list": {
       "價格": {
-       "單片": 70
+       "單片": 60
       }
      },
      "printed": [
-      "$70/單片"
+      "$60/單片"
      ],
      "note": "葷(含豬明膠)"
     },
     {
-     "name_zh": "愛情靈藥",
-     "name_printed": "愛情靈藥",
-     "name_en": "Brownie",
+     "name_zh": "香蕉核桃旅人蛋糕",
+     "name_printed": "香蕉核桃旅人蛋糕",
+     "name_en": "Banana& Walnut Pound Cake",
      "prices_by_list": {
       "價格": {
-       "單個": 50
+       "單片": 45
       }
      },
      "printed": [
-      "$50/單個"
+      "$45/單片"
      ],
-     "note": "葷(含酒)"
+     "note": "蛋奶素"
     },
     {
-     "name_zh": "抹茶達克瓦茲",
-     "name_printed": "抹茶達克瓦茲",
-     "name_en": "",
+     "name_zh": "旅人常溫蛋糕系列-瑪德蓮",
+     "name_printed": "旅人常溫蛋糕系列-瑪德蓮",
+     "name_en": "Madeleine",
      "prices_by_list": {
       "價格": {
-       "單個": 70
+       "原味": 35,
+       "伯爵茶": 45
       }
      },
      "printed": [
-      "$",
-      "$70/單個"
+      "$35 / 原味",
+      "$45 / 伯爵茶"
      ],
-     "note": "葷(含豬明膠)"
+     "note": "蛋奶素"
     },
     {
-     "name_zh": "草莓乳酪慕斯蛋糕",
-     "name_printed": "草莓乳酪慕斯蛋糕",
-     "name_en": "",
+     "name_zh": "經典起司蛋糕",
+     "name_printed": "經典起司蛋糕",
+     "name_en": "Classic Cheesecake",
      "prices_by_list": {
       "價格": {
-       "單個": 80
+       "單片": 55
       }
      },
      "printed": [
-      "$",
-      "$80/單個"
+      "$$55/單片"
      ],
-     "note": "葷(含豬明膠)"
+     "note": "葷(含牛明膠)"
     },
     {
-     "name_zh": "橙酒優格蛋糕",
-     "name_printed": "橙酒優格蛋糕",
-     "name_en": "",
+     "name_zh": "檸檬糖霜溫蛋糕",
+     "name_printed": "檸檬糖霜溫蛋糕",
+     "name_en": "Lemon Frosting Cake",
      "prices_by_list": {
       "價格": {
-       "單個": 65
+       "單個": 75
       }
      },
      "printed": [
-      "$",
-      "$65/單個"
+      "$75/單個"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "焦糖蘋果派",
+     "name_printed": "焦糖蘋果派",
+     "name_en": "Caramel Apple Pie",
+     "prices_by_list": {
+      "價格": {
+       "單片": 95
+      }
+     },
+     "printed": [
+      "$95/單片"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "提拉米蘇",
+     "name_printed": "提拉米蘇",
+     "name_en": "Tiramisu",
+     "prices_by_list": {
+      "價格": {
+       "單個": 95,
+       "盒": 250
+      }
+     },
+     "printed": [
+      "$95/單個",
+      "$250/盒"
      ],
      "note": "葷(含酒與豬明膠)"
+    },
+    {
+     "name_zh": "法式鹹派（培根蔬食／三杯杏鮑菇）",
+     "name_printed": "法式鹹派",
+     "name_en": "Quiche",
+     "prices_by_list": {
+      "價格": {
+       "單個": 75
+      }
+     },
+     "printed": [
+      "$培根蔬食／三杯杏鮑菇",
+      "$75/單個"
+     ],
+     "note": "葷"
+    },
+    {
+     "name_zh": "青檸塔",
+     "name_printed": "青檸塔",
+     "name_en": "Lime Tart",
+     "prices_by_list": {
+      "價格": {
+       "單個": 55,
+       "兩個": 100
+      }
+     },
+     "printed": [
+      "$55/單個",
+      "$100/兩個"
+     ],
+     "note": "蛋奶素"
+    },
+    {
+     "name_zh": "法式布蕾(原味)",
+     "name_printed": "法式布蕾(原味)",
+     "name_en": "Brulee",
+     "prices_by_list": {
+      "價格": {
+       "單價": 60
+      }
+     },
+     "printed": [
+      "$60"
+     ],
+     "note": "蛋奶素"
     }
    ]
   },
@@ -3736,6 +3736,6 @@
  ],
  "notes_zh": "沒收進本頁：濾掛／浸泡咖啡系列（盒裝咖啡）、會議型糕點、商品（周邊）。M、L 是官網寫的杯型。",
  "first_seen": "2026-10-23",
- "changed": "2026-10-23",
- "checked": "2026-10-23"
+ "changed": "2026-10-28",
+ "checked": "2026-10-28"
 }
