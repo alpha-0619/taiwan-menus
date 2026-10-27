@@ -1,0 +1,125 @@
+{
+ "kind": "store_provided",
+ "slug": "a-cun-beef-soup-baoan",
+ "name_zh": "阿村牛肉湯 第二代（保安路）",
+ "address": "台南市中西區保安路41號（不是國華街那家）",
+ "provided": "店家 2026-10-27 用臉書 Messenger 傳來的菜單圖（圖上寫「1968 阿村牛肉湯 第二代」），我們照著抄成文字．店家附註：分享食物無提供小碗",
+ "first_seen": "2026-10-27",
+ "changed": "2026-10-27",
+ "checked": "2026-10-27",
+ "sections": [
+  {
+   "name": "菜單",
+   "items": [
+    {
+     "name_zh": "牛肉湯",
+     "name_en": "Beef Soup",
+     "prices": {
+      "大": 170,
+      "小": 120
+     }
+    },
+    {
+     "name_zh": "牛腩湯",
+     "name_en": "Beef Brisket Soup",
+     "prices": {
+      "大": 170,
+      "小": 120
+     }
+    },
+    {
+     "name_zh": "牛雜湯",
+     "name_en": "Beef Offal Soup",
+     "prices": {
+      "大": 170,
+      "小": 120
+     }
+    },
+    {
+     "name_zh": "牛肉羹",
+     "name_en": "Beef Thick Soup",
+     "prices": {
+      "單價": 140
+     }
+    },
+    {
+     "name_zh": "高麗菜炒牛肉",
+     "name_en": "Cabbage Stir-fried Beef",
+     "prices": {
+      "大": 200,
+      "小": 140
+     }
+    },
+    {
+     "name_zh": "芥蘭炒牛肉",
+     "name_en": "Chinese Broccoli Stir-fried Beef",
+     "prices": {
+      "大": 200,
+      "小": 140
+     }
+    },
+    {
+     "name_zh": "蔥爆牛肉",
+     "name_en": "Scallion Beef Stir-fry",
+     "prices": {
+      "大": 200,
+      "小": 170
+     }
+    },
+    {
+     "name_zh": "麻油牛肉",
+     "name_en": "Sesame Oil Beef",
+     "prices": {
+      "大": 200,
+      "小": 170
+     }
+    },
+    {
+     "name_zh": "薑絲炒牛舌",
+     "name_en": "Ginger Shredded Stir-fried Beef Tongue",
+     "prices": {
+      "大": 200,
+      "小": 140
+     }
+    },
+    {
+     "name_zh": "酸醋牛肚",
+     "name_en": "Sour Vinegar Stir-fried Beef Tripe",
+     "prices": {
+      "大": 200,
+      "小": 140
+     }
+    },
+    {
+     "name_zh": "乾拌牛雜",
+     "name_en": "Dry Mixed Beef Offal",
+     "prices": {
+      "大": 200,
+      "小": 140
+     }
+    },
+    {
+     "name_zh": "牛肉燴飯",
+     "name_en": "Braised Beef on Rice",
+     "prices": {
+      "單價": 120
+     }
+    },
+    {
+     "name_zh": "牛肉炒飯",
+     "name_en": "Beef Fried Rice",
+     "prices": {
+      "單價": 120
+     }
+    },
+    {
+     "name_zh": "白飯",
+     "name_en": "Steamed White Rice",
+     "prices": {
+      "單價": 10
+     }
+    }
+   ]
+  }
+ ]
+}
