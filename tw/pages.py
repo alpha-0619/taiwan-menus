@@ -94,11 +94,16 @@ def shop_page(rec):
     ld = {"@context": "https://schema.org", "@type": "Menu", "name": f"{name} 菜單", "inLanguage": "zh-TW",
           "url": f"{SITE_URL}/{rec['slug']}/", "hasMenuItem": offers}
     also = f"，附店家自己寫的{'、'.join(langs)}文菜名" if langs else ""
-    desc = f"{name}菜單價格（{len(items)} 品項）：{desc_src}{also}。"
+    city = rec["city"]
+    desc = f"{city}{name}最新菜單價格（{len(items)} 品項）：{desc_src}{also}。"
     where = f"{esc(rec['address'])}．" if rec.get("address") else ""
-    return (head(f"{name}菜單價格 {day[:4]}（{title_src}）| Menu Check", desc, ld)
-            + f'<p class="meta"><a href="../">Menu Check 台灣菜單</a></p>\n<h1>{esc(name)} 菜單價格</h1>\n'
-            + f'<p class="meta">{where}{esc(rec["provided"])}．價格以店內為準</p>\n'
+    # Hours and phone as the shop's own Facebook page shows them, left out when it shows none we trust.
+    info = "．".join(f"{label}：{esc(rec[k])}" for label, k in (("營業時間", "hours"), ("電話", "phone")) if rec.get(k))
+    info = (f'<p class="meta">{info}（照店家臉書粉專，{rec["info_checked"]} 看；臨時公休或異動以店家公告為準）</p>\n'
+            if info else "")
+    return (head(f"{city}美食》{name}最新菜單價格 {day[:4]}（{title_src}）| Menu Check", desc, ld)
+            + f'<p class="meta"><a href="../">Menu Check 台灣菜單</a></p>\n<h1>{esc(name)} 最新菜單價格</h1>\n'
+            + f'<p class="meta">{where}{esc(rec["provided"])}．價格以店內為準</p>\n' + info
             + '<div class="wrap"><table style="min-width:0">\n<thead><tr><th>品項'
             + (f"（店家寫的{'、'.join(langs)}文）" if langs else "") + "</th><th>價格（新台幣）</th></tr></thead>\n<tbody>"
             + "".join(rows) + "</tbody></table></div>\n"
