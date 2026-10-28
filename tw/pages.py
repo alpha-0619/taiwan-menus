@@ -5,7 +5,10 @@ import re
 from pathlib import Path
 
 SITE_URL = "https://alpha-0619.github.io/taiwan-menus"
-GOAT = '<script data-goatcounter="https://menucheck.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'
+HOME = "https://alpha-0619.github.io/"  # the page linking every Menu Check site, with About and Privacy
+FOOT = {"zh": ("關於 Menu Check", "隱私權政策"), "en": ("About Menu Check", "Privacy policy"),
+        "ja": ("Menu Checkについて", "プライバシーポリシー"), "ko": ("Menu Check 소개", "개인정보 처리방침")}
+GOAT ='<script data-goatcounter="https://menucheck.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'
 STYLE = """:root{--bg:#fff;--fg:#1c1c1c;--muted:#666;--line:#e3e3e3;--sec:#f4f1ea;--accent:#7a4b12}
 @media (prefers-color-scheme:dark){:root{--bg:#151515;--fg:#eee;--muted:#aaa;--line:#333;--sec:#24211c;--accent:#e0b070}}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif}
@@ -49,6 +52,12 @@ def head(title, desc, ld=None, lang="zh-Hant-TW", alts=(), css=""):
             + "".join(f'<link rel="alternate" hreflang="{h}" href="{esc(u)}">\n' for h, u in alts)
             + (f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n' if ld else "")
             + f"<style>{STYLE}{css}</style></head><body><main>\n")
+
+
+def foot_links(lang="zh"):
+    """About and Privacy, on every page (AdSense asks for clear navigation and a privacy policy)."""
+    about, privacy = FOOT[lang]
+    return f'<p><small><a href="{HOME}about/">{about}</a> · <a href="{HOME}privacy/">{privacy}</a></small></p>\n'
 
 
 def is_shop(rec):
@@ -233,19 +242,19 @@ LANG_INDEX = {
            "h1": "Taiwan restaurant menus in English",
            "intro": "Menus the restaurants sent us or posted themselves, typed out as text, with the shop's own English "
                     "dish names and prices in NT$. Each page says where the menu came from and when we checked it.",
-           "item": lambda zh, city, n: f"({zh}, {city}, {n} items)",
+           "item": lambda zh, city, n: f"({zh}, {city}, {n} items)", "nav": "Taiwan",
            "foot": "Menu Check is not the official site of these restaurants and has no connection with them."},
     "ja": {"title": "台湾の飲食店メニュー（お店の日本語）｜Menu Check",
            "h1": "台湾の飲食店メニュー（日本語）",
            "intro": "お店から送ってもらった、またはお店が自分で載せたメニューを文字にしました。お店自身の日本語の料理名と、"
                     "台湾ドルの料金がついています。各ページに出所と確認日を書いています。",
-           "item": lambda zh, city, n: f"（{zh}・{city}・{n}品）",
+           "item": lambda zh, city, n: f"（{zh}・{city}・{n}品）", "nav": "台湾",
            "foot": "Menu Checkはこれらのお店の公式サイトではなく、お店とは関係ありません。"},
     "ko": {"title": "대만 식당 메뉴 (가게의 한국어) | Menu Check",
            "h1": "대만 식당 메뉴 (한국어)",
            "intro": "가게가 보내 주거나 직접 올린 메뉴를 글자로 옮겼습니다. 가게가 직접 번역한 한국어 메뉴 이름과 "
                     "대만 달러 가격이 있습니다. 각 페이지에 출처와 확인 날짜를 적었습니다.",
-           "item": lambda zh, city, n: f"({zh}, {city}, {n}개)",
+           "item": lambda zh, city, n: f"({zh}, {city}, {n}개)", "nav": "대만",
            "foot": "Menu Check는 이 가게들의 공식 사이트가 아니며 가게와 관련이 없습니다."},
 }
 
@@ -286,14 +295,14 @@ def shop_page(rec):
     other = " · ".join(f'<a href="../{l}/{rec["slug"]}/" hreflang="{l}" lang="{l}">{LANG[l]}</a>' for l in page_langs(rec))
     other = f'<p class="meta">店家自己的外文菜單：{other}</p>\n' if other else ""
     return (head(f"{city}美食》{name}最新菜單價格 {day[:4]}（{title_src}）| Menu Check", desc, ld, alts=alts(rec))
-            + f'<p class="meta"><a href="../">Menu Check 台灣菜單</a></p>\n<h1>{esc(name)} 最新菜單價格</h1>\n'
+            + f'<p class="meta"><a href="{HOME}">Menu Check</a> › <a href="../">台灣菜單</a></p>\n<h1>{esc(name)} 最新菜單價格</h1>\n'
             + f'<p class="meta">{where}{esc(rec["provided"])}．價格以店內為準</p>\n' + info + other
             + '<div class="wrap"><table style="min-width:0">\n<thead><tr><th>品項'
             + (f"（店家寫的{'、'.join(langs)}文）" if langs else "") + "</th><th>價格（新台幣）</th></tr></thead>\n<tbody>"
             + "".join(rows) + "</tbody></table></div>\n"
             + f"<p><small>{foot}</small></p>\n"
             + f"<p><small>Menu Check 不是{esc(name)}的官方網站，跟店家沒有合作關係。</small></p>\n"
-            + f"</main>{GOAT}</body></html>\n")
+            + foot_links() + f"</main>{GOAT}</body></html>\n")
 
 
 def shop_page_lang(rec, lang):
@@ -327,13 +336,14 @@ def shop_page_lang(rec, lang):
              f'<script type="application/json" id="order-text">'
              + json.dumps(o, ensure_ascii=False).replace("</", "<\\/") + f"</script>\n<script>{ORDER_JS}</script>\n")
     return (head(t["title"], t["desc"], ld, lang, alts(rec), LANG_CSS)
-            + f'<p class="meta"><a href="../">Menu Check</a> · {others}</p>\n<h1>{esc(t["h1"])}</h1>\n'
+            + f'<p class="meta"><a href="{HOME}">Menu Check</a> › <a href="../">{esc(LANG_INDEX[lang]["nav"])}</a> · {others}</p>\n'
+            + f'<h1>{esc(t["h1"])}</h1>\n'
             + f'<p class="meta">{esc(t["where"])}{phone}</p>\n<p class="meta">{esc(t["src"])}</p>\n'
             + f'<p class="meta">{esc(o["tap"])}</p>\n'
             + '<div class="wrap"><table style="min-width:0">\n<thead><tr>'
             + "".join(f"<th>{esc(h)}</th>" for h in t["th"]) + "</tr></thead>\n<tbody>" + "".join(rows)
             + "</tbody></table></div>\n"
-            + f"<p><small>{esc(t['foot'])}</small></p>\n</main>{order}{GOAT}</body></html>\n")
+            + f"<p><small>{esc(t['foot'])}</small></p>\n" + foot_links(lang) + f"</main>{order}{GOAT}</body></html>\n")
 
 
 def lang_index(lang, recs):
@@ -343,9 +353,10 @@ def lang_index(lang, recs):
                     + esc(t["item"](r["name_zh"], CITY[r["city"]][lang], sum(len(s["items"]) for s in r["sections"])))
                     + "</small></li>" for r in recs)
     return (head(t["title"], t["intro"], lang=lang)
-            + f'<p class="meta"><a href="../" hreflang="zh-Hant-TW" lang="zh-Hant-TW">Menu Check 台灣菜單（中文）</a></p>\n'
+            + f'<p class="meta"><a href="{HOME}">Menu Check</a> › '
+            + '<a href="../" hreflang="zh-Hant-TW" lang="zh-Hant-TW">台灣菜單（中文）</a></p>\n'
             + f'<h1>{esc(t["h1"])}</h1>\n<p class="meta">{esc(t["intro"])}</p>\n<ul>{items}</ul>\n'
-            + f"<p><small>{esc(t['foot'])}</small></p>\n</main>{GOAT}</body></html>\n")
+            + f"<p><small>{esc(t['foot'])}</small></p>\n" + foot_links(lang) + f"</main>{GOAT}</body></html>\n")
 
 
 def chain_page(rec):
@@ -382,7 +393,7 @@ def chain_page(rec):
     desc = (f"{name}全品項價格：{'、'.join(lists)}分開列" if len(lists) > 1 else f"{name}全品項價格（{len(items)} 品項）") \
         + ("，附官網標示的熱量與糖量" if has_nut else "") + f"。照官網菜單頁原文整理，{day} 查證。"
     return (head(f"{name}菜單價格 {day[:4]}（官網原文，{day} 查證）| Menu Check", desc, ld)
-            + f'<p class="meta"><a href="../">Menu Check 台灣連鎖菜單</a></p>\n<h1>{esc(name)} 菜單價格</h1>\n'
+            + f'<p class="meta"><a href="{HOME}">Menu Check</a> › <a href="../">台灣菜單</a></p>\n<h1>{esc(name)} 菜單價格</h1>\n'
             + f'<p class="meta">照<a href="{esc(rec["source_url"])}" rel="nofollow">官網菜單頁</a>原文整理．{day} 查證{changed}．價格以門市為準</p>\n'
             + (f"<p>{esc(name)}有{len(lists)}種價目，看你在哪裡買：</p>\n<ul>{areas}</ul>\n" if len(lists) > 1 else "")
             + '<div class="wrap"><table>\n<thead><tr><th>品項</th>'
@@ -392,7 +403,7 @@ def chain_page(rec):
             + f"<h2>官網上的其他說明</h2><ul>{notes}</ul>\n<p><small>{esc(rec.get('notes_zh', ''))}</small></p>\n"
             + "<p><small>本頁每天自動對官網重查一次；只轉成文字，不放店家照片。發現價格跟門市不同，歡迎告訴我們。</small></p>\n"
             + f"<p><small>Menu Check 不是{esc(name)}的官方網站，跟品牌沒有合作關係。</small></p>\n"
-            + f"</main>{GOAT}</body></html>\n")
+            + foot_links() + f"</main>{GOAT}</body></html>\n")
 
 
 def build(root):
@@ -419,17 +430,18 @@ def build(root):
                     for r in recs)
     shops = any(is_shop(r) for r in recs)  # the wording only changes once a page from a restaurant's own menu exists
     own = "店家傳來或自己公布的菜單" if any(is_posted(r) for r in recs) else "店家自己傳來的菜單"
+    crumb = f'<p class="meta"><a href="{HOME}">Menu Check</a> › 台灣</p>\n'
     top = (head("台灣餐廳與連鎖店菜單價格（官網原文、店家提供）| Menu Check",
                 f"台灣餐廳與連鎖店的菜單價格：連鎖店照官網原文每天自動重查，其他店用{own}抄成文字，每頁寫出處和日期。")
-           + "<h1>台灣餐廳與連鎖店菜單價格</h1>\n<p class=\"meta\">連鎖店照官網原文整理、每天自動重查；"
+           + crumb + "<h1>台灣餐廳與連鎖店菜單價格</h1>\n<p class=\"meta\">連鎖店照官網原文整理、每天自動重查；"
            + f"其他店用{own}抄成文字。每一頁都寫出處和日期。</p>\n") if shops else (
         head("台灣連鎖店菜單價格（官網原文，每天查證）| Menu Check",
              "台灣連鎖飲料店與餐廳的官方菜單價格，照官網原文整理、分地區價目、每天自動重查。")
-        + "<h1>台灣連鎖店菜單價格</h1>\n<p class=\"meta\">每一頁都照該品牌官網原文整理，寫出處和查證日期，每天自動重查。</p>\n")
+        + crumb + "<h1>台灣連鎖店菜單價格</h1>\n<p class=\"meta\">每一頁都照該品牌官網原文整理，寫出處和查證日期，每天自動重查。</p>\n")
     who = "店家" if shops else "品牌"
     (docs / "index.html").write_text(
         top + lang_links + f"<ul>{items}</ul>\n<p><small>Menu Check 不是這些{who}的官方網站，跟{who}沒有合作關係。</small></p>\n"
-        + f"</main>{GOAT}</body></html>\n", encoding="utf-8", newline="\n")
+        + foot_links() + f"</main>{GOAT}</body></html>\n", encoding="utf-8", newline="\n")
     urls = [(f"{SITE_URL}/", max(r["checked"] for r in recs))] + [(f"{SITE_URL}/{r['slug']}/", r["checked"]) for r in recs]
     for lang, lrecs in by_lang.items():
         if lrecs:
