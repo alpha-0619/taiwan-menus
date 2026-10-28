@@ -34,6 +34,12 @@ def cell(p):
                     else f"{v}／{k}" for k, v in p.items())
 
 
+def price_range(price_dicts):
+    """'價錢從 60 元到 390 元' needs the lowest and highest price; an add-on ('加價') is not a price of its own."""
+    vals = [v for p in price_dicts for k, v in (p or {}).items() if k != "加價"]
+    return (min(vals), max(vals)) if vals else None
+
+
 def nutrition(lines):
     """('大杯', sugar, kcal) as printed; the 中杯 line when only a medium is sold."""
     for size in ("大杯", "中杯"):
@@ -243,18 +249,22 @@ LANG_INDEX = {
            "intro": "Menus the restaurants sent us or posted themselves, typed out as text, with the shop's own English "
                     "dish names and prices in NT$. Each page says where the menu came from and when we checked it.",
            "item": lambda zh, city, n: f"({zh}, {city}, {n} items)", "nav": "Taiwan",
+           "order": "On each page, tap the prices of what you want: the order screen lists it in Chinese with the total, "
+                    "ready to show the staff.",
            "foot": "Menu Check is not the official site of these restaurants and has no connection with them."},
     "ja": {"title": "台湾の飲食店メニュー（お店の日本語）｜Menu Check",
            "h1": "台湾の飲食店メニュー（日本語）",
            "intro": "お店から送ってもらった、またはお店が自分で載せたメニューを文字にしました。お店自身の日本語の料理名と、"
                     "台湾ドルの料金がついています。各ページに出所と確認日を書いています。",
            "item": lambda zh, city, n: f"（{zh}・{city}・{n}品）", "nav": "台湾",
+           "order": "各ページで料金をタップすると注文リストに入り、注文画面に料理名が中国語で合計と一緒に出るので、そのまま店員に見せられます。",
            "foot": "Menu Checkはこれらのお店の公式サイトではなく、お店とは関係ありません。"},
     "ko": {"title": "대만 식당 메뉴 (가게의 한국어) | Menu Check",
            "h1": "대만 식당 메뉴 (한국어)",
            "intro": "가게가 보내 주거나 직접 올린 메뉴를 글자로 옮겼습니다. 가게가 직접 번역한 한국어 메뉴 이름과 "
                     "대만 달러 가격이 있습니다. 각 페이지에 출처와 확인 날짜를 적었습니다.",
            "item": lambda zh, city, n: f"({zh}, {city}, {n}개)", "nav": "대만",
+           "order": "각 페이지에서 가격을 누르면 주문 목록에 들어가고, 주문 화면에 메뉴 이름이 중국어로 합계와 함께 나와서 그대로 직원에게 보여 줄 수 있습니다.",
            "foot": "Menu Check는 이 가게들의 공식 사이트가 아니며 가게와 관련이 없습니다."},
 }
 
@@ -294,9 +304,15 @@ def shop_page(rec):
             if info else "")
     other = " · ".join(f'<a href="../{l}/{rec["slug"]}/" hreflang="{l}" lang="{l}">{LANG[l]}</a>' for l in page_langs(rec))
     other = f'<p class="meta">店家自己的外文菜單：{other}</p>\n' if other else ""
+    rng = price_range(it.get("prices") for it in items)
+    sized = any(len([k for k in (it.get("prices") or {}) if k != "加價"]) > 1 for it in items)
+    summary = (f"這份菜單共 {len(items)} 個品項" + (f"，價錢從 {rng[0]:,} 元到 {rng[1]:,} 元" if rng else "")
+               + ("，有些品項分不同份量" if sized else "") + "。"
+               + (f"店家自己的菜單上有{'、'.join(langs)}文菜名，表格裡一併列出。" if langs else ""))
     return (head(f"{city}美食》{name}最新菜單價格 {day[:4]}（{title_src}）| Menu Check", desc, ld, alts=alts(rec))
             + f'<p class="meta"><a href="{HOME}">Menu Check</a> › <a href="../">台灣菜單</a></p>\n<h1>{esc(name)} 最新菜單價格</h1>\n'
             + f'<p class="meta">{where}{esc(rec["provided"])}．價格以店內為準</p>\n' + info + other
+            + f"<p>{esc(summary)}</p>\n"
             + '<div class="wrap"><table style="min-width:0">\n<thead><tr><th>品項'
             + (f"（店家寫的{'、'.join(langs)}文）" if langs else "") + "</th><th>價格（新台幣）</th></tr></thead>\n<tbody>"
             + "".join(rows) + "</tbody></table></div>\n"
@@ -325,6 +341,11 @@ def shop_page_lang(rec, lang):
                         + [f'<a href="../../{l}/{slug}/" hreflang="{l}" lang="{l}">{LANG[l]}</a>'
                            for l in page_langs(rec) if l != lang])
     phone = f" · {t['phone']}: {esc(rec['phone'])}" if rec.get("phone") else ""
+    rng = price_range(it.get("prices") for it in items)
+    summary = ({"en": "This menu has {n} dishes, from NT${lo:,} to NT${hi:,}.",
+                "ja": "このメニューは{n}品、料金は{lo:,}〜{hi:,}台湾ドルです。",
+                "ko": "이 메뉴는 {n}개이며, 가격은 {lo:,}~{hi:,} 대만 달러입니다."}[lang].format(n=len(items), lo=rng[0], hi=rng[1])
+               if rng else "")
     o = ORDER[lang]
     order = (f'<div id="card" hidden role="dialog" aria-modal="true" aria-labelledby="card-h">'
              f'<p class="meta" id="card-h">{esc(o["hint"])}</p>\n<p class="big" lang="zh-Hant">你好，我要點：</p>\n'
@@ -339,6 +360,7 @@ def shop_page_lang(rec, lang):
             + f'<p class="meta"><a href="{HOME}">Menu Check</a> › <a href="../">{esc(LANG_INDEX[lang]["nav"])}</a> · {others}</p>\n'
             + f'<h1>{esc(t["h1"])}</h1>\n'
             + f'<p class="meta">{esc(t["where"])}{phone}</p>\n<p class="meta">{esc(t["src"])}</p>\n'
+            + (f"<p>{esc(summary)}</p>\n" if summary else "")
             + f'<p class="meta">{esc(o["tap"])}</p>\n'
             + '<div class="wrap"><table style="min-width:0">\n<thead><tr>'
             + "".join(f"<th>{esc(h)}</th>" for h in t["th"]) + "</tr></thead>\n<tbody>" + "".join(rows)
@@ -355,7 +377,7 @@ def lang_index(lang, recs):
     return (head(t["title"], t["intro"], lang=lang)
             + f'<p class="meta"><a href="{HOME}">Menu Check</a> › '
             + '<a href="../" hreflang="zh-Hant-TW" lang="zh-Hant-TW">台灣菜單（中文）</a></p>\n'
-            + f'<h1>{esc(t["h1"])}</h1>\n<p class="meta">{esc(t["intro"])}</p>\n<ul>{items}</ul>\n'
+            + f'<h1>{esc(t["h1"])}</h1>\n<p class="meta">{esc(t["intro"])}</p>\n<p>{esc(t["order"])}</p>\n<ul>{items}</ul>\n'
             + f"<p><small>{esc(t['foot'])}</small></p>\n" + foot_links(lang) + f"</main>{GOAT}</body></html>\n")
 
 
@@ -390,11 +412,14 @@ def chain_page(rec):
     areas = "".join(f"<li><b>{esc(l)}</b>：{esc(rec['areas'].get(l, ''))}</li>" for l in lists)
     notes = "".join(f"<li>{esc(n.lstrip('• '))}</li>" for n in rec.get("notes_official", []))
     changed = f"．價錢上次變動 {rec['changed']}" if rec.get("changed") and rec["changed"] != rec.get("first_seen") else ""
+    rng = price_range(it["prices_by_list"].get(l) for it in items for l in lists)
+    summary = f"官網列出 {len(items)} 個品項" + (f"，價錢從 {rng[0]:,} 元到 {rng[1]:,} 元" if rng else "") + "。"
     desc = (f"{name}全品項價格：{'、'.join(lists)}分開列" if len(lists) > 1 else f"{name}全品項價格（{len(items)} 品項）") \
         + ("，附官網標示的熱量與糖量" if has_nut else "") + f"。照官網菜單頁原文整理，{day} 查證。"
     return (head(f"{name}菜單價格 {day[:4]}（官網原文，{day} 查證）| Menu Check", desc, ld)
             + f'<p class="meta"><a href="{HOME}">Menu Check</a> › <a href="../">台灣菜單</a></p>\n<h1>{esc(name)} 菜單價格</h1>\n'
             + f'<p class="meta">照<a href="{esc(rec["source_url"])}" rel="nofollow">官網菜單頁</a>原文整理．{day} 查證{changed}．價格以門市為準</p>\n'
+            + f"<p>{esc(summary)}</p>\n"
             + (f"<p>{esc(name)}有{len(lists)}種價目，看你在哪裡買：</p>\n<ul>{areas}</ul>\n" if len(lists) > 1 else "")
             + '<div class="wrap"><table>\n<thead><tr><th>品項</th>'
             + "".join(f"<th>{esc(l)}</th>" for l in lists)
@@ -423,7 +448,9 @@ def build(root):
         if lrecs:
             (docs / lang / "index.html").write_text(lang_index(lang, lrecs), encoding="utf-8", newline="\n")
     lang_links = " · ".join(f'<a href="{l}/" hreflang="{l}" lang="{l}">{LANG[l]}</a>' for l in LANG if by_lang[l])
-    lang_links = f'<p class="meta">店家自己的外文菜單：{lang_links}</p>\n' if lang_links else ""
+    lang_links = (f'<p class="meta">店家自己的外文菜單：{lang_links}</p>\n'
+                  "<p>有店家自己英文、日文或韓文菜單的店，另外有外文頁：外國旅客在外文頁上按價錢點菜，"
+                  "畫面會變成大字的中文點餐單和總價，可以直接拿給店員看。</p>\n") if lang_links else ""
     items = "".join(f'<li><a href="{esc(r["slug"])}/">{esc(r["name_zh"])} 菜單價格</a> '
                     f'<small>（{sum(len(s["items"]) for s in r["sections"])} 品項，'
                     + (esc(shop_dated(r)) if is_shop(r) else f'{esc(r["checked"])} 查證') + "）</small></li>"
