@@ -3,6 +3,7 @@
 台灣餐廳與連鎖店的菜單價格（新台幣）：連鎖店照官網原文整理、每天自動重查；其他店用店家傳來或自己公布的菜單抄成文字。每頁寫出處與日期。
 
 - [阿村牛肉湯 第二代（保安路）](https://alpha-0619.github.io/taiwan-menus/a-cun-beef-soup-baoan/): 店家提供的菜單（2026-10-27）
+- [邱家小卷米粉](https://alpha-0619.github.io/taiwan-menus/chiu-squid-rice-noodles/): 店家公布的菜單（2026-10-28 查證）
 - [春美冰菓室](https://alpha-0619.github.io/taiwan-menus/chun-mei-ice/): 店家提供的菜單（2026-10-25）
 - [公正包子](https://alpha-0619.github.io/taiwan-menus/gong-zheng-bao-zi/): 店家提供的菜單（2026-10-27）
 - [可不可熟成茶行](https://alpha-0619.github.io/taiwan-menus/kebuke/): https://kebuke.com/menu/
@@ -14,3 +15,4 @@
 - [一甲子餐飲](https://alpha-0619.github.io/taiwan-menus/yi-jia-zi/): 店家提供的菜單（2026-10-25）
 - [永康牛肉麵館](https://alpha-0619.github.io/taiwan-menus/yong-kang-beef-noodles/): 店家提供的菜單（2026-10-23）
 - [萬華源芳刈包](https://alpha-0619.github.io/taiwan-menus/yuan-fang-gua-bao/): 店家提供的菜單（2026-10-24）
+- [周家蒸餃小籠包](https://alpha-0619.github.io/taiwan-menus/zhou-jia-steamed-dumplings/): 店家公布的菜單（2026-10-28 查證）

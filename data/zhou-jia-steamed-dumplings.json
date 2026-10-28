@@ -1,0 +1,275 @@
+{
+ "kind": "store_posted",
+ "slug": "zhou-jia-steamed-dumplings",
+ "name_zh": "周家蒸餃小籠包",
+ "address": "花蓮市公正街4之20號",
+ "city": "花蓮",
+ "phone": "03-835-0006",
+ "info_checked": "2026-10-28",
+ "provided": "店家自己在臉書粉專 2026-03-03 貼的英文、日文菜單（兩張，每道菜都附中文名），我們照著抄成文字，英文、日文菜名是店家自己寫的．價錢跟店家 2025-09-30 貼的「114年10月調整後的價格」中文價目板一樣．店家價目板寫：請用桌上 QR Code 點餐後至櫃台結帳",
+ "first_seen": "2026-10-28",
+ "changed": "2026-10-28",
+ "checked": "2026-10-28",
+ "sections": [
+  {
+   "name": "蒸餃／小籠包",
+   "items": [
+    {
+     "name_zh": "小籠包",
+     "name_en": "XiaoLongBao (Pork Bun)",
+     "name_ja": "小籠包（小肉まん）",
+     "prices": {
+      "10個": 70,
+      "1個": 7
+     }
+    },
+    {
+     "name_zh": "鮮肉蒸餃",
+     "name_en": "Fresh Pork Dumplings",
+     "name_ja": "豚肉蒸し餃子",
+     "prices": {
+      "10個": 45
+     }
+    },
+    {
+     "name_zh": "韭菜蒸餃",
+     "name_en": "Chive Dumplings",
+     "name_ja": "ニラ蒸し餃子",
+     "prices": {
+      "10個": 55
+     }
+    },
+    {
+     "name_zh": "蝦仁蒸餃",
+     "name_en": "Shrimp Dumplings",
+     "name_ja": "エビ蒸し餃子",
+     "prices": {
+      "10個": 90
+     }
+    }
+   ]
+  },
+  {
+   "name": "湯類",
+   "items": [
+    {
+     "name_zh": "魚丸湯",
+     "name_en": "Milkfish Ball Soup",
+     "name_ja": "魚団子スープ",
+     "prices": {
+      "大": 70,
+      "小": 35
+     }
+    },
+    {
+     "name_zh": "貢丸湯",
+     "name_en": "Meatball Soup",
+     "name_ja": "肉団子スープ",
+     "prices": {
+      "大": 50,
+      "小": 25
+     }
+    },
+    {
+     "name_zh": "酸辣湯",
+     "name_en": "Hot & Sour Soup",
+     "name_ja": "酸辣湯（サンラータン）",
+     "prices": {
+      "大": 50,
+      "小": 25
+     }
+    },
+    {
+     "name_zh": "酸辣湯餃",
+     "name_en": "Hot & Sour Soup with Dumplings",
+     "name_ja": "酸辣湯（サンラータン） 餃子入り",
+     "prices": {
+      "單價": 70
+     }
+    },
+    {
+     "name_zh": "肉羹湯",
+     "name_en": "Pork Thick Soup",
+     "name_ja": "豚肉のとろみスープ",
+     "prices": {
+      "大": 70,
+      "小": 35
+     }
+    },
+    {
+     "name_zh": "肉羹湯餃",
+     "name_en": "Pork thick soup with Dumplings",
+     "name_ja": "豚肉のとろみスープ 餃子入り",
+     "prices": {
+      "單價": 80
+     }
+    },
+    {
+     "name_zh": "蒜味肉羹",
+     "name_en": "Garlic Pork Thick Soup",
+     "name_ja": "豚肉のとろみスープ ニンニク味",
+     "prices": {
+      "大": 90,
+      "小": 45
+     }
+    }
+   ]
+  },
+  {
+   "name": "飯類",
+   "items": [
+    {
+     "name_zh": "魯肉飯",
+     "name_en": "Braised Pork Rice",
+     "name_ja": "魯肉飯（ルーローハン）",
+     "prices": {
+      "大": 55,
+      "小": 35
+     }
+    },
+    {
+     "name_zh": "酸辣飯",
+     "name_en": "Hot & Sour Soup with Rice",
+     "name_ja": "酸辣湯（サンラータン） ご飯入り",
+     "prices": {
+      "大": 65,
+      "小": 50
+     }
+    },
+    {
+     "name_zh": "肉羹飯",
+     "name_en": "Pork thick soup with Rice",
+     "name_ja": "豚肉のとろみスープ ご飯入り",
+     "prices": {
+      "大": 70,
+      "小": 55
+     }
+    },
+    {
+     "name_zh": "蒜味肉羹飯",
+     "name_en": "Garlic Pork thick soup with Rice",
+     "name_ja": "豚肉のとろみスープ ご飯入り ニンニク味",
+     "prices": {
+      "大": 80,
+      "小": 65
+     }
+    }
+   ]
+  },
+  {
+   "name": "麵／米粉／冬粉",
+   "items": [
+    {
+     "name_zh": "酸辣麵",
+     "name_en": "Hot & Sour Soup with Noodles",
+     "name_ja": "酸辣湯（サンラータン） 麺入り",
+     "prices": {
+      "大": 65,
+      "小": 50
+     }
+    },
+    {
+     "name_zh": "酸辣米粉",
+     "name_en": "Hot & Sour Soup with Rice Noodle",
+     "name_ja": "酸辣湯（サンラータン） ビーフン入り",
+     "prices": {
+      "大": 65,
+      "小": 50
+     }
+    },
+    {
+     "name_zh": "酸辣冬粉",
+     "name_en": "Hot & Sour Soup with Glass Noodles",
+     "name_ja": "酸辣湯（サンラータン） 春雨入り",
+     "prices": {
+      "大": 65,
+      "小": 50
+     }
+    },
+    {
+     "name_zh": "肉羹麵",
+     "name_en": "Pork thick soup with Noodles",
+     "name_ja": "豚肉のとろみスープ 麺入り",
+     "prices": {
+      "大": 70,
+      "小": 55
+     }
+    },
+    {
+     "name_zh": "蒜味肉羹麵",
+     "name_en": "Garlic Pork thick soup with Noodles",
+     "name_ja": "豚肉のとろみスープ 麺入り ニンニク味",
+     "prices": {
+      "大": 80,
+      "小": 65
+     }
+    },
+    {
+     "name_zh": "肉羹米粉",
+     "name_en": "Pork thick soup with Rice Noodles",
+     "name_ja": "豚肉のとろみスープ ビーフン入り",
+     "prices": {
+      "大": 70,
+      "小": 55
+     }
+    },
+    {
+     "name_zh": "蒜味肉羹米粉",
+     "name_en": "Garlic Pork thick soup with Rice Noodles",
+     "name_ja": "豚肉のとろみスープ ビーフン入りニンニク味",
+     "prices": {
+      "大": 80,
+      "小": 65
+     }
+    },
+    {
+     "name_zh": "肉羹冬粉",
+     "name_en": "Pork thick soup with Glass Noodles",
+     "name_ja": "豚肉のとろみスープ 春雨入り",
+     "prices": {
+      "大": 70,
+      "小": 55
+     }
+    },
+    {
+     "name_zh": "蒜味肉羹冬粉",
+     "name_en": "Garlic Pork thick soup with Glass Noodles",
+     "name_ja": "豚肉のとろみスープ 春雨入り ニンニク味",
+     "prices": {
+      "大": 80,
+      "小": 65
+     }
+    }
+   ]
+  },
+  {
+   "name": "飲料",
+   "items": [
+    {
+     "name_zh": "香濃豆漿／無糖豆漿",
+     "name_en": "Rich Soy Milk (sweetened/unsweetened)",
+     "name_ja": "濃厚豆乳 甘/無糖",
+     "prices": {
+      "單價": 20
+     }
+    },
+    {
+     "name_zh": "豆香紅茶",
+     "name_en": "Soy Milk Black Tea (sweetened)",
+     "name_ja": "豆乳紅茶 甘のみ",
+     "prices": {
+      "單價": 20
+     }
+    },
+    {
+     "name_zh": "古早味紅茶",
+     "name_en": "Traditional Black Tea (sweetened)",
+     "name_ja": "昔ながらの紅 甘のみ",
+     "prices": {
+      "單價": 20
+     }
+    }
+   ]
+  }
+ ]
+}
