@@ -18,13 +18,61 @@ table{border-collapse:collapse;width:100%;min-width:560px} th,td{border-bottom:1
 thead th{font-size:.85rem;color:var(--muted)} tr.sec th{background:var(--sec);font-size:.95rem}
 td:not(:first-child){white-space:nowrap}
 tbody td:first-child,thead th:first-child{position:sticky;left:0;background:var(--bg);min-width:8.5em;z-index:1}
-tr.sec th{position:sticky;left:0} ul{padding-left:1.2em} small{color:var(--muted)}td:not(:first-child){white-space:normal} .zh{font-size:1.15rem;font-weight:600}</style></head><body><main>
+tr.sec th{position:sticky;left:0} ul{padding-left:1.2em} small{color:var(--muted)}td:not(:first-child){white-space:normal} .zh{font-size:1.15rem;font-weight:600}main{padding-bottom:96px} [hidden]{display:none!important}button{font:inherit;color:var(--fg);background:var(--sec);border:1px solid var(--line);border-radius:6px;padding:6px 10px;cursor:pointer} button.add{display:block;margin:0 0 4px;white-space:nowrap}#bar{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 16px;background:var(--bg);border-top:1px solid var(--line)} #bar span{flex:1 1 auto}#card{position:fixed;inset:0;z-index:6;overflow:auto;padding:16px;background:var(--bg)}.big{font-size:1.7rem;font-weight:700;margin:.4em 0} #lines{list-style:none;padding:0}#lines li{display:grid;grid-template-columns:1fr auto auto auto;gap:8px;align-items:center;font-size:1.5rem;padding:8px 0;border-bottom:1px solid var(--line)} #lines .zhl{font-weight:700}#lines button{min-width:44px;min-height:44px}</style></head><body><main>
 <p class="meta"><a href="../">Menu Check</a> · <a href="../../yong-kang-beef-noodles/" hreflang="zh-Hant-TW" lang="zh-Hant-TW">中文</a> · <a href="../../en/yong-kang-beef-noodles/" hreflang="en" lang="en">English</a> · <a href="../../ko/yong-kang-beef-noodles/" hreflang="ko" lang="ko">한국어</a></p>
 <h1>永康牛肉麺館 メニューと料金</h1>
 <p class="meta">永康牛肉麵館・台北・住所（中国語。タクシーで見せる用）：台北市金山南路二段31巷17號</p>
 <p class="meta">2026-10-23にお店からもらったメニューを文字にしました。日本語の料理名はお店自身の翻訳です。料金は台湾ドル（NT$）で、お店の表示価格が優先です。</p>
+<p class="meta">料金をタップすると注文リストに入ります。注文画面には料理名が中国語で出るので、そのまま店員に見せられます。</p>
 <div class="wrap"><table style="min-width:0">
 <thead><tr><th>料理（お店の日本語。注文時は下の中国語を指さし）</th><th>料金（NT$）</th></tr></thead>
-<tbody><tr class="sec"><th colspan="2">菜單</th></tr><tr><td>スペアリブとサツマイモのもち米蒸し<br><span lang="zh-Hant" class="zh">粉蒸排骨</span></td><td>160</td></tr><tr><td>四川風ワンタンのラー油あえ<br><span lang="zh-Hant" class="zh">紅油抄手</span></td><td>160</td></tr><tr><td>白モツとサツマイモのもち米蒸し<br><span lang="zh-Hant" class="zh">粉蒸肥腸</span></td><td>160</td></tr><tr><td>煮込み牛肉麺 (ピリ辛)<br><span lang="zh-Hant" class="zh">紅燒牛肉麵</span></td><td>大 350 / 小 300</td></tr><tr><td>煮込み牛筋麺 (ピリ辛)<br><span lang="zh-Hant" class="zh">紅燒牛筋麵</span></td><td>大 390 / 小 340</td></tr><tr><td>煮込み牛筋と牛肉麺 (ピリ辛)<br><span lang="zh-Hant" class="zh">紅燒半筋半肉麵</span></td><td>大 370 / 小 320</td></tr><tr><td>牛肉麺 (塩味)<br><span lang="zh-Hant" class="zh">清燉牛肉麵</span></td><td>—</td></tr><tr><td>タンタン麺<br><span lang="zh-Hant" class="zh">担担麵</span></td><td>大 160 / 小 140</td></tr><tr><td>ジャージャー麺<br><span lang="zh-Hant" class="zh">炸醬麵</span></td><td>大 190 / 小 160</td></tr></tbody></table></div>
+<tbody><tr class="sec"><th colspan="2">菜單</th></tr><tr><td>スペアリブとサツマイモのもち米蒸し<br><span lang="zh-Hant" class="zh">粉蒸排骨</span></td><td><button type="button" class="add" data-zh="粉蒸排骨" data-p="160">+ 160</button></td></tr><tr><td>四川風ワンタンのラー油あえ<br><span lang="zh-Hant" class="zh">紅油抄手</span></td><td><button type="button" class="add" data-zh="紅油抄手" data-p="160">+ 160</button></td></tr><tr><td>白モツとサツマイモのもち米蒸し<br><span lang="zh-Hant" class="zh">粉蒸肥腸</span></td><td><button type="button" class="add" data-zh="粉蒸肥腸" data-p="160">+ 160</button></td></tr><tr><td>煮込み牛肉麺 (ピリ辛)<br><span lang="zh-Hant" class="zh">紅燒牛肉麵</span></td><td><button type="button" class="add" data-zh="紅燒牛肉麵（大）" data-p="350">+ 大 350</button><button type="button" class="add" data-zh="紅燒牛肉麵（小）" data-p="300">+ 小 300</button></td></tr><tr><td>煮込み牛筋麺 (ピリ辛)<br><span lang="zh-Hant" class="zh">紅燒牛筋麵</span></td><td><button type="button" class="add" data-zh="紅燒牛筋麵（大）" data-p="390">+ 大 390</button><button type="button" class="add" data-zh="紅燒牛筋麵（小）" data-p="340">+ 小 340</button></td></tr><tr><td>煮込み牛筋と牛肉麺 (ピリ辛)<br><span lang="zh-Hant" class="zh">紅燒半筋半肉麵</span></td><td><button type="button" class="add" data-zh="紅燒半筋半肉麵（大）" data-p="370">+ 大 370</button><button type="button" class="add" data-zh="紅燒半筋半肉麵（小）" data-p="320">+ 小 320</button></td></tr><tr><td>牛肉麺 (塩味)<br><span lang="zh-Hant" class="zh">清燉牛肉麵</span></td><td>—</td></tr><tr><td>タンタン麺<br><span lang="zh-Hant" class="zh">担担麵</span></td><td><button type="button" class="add" data-zh="担担麵（大）" data-p="160">+ 大 160</button><button type="button" class="add" data-zh="担担麵（小）" data-p="140">+ 小 140</button></td></tr><tr><td>ジャージャー麺<br><span lang="zh-Hant" class="zh">炸醬麵</span></td><td><button type="button" class="add" data-zh="炸醬麵（大）" data-p="190">+ 大 190</button><button type="button" class="add" data-zh="炸醬麵（小）" data-p="160">+ 小 160</button></td></tr></tbody></table></div>
 <p><small>写真はなく、文字だけです。Menu Checkは永康牛肉麺館の公式サイトではなく、お店とは関係ありません。</small></p>
-</main><script data-goatcounter="https://menucheck.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
+</main><div id="card" hidden role="dialog" aria-modal="true" aria-labelledby="card-h"><p class="meta" id="card-h">この画面を店員に見せてください。</p>
+<p class="big" lang="zh-Hant">你好，我要點：</p>
+<ul id="lines"></ul>
+<p class="big" id="tot" lang="zh-Hant"></p>
+<p lang="zh-Hant"><small>照網頁上的價錢算，以店內為準</small></p>
+<p><small>合計はこのページの料金を足したものです。お店の表示価格が優先です。</small></p>
+<button type="button" id="close">メニューに戻る</button></div>
+<div id="bar" hidden><span id="sum" aria-live="polite"></span><button type="button" id="show">店員に見せる</button><button type="button" id="clr">クリア</button></div>
+<script type="application/json" id="order-text">{"tap": "料金をタップすると注文リストに入ります。注文画面には料理名が中国語で出るので、そのまま店員に見せられます。", "bar": "注文リスト", "item": "品", "items": "品", "show": "店員に見せる", "clear": "クリア", "hint": "この画面を店員に見せてください。", "close": "メニューに戻る", "note": "合計はこのページの料金を足したものです。お店の表示価格が優先です。", "less": "1つ減らす", "more": "1つ増やす"}</script>
+<script>(function () {
+  var T = JSON.parse(document.getElementById("order-text").textContent), order = [];
+  var bar = document.getElementById("bar"), sum = document.getElementById("sum"), card = document.getElementById("card");
+  var lines = document.getElementById("lines"), tot = document.getElementById("tot");
+  function draw() {
+    var n = 0, s = 0;
+    order = order.filter(function (o) { return o.q > 0; });
+    lines.textContent = "";
+    order.forEach(function (o) {
+      n += o.q; s += o.q * o.p;
+      var li = document.createElement("li"), name = document.createElement("span"), pr = document.createElement("span");
+      name.className = "zhl"; name.lang = "zh-Hant"; name.textContent = o.zh + " \u00d7 " + o.q;
+      pr.textContent = o.q * o.p;
+      li.appendChild(name); li.appendChild(pr);
+      [["\u2212", -1, T.less], ["+", 1, T.more]].forEach(function (b) {
+        var btn = document.createElement("button");
+        btn.type = "button"; btn.textContent = b[0]; btn.setAttribute("aria-label", b[2] + ": " + o.zh);
+        btn.onclick = function () { o.q += b[1]; draw(); };
+        li.appendChild(btn);
+      });
+      lines.appendChild(li);
+    });
+    tot.textContent = "\u5408\u8a08 " + s + " \u5143";
+    sum.textContent = T.bar + ": " + n + " " + (n === 1 ? T.item : T.items) + " \u00b7 NT$ " + s;
+    bar.hidden = n === 0;
+    if (n === 0) card.hidden = true;
+  }
+  Array.prototype.forEach.call(document.querySelectorAll("button.add"), function (b) {
+    b.onclick = function () {
+      var o = order.filter(function (x) { return x.zh === b.getAttribute("data-zh"); })[0];
+      if (o) o.q += 1; else order.push({zh: b.getAttribute("data-zh"), p: Number(b.getAttribute("data-p")), q: 1});
+      draw();
+    };
+  });
+  document.getElementById("show").onclick = function () { card.hidden = false; };
+  document.getElementById("close").onclick = function () { card.hidden = true; };
+  document.getElementById("clr").onclick = function () { order = []; draw(); };
+})();</script>
+<script data-goatcounter="https://menucheck.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>

@@ -74,7 +74,75 @@ CITY = {"台北": {"en": "Taipei", "ja": "台北", "ko": "타이베이"}, "台�
         "花蓮": {"en": "Hualien", "ja": "花蓮", "ko": "화롄"}}
 SIZE = {"en": {"大": "Large", "中": "Medium", "小": "Small"}, "ja": {"大": "大", "中": "中", "小": "小"},
         "ko": {"大": "대", "中": "중", "小": "소"}}
-LANG_CSS = "td:not(:first-child){white-space:normal} .zh{font-size:1.15rem;font-weight:600}"
+LANG_CSS = ("td:not(:first-child){white-space:normal} .zh{font-size:1.15rem;font-weight:600}"
+            "main{padding-bottom:96px} [hidden]{display:none!important}"
+            "button{font:inherit;color:var(--fg);background:var(--sec);border:1px solid var(--line);border-radius:6px;"
+            "padding:6px 10px;cursor:pointer} button.add{display:block;margin:0 0 4px;white-space:nowrap}"
+            "#bar{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;flex-wrap:wrap;gap:8px;align-items:center;"
+            "padding:10px 16px;background:var(--bg);border-top:1px solid var(--line)} #bar span{flex:1 1 auto}"
+            "#card{position:fixed;inset:0;z-index:6;overflow:auto;padding:16px;background:var(--bg)}"
+            ".big{font-size:1.7rem;font-weight:700;margin:.4em 0} #lines{list-style:none;padding:0}"
+            "#lines li{display:grid;grid-template-columns:1fr auto auto auto;gap:8px;align-items:center;font-size:1.5rem;"
+            "padding:8px 0;border-bottom:1px solid var(--line)} #lines .zhl{font-weight:700}"
+            "#lines button{min-width:44px;min-height:44px}")
+
+# The order screen: a visitor taps prices, then shows the staff their dishes in Chinese with the total.
+ORDER = {
+    "en": {"tap": "Tap a price to add the dish to your order. The order screen lists your dishes in Chinese, "
+                  "ready to show the staff.",
+           "bar": "Your order", "item": "item", "items": "items", "show": "Show the staff", "clear": "Clear",
+           "hint": "Show this screen to the staff.", "close": "Back to the menu",
+           "note": "The total adds up the prices on this page; the price at the shop is final.",
+           "less": "One less", "more": "One more"},
+    "ja": {"tap": "料金をタップすると注文リストに入ります。注文画面には料理名が中国語で出るので、そのまま店員に見せられます。",
+           "bar": "注文リスト", "item": "品", "items": "品", "show": "店員に見せる", "clear": "クリア",
+           "hint": "この画面を店員に見せてください。", "close": "メニューに戻る",
+           "note": "合計はこのページの料金を足したものです。お店の表示価格が優先です。",
+           "less": "1つ減らす", "more": "1つ増やす"},
+    "ko": {"tap": "가격을 누르면 주문 목록에 들어갑니다. 주문 화면에는 메뉴 이름이 중국어로 나와서 그대로 직원에게 보여 줄 수 있습니다.",
+           "bar": "주문 목록", "item": "개", "items": "개", "show": "직원에게 보여 주기", "clear": "지우기",
+           "hint": "이 화면을 직원에게 보여 주세요.", "close": "메뉴로 돌아가기",
+           "note": "합계는 이 페이지의 가격을 더한 것입니다. 가게에 표시된 가격이 우선입니다.",
+           "less": "하나 빼기", "more": "하나 더"},
+}
+ORDER_JS = """(function () {
+  var T = JSON.parse(document.getElementById("order-text").textContent), order = [];
+  var bar = document.getElementById("bar"), sum = document.getElementById("sum"), card = document.getElementById("card");
+  var lines = document.getElementById("lines"), tot = document.getElementById("tot");
+  function draw() {
+    var n = 0, s = 0;
+    order = order.filter(function (o) { return o.q > 0; });
+    lines.textContent = "";
+    order.forEach(function (o) {
+      n += o.q; s += o.q * o.p;
+      var li = document.createElement("li"), name = document.createElement("span"), pr = document.createElement("span");
+      name.className = "zhl"; name.lang = "zh-Hant"; name.textContent = o.zh + " \\u00d7 " + o.q;
+      pr.textContent = o.q * o.p;
+      li.appendChild(name); li.appendChild(pr);
+      [["\\u2212", -1, T.less], ["+", 1, T.more]].forEach(function (b) {
+        var btn = document.createElement("button");
+        btn.type = "button"; btn.textContent = b[0]; btn.setAttribute("aria-label", b[2] + ": " + o.zh);
+        btn.onclick = function () { o.q += b[1]; draw(); };
+        li.appendChild(btn);
+      });
+      lines.appendChild(li);
+    });
+    tot.textContent = "\\u5408\\u8a08 " + s + " \\u5143";
+    sum.textContent = T.bar + ": " + n + " " + (n === 1 ? T.item : T.items) + " \\u00b7 NT$ " + s;
+    bar.hidden = n === 0;
+    if (n === 0) card.hidden = true;
+  }
+  Array.prototype.forEach.call(document.querySelectorAll("button.add"), function (b) {
+    b.onclick = function () {
+      var o = order.filter(function (x) { return x.zh === b.getAttribute("data-zh"); })[0];
+      if (o) o.q += 1; else order.push({zh: b.getAttribute("data-zh"), p: Number(b.getAttribute("data-p")), q: 1});
+      draw();
+    };
+  });
+  document.getElementById("show").onclick = function () { card.hidden = false; };
+  document.getElementById("close").onclick = function () { card.hidden = true; };
+  document.getElementById("clr").onclick = function () { order = []; draw(); };
+})();"""
 
 
 def page_langs(rec):
@@ -109,6 +177,15 @@ def cell_lang(p, lang):
         else:
             raise ValueError(f"no {lang} label for the price {k!r} in {p}")
     return " / ".join(out)
+
+
+def price_buttons(p, lang, zh):
+    """One button per price, labelled as cell_lang writes it ('+ Large 70'); data-zh is what the order screen
+    shows the staff ('牛肉麵（大）')."""
+    if not p:
+        return "—"
+    return "".join(f'<button type="button" class="add" data-zh="{esc(zh if k == "單價" else f"{zh}（{k}）")}" '
+                   f'data-p="{v}">+ {esc(cell_lang({k: v}, lang))}</button>' for k, v in p.items())
 
 
 def lang_text(lang, rec, n):
@@ -228,7 +305,7 @@ def shop_page_lang(rec, lang):
         rows.append(f'<tr class="sec"><th colspan="2">{esc(s.get(f"name_{lang}") or s["name"])}</th></tr>')
         for it in s["items"]:
             rows.append(f"<tr><td>{esc(it[f'name_{lang}'])}<br><span lang=\"zh-Hant\" class=\"zh\">{esc(it['name_zh'])}</span>"
-                        f"</td><td>{esc(cell_lang(it.get('prices'), lang))}</td></tr>")
+                        f"</td><td>{price_buttons(it.get('prices'), lang, it['name_zh'])}</td></tr>")
             for size, price in (it.get("prices") or {}).items():
                 offers.append({"@type": "MenuItem", "name": it[f"name_{lang}"], "alternateName": it["name_zh"],
                                "offers": {"@type": "Offer", "price": price, "priceCurrency": "TWD",
@@ -239,13 +316,24 @@ def shop_page_lang(rec, lang):
                         + [f'<a href="../../{l}/{slug}/" hreflang="{l}" lang="{l}">{LANG[l]}</a>'
                            for l in page_langs(rec) if l != lang])
     phone = f" · {t['phone']}: {esc(rec['phone'])}" if rec.get("phone") else ""
+    o = ORDER[lang]
+    order = (f'<div id="card" hidden role="dialog" aria-modal="true" aria-labelledby="card-h">'
+             f'<p class="meta" id="card-h">{esc(o["hint"])}</p>\n<p class="big" lang="zh-Hant">你好，我要點：</p>\n'
+             f'<ul id="lines"></ul>\n<p class="big" id="tot" lang="zh-Hant"></p>\n'
+             f'<p lang="zh-Hant"><small>照網頁上的價錢算，以店內為準</small></p>\n<p><small>{esc(o["note"])}</small></p>\n'
+             f'<button type="button" id="close">{esc(o["close"])}</button></div>\n'
+             f'<div id="bar" hidden><span id="sum" aria-live="polite"></span>'
+             f'<button type="button" id="show">{esc(o["show"])}</button><button type="button" id="clr">{esc(o["clear"])}</button></div>\n'
+             f'<script type="application/json" id="order-text">'
+             + json.dumps(o, ensure_ascii=False).replace("</", "<\\/") + f"</script>\n<script>{ORDER_JS}</script>\n")
     return (head(t["title"], t["desc"], ld, lang, alts(rec), LANG_CSS)
             + f'<p class="meta"><a href="../">Menu Check</a> · {others}</p>\n<h1>{esc(t["h1"])}</h1>\n'
             + f'<p class="meta">{esc(t["where"])}{phone}</p>\n<p class="meta">{esc(t["src"])}</p>\n'
+            + f'<p class="meta">{esc(o["tap"])}</p>\n'
             + '<div class="wrap"><table style="min-width:0">\n<thead><tr>'
             + "".join(f"<th>{esc(h)}</th>" for h in t["th"]) + "</tr></thead>\n<tbody>" + "".join(rows)
             + "</tbody></table></div>\n"
-            + f"<p><small>{esc(t['foot'])}</small></p>\n</main>{GOAT}</body></html>\n")
+            + f"<p><small>{esc(t['foot'])}</small></p>\n</main>{order}{GOAT}</body></html>\n")
 
 
 def lang_index(lang, recs):

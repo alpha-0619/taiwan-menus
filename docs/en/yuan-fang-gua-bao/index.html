@@ -16,13 +16,61 @@ table{border-collapse:collapse;width:100%;min-width:560px} th,td{border-bottom:1
 thead th{font-size:.85rem;color:var(--muted)} tr.sec th{background:var(--sec);font-size:.95rem}
 td:not(:first-child){white-space:nowrap}
 tbody td:first-child,thead th:first-child{position:sticky;left:0;background:var(--bg);min-width:8.5em;z-index:1}
-tr.sec th{position:sticky;left:0} ul{padding-left:1.2em} small{color:var(--muted)}td:not(:first-child){white-space:normal} .zh{font-size:1.15rem;font-weight:600}</style></head><body><main>
+tr.sec th{position:sticky;left:0} ul{padding-left:1.2em} small{color:var(--muted)}td:not(:first-child){white-space:normal} .zh{font-size:1.15rem;font-weight:600}main{padding-bottom:96px} [hidden]{display:none!important}button{font:inherit;color:var(--fg);background:var(--sec);border:1px solid var(--line);border-radius:6px;padding:6px 10px;cursor:pointer} button.add{display:block;margin:0 0 4px;white-space:nowrap}#bar{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 16px;background:var(--bg);border-top:1px solid var(--line)} #bar span{flex:1 1 auto}#card{position:fixed;inset:0;z-index:6;overflow:auto;padding:16px;background:var(--bg)}.big{font-size:1.7rem;font-weight:700;margin:.4em 0} #lines{list-style:none;padding:0}#lines li{display:grid;grid-template-columns:1fr auto auto auto;gap:8px;align-items:center;font-size:1.5rem;padding:8px 0;border-bottom:1px solid var(--line)} #lines .zhl{font-weight:700}#lines button{min-width:44px;min-height:44px}</style></head><body><main>
 <p class="meta"><a href="../">Menu Check</a> · <a href="../../yuan-fang-gua-bao/" hreflang="zh-Hant-TW" lang="zh-Hant-TW">中文</a></p>
 <h1>Yuan Fang Gua Bao menu &amp; prices</h1>
 <p class="meta">萬華源芳刈包 · Taipei · Address in Chinese (show it to your driver): 台北市萬華區華西街觀光夜市161號（攤號） · Phone: 02-2381-0249</p>
 <p class="meta">From the menu the shop gave us on 2026-10-24, typed out as text. The English dish names are the shop&#x27;s own. Prices in NT$; the price at the shop is final.</p>
+<p class="meta">Tap a price to add the dish to your order. The order screen lists your dishes in Chinese, ready to show the staff.</p>
 <div class="wrap"><table style="min-width:0">
 <thead><tr><th>Dish (the shop&#x27;s English; show the staff the Chinese under it)</th><th>Price (NT$)</th></tr></thead>
-<tbody><tr class="sec"><th colspan="2">主食</th></tr><tr><td>Steam Bun<br><span lang="zh-Hant" class="zh">刈包（五花肉／全瘦肉）</span></td><td>70</td></tr><tr class="sec"><th colspan="2">湯類</th></tr><tr><td>Four-Herbal Soup<br><span lang="zh-Hant" class="zh">四神湯</span></td><td>65</td></tr><tr><td>All-in-one Soup<br><span lang="zh-Hant" class="zh">綜合湯</span></td><td>75</td></tr><tr><td>Pig&#x27;s Bladder Soup<br><span lang="zh-Hant" class="zh">小肚湯</span></td><td>60</td></tr><tr><td>Pig&#x27;s Stomach Soup<br><span lang="zh-Hant" class="zh">豬肚湯</span></td><td>75</td></tr><tr><td>Small Intestine Soup<br><span lang="zh-Hant" class="zh">粉腸湯</span></td><td>70</td></tr></tbody></table></div>
+<tbody><tr class="sec"><th colspan="2">主食</th></tr><tr><td>Steam Bun<br><span lang="zh-Hant" class="zh">刈包（五花肉／全瘦肉）</span></td><td><button type="button" class="add" data-zh="刈包（五花肉／全瘦肉）" data-p="70">+ 70</button></td></tr><tr class="sec"><th colspan="2">湯類</th></tr><tr><td>Four-Herbal Soup<br><span lang="zh-Hant" class="zh">四神湯</span></td><td><button type="button" class="add" data-zh="四神湯" data-p="65">+ 65</button></td></tr><tr><td>All-in-one Soup<br><span lang="zh-Hant" class="zh">綜合湯</span></td><td><button type="button" class="add" data-zh="綜合湯" data-p="75">+ 75</button></td></tr><tr><td>Pig&#x27;s Bladder Soup<br><span lang="zh-Hant" class="zh">小肚湯</span></td><td><button type="button" class="add" data-zh="小肚湯" data-p="60">+ 60</button></td></tr><tr><td>Pig&#x27;s Stomach Soup<br><span lang="zh-Hant" class="zh">豬肚湯</span></td><td><button type="button" class="add" data-zh="豬肚湯" data-p="75">+ 75</button></td></tr><tr><td>Small Intestine Soup<br><span lang="zh-Hant" class="zh">粉腸湯</span></td><td><button type="button" class="add" data-zh="粉腸湯" data-p="70">+ 70</button></td></tr></tbody></table></div>
 <p><small>Text only, no photos. Menu Check is not the official site of Yuan Fang Gua Bao and has no connection with the shop.</small></p>
-</main><script data-goatcounter="https://menucheck.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
+</main><div id="card" hidden role="dialog" aria-modal="true" aria-labelledby="card-h"><p class="meta" id="card-h">Show this screen to the staff.</p>
+<p class="big" lang="zh-Hant">你好，我要點：</p>
+<ul id="lines"></ul>
+<p class="big" id="tot" lang="zh-Hant"></p>
+<p lang="zh-Hant"><small>照網頁上的價錢算，以店內為準</small></p>
+<p><small>The total adds up the prices on this page; the price at the shop is final.</small></p>
+<button type="button" id="close">Back to the menu</button></div>
+<div id="bar" hidden><span id="sum" aria-live="polite"></span><button type="button" id="show">Show the staff</button><button type="button" id="clr">Clear</button></div>
+<script type="application/json" id="order-text">{"tap": "Tap a price to add the dish to your order. The order screen lists your dishes in Chinese, ready to show the staff.", "bar": "Your order", "item": "item", "items": "items", "show": "Show the staff", "clear": "Clear", "hint": "Show this screen to the staff.", "close": "Back to the menu", "note": "The total adds up the prices on this page; the price at the shop is final.", "less": "One less", "more": "One more"}</script>
+<script>(function () {
+  var T = JSON.parse(document.getElementById("order-text").textContent), order = [];
+  var bar = document.getElementById("bar"), sum = document.getElementById("sum"), card = document.getElementById("card");
+  var lines = document.getElementById("lines"), tot = document.getElementById("tot");
+  function draw() {
+    var n = 0, s = 0;
+    order = order.filter(function (o) { return o.q > 0; });
+    lines.textContent = "";
+    order.forEach(function (o) {
+      n += o.q; s += o.q * o.p;
+      var li = document.createElement("li"), name = document.createElement("span"), pr = document.createElement("span");
+      name.className = "zhl"; name.lang = "zh-Hant"; name.textContent = o.zh + " \u00d7 " + o.q;
+      pr.textContent = o.q * o.p;
+      li.appendChild(name); li.appendChild(pr);
+      [["\u2212", -1, T.less], ["+", 1, T.more]].forEach(function (b) {
+        var btn = document.createElement("button");
+        btn.type = "button"; btn.textContent = b[0]; btn.setAttribute("aria-label", b[2] + ": " + o.zh);
+        btn.onclick = function () { o.q += b[1]; draw(); };
+        li.appendChild(btn);
+      });
+      lines.appendChild(li);
+    });
+    tot.textContent = "\u5408\u8a08 " + s + " \u5143";
+    sum.textContent = T.bar + ": " + n + " " + (n === 1 ? T.item : T.items) + " \u00b7 NT$ " + s;
+    bar.hidden = n === 0;
+    if (n === 0) card.hidden = true;
+  }
+  Array.prototype.forEach.call(document.querySelectorAll("button.add"), function (b) {
+    b.onclick = function () {
+      var o = order.filter(function (x) { return x.zh === b.getAttribute("data-zh"); })[0];
+      if (o) o.q += 1; else order.push({zh: b.getAttribute("data-zh"), p: Number(b.getAttribute("data-p")), q: 1});
+      draw();
+    };
+  });
+  document.getElementById("show").onclick = function () { card.hidden = false; };
+  document.getElementById("close").onclick = function () { card.hidden = true; };
+  document.getElementById("clr").onclick = function () { order = []; draw(); };
+})();</script>
+<script data-goatcounter="https://menucheck.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
