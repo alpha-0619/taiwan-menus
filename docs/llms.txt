@@ -16,3 +16,13 @@
 - [永康牛肉麵館](https://alpha-0619.github.io/taiwan-menus/yong-kang-beef-noodles/): 店家提供的菜單（2026-10-23）
 - [萬華源芳刈包](https://alpha-0619.github.io/taiwan-menus/yuan-fang-gua-bao/): 店家提供的菜單（2026-10-24）
 - [周家蒸餃小籠包](https://alpha-0619.github.io/taiwan-menus/zhou-jia-steamed-dumplings/): 店家公布的菜單（2026-10-28 查證）
+- [A Cun Beef Soup, 2nd generation (Bao'an Rd)](https://alpha-0619.github.io/taiwan-menus/en/a-cun-beef-soup-baoan/): 阿村牛肉湯 第二代（保安路），店家自己的English菜單（2026-10-27）
+- [Liang Xi Hao](https://alpha-0619.github.io/taiwan-menus/en/liang-xi-hao/): 兩喜號，店家自己的English菜單（2026-10-25）
+- [Yong Kang Beef Noodles](https://alpha-0619.github.io/taiwan-menus/en/yong-kang-beef-noodles/): 永康牛肉麵館，店家自己的English菜單（2026-10-23）
+- [Yuan Fang Gua Bao](https://alpha-0619.github.io/taiwan-menus/en/yuan-fang-gua-bao/): 萬華源芳刈包，店家自己的English菜單（2026-10-24）
+- [Zhou's Steamed Dumplings](https://alpha-0619.github.io/taiwan-menus/en/zhou-jia-steamed-dumplings/): 周家蒸餃小籠包，店家自己的English菜單（2026-10-28）
+- [両喜号](https://alpha-0619.github.io/taiwan-menus/ja/liang-xi-hao/): 兩喜號，店家自己的日本語菜單（2026-10-25）
+- [永康牛肉麺館](https://alpha-0619.github.io/taiwan-menus/ja/yong-kang-beef-noodles/): 永康牛肉麵館，店家自己的日本語菜單（2026-10-23）
+- [周家蒸餃小籠包](https://alpha-0619.github.io/taiwan-menus/ja/zhou-jia-steamed-dumplings/): 周家蒸餃小籠包，店家自己的日本語菜單（2026-10-28）
+- [Liang Xi Hao(兩喜號)](https://alpha-0619.github.io/taiwan-menus/ko/liang-xi-hao/): 兩喜號，店家自己的한국어菜單（2026-10-25）
+- [Yong Kang Beef Noodles(永康牛肉麵館)](https://alpha-0619.github.io/taiwan-menus/ko/yong-kang-beef-noodles/): 永康牛肉麵館，店家自己的한국어菜單（2026-10-23）

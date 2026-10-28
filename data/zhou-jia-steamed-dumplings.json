@@ -2,6 +2,8 @@
  "kind": "store_posted",
  "slug": "zhou-jia-steamed-dumplings",
  "name_zh": "周家蒸餃小籠包",
+ "name_en": "Zhou's Steamed Dumplings",
+ "name_ja": "周家蒸餃小籠包",
  "address": "花蓮市公正街4之20號",
  "city": "花蓮",
  "phone": "03-835-0006",
@@ -13,6 +15,8 @@
  "sections": [
   {
    "name": "蒸餃／小籠包",
+   "name_en": "Steamed Dumplings / Xiao Long Bao",
+   "name_ja": "点心",
    "items": [
     {
      "name_zh": "小籠包",
@@ -51,6 +55,8 @@
   },
   {
    "name": "湯類",
+   "name_en": "Soups",
+   "name_ja": "スープ",
    "items": [
     {
      "name_zh": "魚丸湯",
@@ -117,6 +123,8 @@
   },
   {
    "name": "飯類",
+   "name_en": "Rice",
+   "name_ja": "ご飯",
    "items": [
     {
      "name_zh": "魯肉飯",
@@ -158,6 +166,8 @@
   },
   {
    "name": "麵／米粉／冬粉",
+   "name_en": "Noodles / Rice Noodles / Glass Noodles",
+   "name_ja": "麺類",
    "items": [
     {
      "name_zh": "酸辣麵",
@@ -244,6 +254,8 @@
   },
   {
    "name": "飲料",
+   "name_en": "Drinks",
+   "name_ja": "ドリンク",
    "items": [
     {
      "name_zh": "香濃豆漿／無糖豆漿",

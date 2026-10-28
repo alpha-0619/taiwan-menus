@@ -42,12 +42,13 @@ def nutrition(lines):
     return None
 
 
-def head(title, desc, ld=None):
-    return (f'<!doctype html>\n<html lang="zh-Hant-TW"><head><meta charset="utf-8">\n'
+def head(title, desc, ld=None, lang="zh-Hant-TW", alts=(), css=""):
+    return (f'<!doctype html>\n<html lang="{lang}"><head><meta charset="utf-8">\n'
             f'<meta name="viewport" content="width=device-width,initial-scale=1">\n<title>{esc(title)}</title>\n'
             f'<meta name="description" content="{esc(desc)}">\n'
+            + "".join(f'<link rel="alternate" hreflang="{h}" href="{esc(u)}">\n' for h, u in alts)
             + (f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n' if ld else "")
-            + f"<style>{STYLE}</style></head><body><main>\n")
+            + f"<style>{STYLE}{css}</style></head><body><main>\n")
 
 
 def is_shop(rec):
@@ -66,6 +67,110 @@ def shop_dated(rec):
 
 
 OTHER_NAMES = (("name_en", "en", "英"), ("name_ja", "ja", "日"), ("name_ko", "ko", "韓"))
+
+# Pages in a visitor's language, made only where the shop itself wrote every dish name in that language.
+LANG = {"en": "English", "ja": "日本語", "ko": "한국어"}
+CITY = {"台北": {"en": "Taipei", "ja": "台北", "ko": "타이베이"}, "台南": {"en": "Tainan", "ja": "台南", "ko": "타이난"},
+        "花蓮": {"en": "Hualien", "ja": "花蓮", "ko": "화롄"}}
+SIZE = {"en": {"大": "Large", "中": "Medium", "小": "Small"}, "ja": {"大": "大", "中": "中", "小": "小"},
+        "ko": {"大": "대", "中": "중", "小": "소"}}
+LANG_CSS = "td:not(:first-child){white-space:normal} .zh{font-size:1.15rem;font-weight:600}"
+
+
+def page_langs(rec):
+    """Languages the shop gave every dish name in, for shops whose own name and city we have in that language."""
+    items = [it for s in rec["sections"] for it in s["items"]]
+    return [l for l in LANG if is_shop(rec) and rec.get(f"name_{l}") and rec["city"] in CITY
+            and all(it.get(f"name_{l}") for it in items)]
+
+
+def alts(rec):
+    """hreflang links between a shop's Chinese page and its pages in other languages (none if it has none)."""
+    langs = page_langs(rec)
+    return ((("zh-Hant-TW", f"{SITE_URL}/{rec['slug']}/"),) + tuple((l, f"{SITE_URL}/{l}/{rec['slug']}/") for l in langs)
+            if langs else ())
+
+
+def cell_lang(p, lang):
+    """{'大': 70, '小': 35} -> 'Large 70 / Small 35'; {'10個': 70, '1個': 7} -> '70 (10 pcs) / 7 (1 pc)'."""
+    if not p:
+        return "—"
+    out = []
+    for k, v in p.items():
+        n = re.fullmatch(r"(\d+)個", k)
+        if k == "單價":
+            out.append(f"{v}")
+        elif k in SIZE[lang]:
+            out.append(f"{SIZE[lang][k]} {v}")
+        elif n:
+            count = {"en": f"{n.group(1)} pc" + ("" if n.group(1) == "1" else "s"), "ja": f"{n.group(1)}個",
+                     "ko": f"{n.group(1)}개"}[lang]
+            out.append(f"{v} ({count})")
+        else:
+            raise ValueError(f"no {lang} label for the price {k!r} in {p}")
+    return " / ".join(out)
+
+
+def lang_text(lang, rec, n):
+    """The fixed sentences of a shop page in a visitor's language."""
+    name, zh, city, day = rec[f"name_{lang}"], rec["name_zh"], CITY[rec["city"]][lang], rec["checked"]
+    addr, posted = rec.get("address", ""), is_posted(rec)
+    if lang == "en":
+        return {"title": f"{name} menu & prices {day[:4]}, {city} (the shop's own English menu) | Menu Check",
+                "desc": f"{name} ({zh}), {city}: the shop's own English menu with prices in NT$ ({n} items), "
+                        f"typed out as text. Checked {day}.",
+                "h1": f"{name} menu & prices",
+                "where": f"{zh} · {city} · Address in Chinese (show it to your driver): {addr}", "phone": "Phone",
+                "src": (f"From the menu the shop posted on its own Facebook page, typed out as text (checked {day})."
+                        if posted else f"From the menu the shop gave us on {day}, typed out as text.")
+                       + " The English dish names are the shop's own. Prices in NT$; the price at the shop is final.",
+                "th": ("Dish (the shop's English; show the staff the Chinese under it)", "Price (NT$)"),
+                "foot": f"Text only, no photos. Menu Check is not the official site of {name} "
+                        "and has no connection with the shop.",
+                "menu": f"{name} menu"}
+    if lang == "ja":
+        return {"title": f"{name}のメニューと料金 {day[:4]}（{city}・お店の日本語メニュー）｜Menu Check",
+                "desc": f"{city}の{name}：お店自身の日本語メニューと料金（台湾ドル・{n}品）を文字にしました。{day}確認。",
+                "h1": f"{name} メニューと料金",
+                "where": f"{zh}・{city}・住所（中国語。タクシーで見せる用）：{addr}", "phone": "電話",
+                "src": (f"お店が自分のFacebookページに載せたメニューを文字にしました（{day}確認）。"
+                        if posted else f"{day}にお店からもらったメニューを文字にしました。")
+                       + "日本語の料理名はお店自身の翻訳です。料金は台湾ドル（NT$）で、お店の表示価格が優先です。",
+                "th": ("料理（お店の日本語。注文時は下の中国語を指さし）", "料金（NT$）"),
+                "foot": f"写真はなく、文字だけです。Menu Checkは{name}の公式サイトではなく、お店とは関係ありません。",
+                "menu": f"{name} メニュー"}
+    return {"title": f"{name} 메뉴와 가격 {day[:4]} ({city}, 가게의 한국어 메뉴) | Menu Check",
+            "desc": f"{city} {name}: 가게가 직접 만든 한국어 메뉴와 가격(대만 달러, {n}개)을 글자로 옮겼습니다. {day} 확인.",
+            "h1": f"{name} 메뉴와 가격",
+            "where": f"{zh} · {city} · 주소(중국어, 택시 기사에게 보여 주세요): {addr}", "phone": "전화",
+            "src": (f"가게가 자기 페이스북 페이지에 올린 메뉴를 글자로 옮겼습니다({day} 확인). "
+                    if posted else f"{day}에 가게에서 받은 메뉴를 글자로 옮겼습니다. ")
+                   + "한국어 메뉴 이름은 가게가 직접 번역한 것입니다. 가격은 대만 달러(NT$)이며, 가게에 표시된 가격이 우선입니다.",
+            "th": ("메뉴(가게의 한국어, 주문할 때 아래 중국어를 가리키세요)", "가격(NT$)"),
+            "foot": f"사진 없이 글자만 있습니다. Menu Check는 {name}의 공식 사이트가 아니며 가게와 관련이 없습니다.",
+            "menu": f"{name} 메뉴"}
+
+
+LANG_INDEX = {
+    "en": {"title": "Taiwan restaurant menus in English, from the shops | Menu Check",
+           "h1": "Taiwan restaurant menus in English",
+           "intro": "Menus the restaurants sent us or posted themselves, typed out as text, with the shop's own English "
+                    "dish names and prices in NT$. Each page says where the menu came from and when we checked it.",
+           "item": lambda zh, city, n: f"({zh}, {city}, {n} items)",
+           "foot": "Menu Check is not the official site of these restaurants and has no connection with them."},
+    "ja": {"title": "台湾の飲食店メニュー（お店の日本語）｜Menu Check",
+           "h1": "台湾の飲食店メニュー（日本語）",
+           "intro": "お店から送ってもらった、またはお店が自分で載せたメニューを文字にしました。お店自身の日本語の料理名と、"
+                    "台湾ドルの料金がついています。各ページに出所と確認日を書いています。",
+           "item": lambda zh, city, n: f"（{zh}・{city}・{n}品）",
+           "foot": "Menu Checkはこれらのお店の公式サイトではなく、お店とは関係ありません。"},
+    "ko": {"title": "대만 식당 메뉴 (가게의 한국어) | Menu Check",
+           "h1": "대만 식당 메뉴 (한국어)",
+           "intro": "가게가 보내 주거나 직접 올린 메뉴를 글자로 옮겼습니다. 가게가 직접 번역한 한국어 메뉴 이름과 "
+                    "대만 달러 가격이 있습니다. 각 페이지에 출처와 확인 날짜를 적었습니다.",
+           "item": lambda zh, city, n: f"({zh}, {city}, {n}개)",
+           "foot": "Menu Check는 이 가게들의 공식 사이트가 아니며 가게와 관련이 없습니다."},
+}
 
 
 def shop_page(rec):
@@ -101,15 +206,58 @@ def shop_page(rec):
     info = "．".join(f"{label}：{esc(rec[k])}" for label, k in (("營業時間", "hours"), ("電話", "phone")) if rec.get(k))
     info = (f'<p class="meta">{info}（照店家臉書粉專，{rec["info_checked"]} 看；臨時公休或異動以店家公告為準）</p>\n'
             if info else "")
-    return (head(f"{city}美食》{name}最新菜單價格 {day[:4]}（{title_src}）| Menu Check", desc, ld)
+    other = " · ".join(f'<a href="../{l}/{rec["slug"]}/" hreflang="{l}" lang="{l}">{LANG[l]}</a>' for l in page_langs(rec))
+    other = f'<p class="meta">店家自己的外文菜單：{other}</p>\n' if other else ""
+    return (head(f"{city}美食》{name}最新菜單價格 {day[:4]}（{title_src}）| Menu Check", desc, ld, alts=alts(rec))
             + f'<p class="meta"><a href="../">Menu Check 台灣菜單</a></p>\n<h1>{esc(name)} 最新菜單價格</h1>\n'
-            + f'<p class="meta">{where}{esc(rec["provided"])}．價格以店內為準</p>\n' + info
+            + f'<p class="meta">{where}{esc(rec["provided"])}．價格以店內為準</p>\n' + info + other
             + '<div class="wrap"><table style="min-width:0">\n<thead><tr><th>品項'
             + (f"（店家寫的{'、'.join(langs)}文）" if langs else "") + "</th><th>價格（新台幣）</th></tr></thead>\n<tbody>"
             + "".join(rows) + "</tbody></table></div>\n"
             + f"<p><small>{foot}</small></p>\n"
             + f"<p><small>Menu Check 不是{esc(name)}的官方網站，跟店家沒有合作關係。</small></p>\n"
             + f"</main>{GOAT}</body></html>\n")
+
+
+def shop_page_lang(rec, lang):
+    """The same menu in a visitor's language: the shop's own dish name, the Chinese to point at, the price."""
+    items = [it for s in rec["sections"] for it in s["items"]]
+    t, slug = lang_text(lang, rec, len(items)), rec["slug"]
+    rows, offers = [], []
+    for s in rec["sections"]:
+        rows.append(f'<tr class="sec"><th colspan="2">{esc(s.get(f"name_{lang}") or s["name"])}</th></tr>')
+        for it in s["items"]:
+            rows.append(f"<tr><td>{esc(it[f'name_{lang}'])}<br><span lang=\"zh-Hant\" class=\"zh\">{esc(it['name_zh'])}</span>"
+                        f"</td><td>{esc(cell_lang(it.get('prices'), lang))}</td></tr>")
+            for size, price in (it.get("prices") or {}).items():
+                offers.append({"@type": "MenuItem", "name": it[f"name_{lang}"], "alternateName": it["name_zh"],
+                               "offers": {"@type": "Offer", "price": price, "priceCurrency": "TWD",
+                                          "description": cell_lang({size: price}, lang)}})
+    ld = {"@context": "https://schema.org", "@type": "Menu", "name": t["menu"], "inLanguage": lang,
+          "url": f"{SITE_URL}/{lang}/{slug}/", "hasMenuItem": offers}
+    others = " · ".join([f'<a href="../../{slug}/" hreflang="zh-Hant-TW" lang="zh-Hant-TW">中文</a>']
+                        + [f'<a href="../../{l}/{slug}/" hreflang="{l}" lang="{l}">{LANG[l]}</a>'
+                           for l in page_langs(rec) if l != lang])
+    phone = f" · {t['phone']}: {esc(rec['phone'])}" if rec.get("phone") else ""
+    return (head(t["title"], t["desc"], ld, lang, alts(rec), LANG_CSS)
+            + f'<p class="meta"><a href="../">Menu Check</a> · {others}</p>\n<h1>{esc(t["h1"])}</h1>\n'
+            + f'<p class="meta">{esc(t["where"])}{phone}</p>\n<p class="meta">{esc(t["src"])}</p>\n'
+            + '<div class="wrap"><table style="min-width:0">\n<thead><tr>'
+            + "".join(f"<th>{esc(h)}</th>" for h in t["th"]) + "</tr></thead>\n<tbody>" + "".join(rows)
+            + "</tbody></table></div>\n"
+            + f"<p><small>{esc(t['foot'])}</small></p>\n</main>{GOAT}</body></html>\n")
+
+
+def lang_index(lang, recs):
+    """The list of shops that have a page in this language."""
+    t = LANG_INDEX[lang]
+    items = "".join(f'<li><a href="{esc(r["slug"])}/">{esc(r[f"name_{lang}"])}</a> <small>'
+                    + esc(t["item"](r["name_zh"], CITY[r["city"]][lang], sum(len(s["items"]) for s in r["sections"])))
+                    + "</small></li>" for r in recs)
+    return (head(t["title"], t["intro"], lang=lang)
+            + f'<p class="meta"><a href="../" hreflang="zh-Hant-TW" lang="zh-Hant-TW">Menu Check 台灣菜單（中文）</a></p>\n'
+            + f'<h1>{esc(t["h1"])}</h1>\n<p class="meta">{esc(t["intro"])}</p>\n<ul>{items}</ul>\n'
+            + f"<p><small>{esc(t['foot'])}</small></p>\n</main>{GOAT}</body></html>\n")
 
 
 def chain_page(rec):
@@ -167,6 +315,16 @@ def build(root):
         out = docs / rec["slug"] / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(chain_page(rec), encoding="utf-8", newline="\n")
+    by_lang = {l: [r for r in recs if l in page_langs(r)] for l in LANG}
+    for lang, lrecs in by_lang.items():
+        for rec in lrecs:
+            out = docs / lang / rec["slug"] / "index.html"
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(shop_page_lang(rec, lang), encoding="utf-8", newline="\n")
+        if lrecs:
+            (docs / lang / "index.html").write_text(lang_index(lang, lrecs), encoding="utf-8", newline="\n")
+    lang_links = " · ".join(f'<a href="{l}/" hreflang="{l}" lang="{l}">{LANG[l]}</a>' for l in LANG if by_lang[l])
+    lang_links = f'<p class="meta">店家自己的外文菜單：{lang_links}</p>\n' if lang_links else ""
     items = "".join(f'<li><a href="{esc(r["slug"])}/">{esc(r["name_zh"])} 菜單價格</a> '
                     f'<small>（{sum(len(s["items"]) for s in r["sections"])} 品項，'
                     + (esc(shop_dated(r)) if is_shop(r) else f'{esc(r["checked"])} 查證') + "）</small></li>"
@@ -182,9 +340,13 @@ def build(root):
         + "<h1>台灣連鎖店菜單價格</h1>\n<p class=\"meta\">每一頁都照該品牌官網原文整理，寫出處和查證日期，每天自動重查。</p>\n")
     who = "店家" if shops else "品牌"
     (docs / "index.html").write_text(
-        top + f"<ul>{items}</ul>\n<p><small>Menu Check 不是這些{who}的官方網站，跟{who}沒有合作關係。</small></p>\n"
+        top + lang_links + f"<ul>{items}</ul>\n<p><small>Menu Check 不是這些{who}的官方網站，跟{who}沒有合作關係。</small></p>\n"
         + f"</main>{GOAT}</body></html>\n", encoding="utf-8", newline="\n")
     urls = [(f"{SITE_URL}/", max(r["checked"] for r in recs))] + [(f"{SITE_URL}/{r['slug']}/", r["checked"]) for r in recs]
+    for lang, lrecs in by_lang.items():
+        if lrecs:
+            urls += [(f"{SITE_URL}/{lang}/", max(r["checked"] for r in lrecs))]
+            urls += [(f"{SITE_URL}/{lang}/{r['slug']}/", r["checked"]) for r in lrecs]
     (docs / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "".join(f"<url><loc>{u}</loc><lastmod>{d}</lastmod></url>\n" for u, d in urls) + "</urlset>\n",
@@ -195,6 +357,8 @@ def build(root):
          "# Menu Check 台灣\n\n台灣連鎖店的官方菜單價格（新台幣），照官網原文整理，每天自動重查；每頁寫出處網址與查證日期。\n\n")
         + "".join(f"- [{r['name_zh']}]({SITE_URL}/{r['slug']}/): "
                   + ((f"店家公布的菜單（{r['checked']} 查證）" if is_posted(r) else f"店家提供的菜單（{r['checked']}）")
-                     if is_shop(r) else r["source_url"]) + "\n" for r in recs),
+                     if is_shop(r) else r["source_url"]) + "\n" for r in recs)
+        + "".join(f"- [{r[f'name_{l}']}]({SITE_URL}/{l}/{r['slug']}/): {r['name_zh']}，店家自己的{LANG[l]}菜單（{r['checked']}）\n"
+                  for l, lrecs in by_lang.items() for r in lrecs),
         encoding="utf-8", newline="\n")
     return [u for u, _ in urls]
