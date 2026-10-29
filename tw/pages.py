@@ -296,7 +296,9 @@ def shop_page(rec):
           "url": f"{SITE_URL}/{rec['slug']}/", "hasMenuItem": offers}
     also = f"，附店家自己寫的{'、'.join(langs)}文菜名" if langs else ""
     city = rec["city"]
-    desc = f"{city}{name}最新菜單價格（{len(items)} 品項）：{desc_src}{also}。"
+    rng = price_range(it.get("prices") for it in items)
+    span = f"，{rng[0]:,}–{rng[1]:,} 元" if rng else ""
+    desc = f"{city}{name}最新菜單價格（{len(items)} 品項{span}）：{desc_src}{also}。"
     where = f"{esc(rec['address'])}．" if rec.get("address") else ""
     # Hours and phone as the shop's own Facebook page shows them, left out when it shows none we trust.
     info = "．".join(f"{label}：{esc(rec[k])}" for label, k in (("營業時間", "hours"), ("電話", "phone")) if rec.get(k))
@@ -304,7 +306,6 @@ def shop_page(rec):
             if info else "")
     other = " · ".join(f'<a href="../{l}/{rec["slug"]}/" hreflang="{l}" lang="{l}">{LANG[l]}</a>' for l in page_langs(rec))
     other = f'<p class="meta">店家自己的外文菜單：{other}</p>\n' if other else ""
-    rng = price_range(it.get("prices") for it in items)
     sized = any(len([k for k in (it.get("prices") or {}) if k != "加價"]) > 1 for it in items)
     summary = (f"這份菜單共 {len(items)} 個品項" + (f"，價錢從 {rng[0]:,} 元到 {rng[1]:,} 元" if rng else "")
                + ("，有些品項分不同份量" if sized else "") + "。"
