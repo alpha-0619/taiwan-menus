@@ -807,7 +807,7 @@
     {
      "name_zh": "小農經典拿鐵 (冰)",
      "name_printed": "小農經典拿鐵 (冰)",
-     "name_en": "Farmer's Choice Coffee Latte",
+     "name_en": "Farmer's Choice Light Latte",
      "prices_by_list": {
       "價格": {
        "M": 90,
@@ -823,7 +823,7 @@
     {
      "name_zh": "小農經典拿鐵 (熱)",
      "name_printed": "小農經典拿鐵 (熱)",
-     "name_en": "Farmer's Choice Coffee Latte",
+     "name_en": "Farmer's Choice Light Latte",
      "prices_by_list": {
       "價格": {
        "M": 90,
@@ -3737,5 +3737,5 @@
  "notes_zh": "沒收進本頁：濾掛／浸泡咖啡系列（盒裝咖啡）、會議型糕點、商品（周邊）。M、L 是官網寫的杯型。",
  "first_seen": "2026-10-23",
  "changed": "2026-10-28",
- "checked": "2026-11-09"
+ "checked": "2026-11-10"
 }

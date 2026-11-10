@@ -299,12 +299,12 @@ La Merenda食光點心
 總共有 10 項產品
 ＃小標：
 小農經典拿鐵 (冰)
-Farmer's Choice Coffee Latte
+Farmer's Choice Light Latte
 M $90
 L $110
 ＃備註：
 小農經典拿鐵 (熱)
-Farmer's Choice Coffee Latte
+Farmer's Choice Light Latte
 M $90
 L $110
 ＃備註：
